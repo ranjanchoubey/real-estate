@@ -1,52 +1,78 @@
-import uvicorn
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi import FastAPI, Request, status
-from fastapi.responses import JSONResponse
-from fastapi import FastAPI
-
+from pydantic import BaseModel
+import pandas as pd
+import numpy as np
+import pickle
+import uvicorn
+from fastapi import HTTPException
 
 app = FastAPI(
-    title="Real Estate API",
-    description="This is a very custom OpenAPI schema for the Real Estate API",
+    title="Real Estate Price Prediction API",
+    description="API for predicting real estate prices using XGBoost model",
     version="1.0.0",
-    docs_url="/docs",
-    redoc_url="/redoc",
-    openapi_url="/openapi.json"
 )
 
-origins = ['*']
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Load the fitted pipeline
+with open('./models/xgboost_pipeline_fitted.pkl', 'rb') as file:
+    loaded_pipeline = pickle.load(file)
 
-@app.get("/real-estate/")
+class PredictionRequest(BaseModel):
+    property_type: str
+    sector: str
+    bedRoom: int
+    bathroom: int
+    balcony: str
+    agePossession: str
+    built_up_area: float
+    servant_room: int
+    store_room: int
+    furnishing_type: str
+    luxury_category: str
+    floor_category: str
+
+class PredictionResponse(BaseModel):
+    predicted_price: str
+
+@app.get("/")
 def home():
-    return {"message": "Hello Hunny Bunny Tokko Tokko!! Feeling Something Something ...."}
+    return {"message": "Welcome to the Real Estate Price Prediction API"}
 
+@app.post('/predict', response_model=PredictionResponse)
+async def predict(request: PredictionRequest):
+    try:
+        # Convert input data to DataFrame
+        print("Received request:", request)
+        new_data = pd.DataFrame([request.model_dump()])
+        
+        # Rename columns to match what the model expects
+        new_data = new_data.rename(columns={
+            'servant_room': 'servant room',
+            'store_room': 'store room'
+        })
+        
+        print("Converted to DataFrame:", new_data.to_dict())
+        
+        # Make prediction
+        prediction = loaded_pipeline.predict(new_data)
+        print("Raw prediction:", prediction)
 
-@app.get("/real-estate/api/insights")
-async def insights():
-    print("insights api called....")
-    insights_data = 123
-    result_dict = {'message': 'Prediction Successful !', 'data': insights_data}
-    print("RESPONSE SENT: ", result_dict)
-    return result_dict
+        # Since we used log1p transformation on the target variable, we need to use expm1 to get back to the original scale
+        final_prediction = np.expm1(prediction)
+        print("Final prediction:", final_prediction)
 
-
-@app.post("/real-estate/api/predictions", status_code=status.HTTP_201_CREATED)
-async def predictions(request: Request):
-    print("predictions api called...")
-    form_data = await request.json()
-    data = form_data
-    print("prediction result: ", data)
-    return JSONResponse(status_code=status.HTTP_200_OK, content=data)
-
-
-if __name__ == "__main__":
-    uvicorn.run("app:app", host='0.0.0.0', port=7878, log_level="debug")
-
+        # Return the prediction as a JSON response
+        return PredictionResponse(predicted_price=f"{final_prediction[0]:.2f} crores")
+    except Exception as e:
+        print(f"Error occurred: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
+if __name__ == '__main__':
+    uvicorn.run(app, host='0.0.0.0', port=7878, log_level="info")
