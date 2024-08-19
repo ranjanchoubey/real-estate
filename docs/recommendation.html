@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommendation - Real Estate Analytics</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header" data-header>
+    <div class="overlay" data-overlay></div>
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-top-list">
+          <li>
+            <a href="mailto:info@Real Estate Analytics.com" class="header-top-link">
+              <ion-icon name="mail-outline"></ion-icon>
+              <span>info@Real Estate Analytics.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="header-top-link">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>Gurgaon</address>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="./assets/images/logo.png" alt="Real Estate Analytics logo">
+        </a>
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="index.html" class="logo">
+              <img src="./assets/images/logo.png" alt="Real Estate Analytics logo">
+            </a>
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+              <li><a href="index.html" class="navbar-link" data-nav-link>Home</a></li>
+              <li><a href="price-prediction.html" class="navbar-link" data-nav-link>Price Prediction</a></li>
+              <li><a href="analytics.html" class="navbar-link" data-nav-link>Analytics</a></li>
+              <li><a href="recommendation.html" class="navbar-link" data-nav-link>Recommendation</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <article>
+      <section class="recommendation" id="recommendation">
+        <div class="container">
+          <p class="section-subtitle">Our Recommendations</p>
+          <h2 class="h2 section-title">Top Picks for You</h2>
+          
+         
+          <div class="input-container">
+            <input list="locations" id="location" placeholder="Search location">
+            <datalist id="locations">
+              <option value="Bajghera Road">Bajghera Road</option>
+              <option value="Palam Vihar Halt">Palam Vihar Halt</option>
+              <option value="DPSG Palam Vihar">DPSG Palam Vihar</option>
+              <option value="Park Hospital">Park Hospital</option>
+              <option value="Gurgaon Railway Station">Gurgaon Railway Station</option>
+              <option value="The NorthCap University">The NorthCap University</option>
+              <option value="Dwarka Expy">Dwarka Expy</option>
+              <option value="Hyatt Place Gurgaon Udyog Vihar">Hyatt Place Gurgaon Udyog Vihar</option>
+              <option value="Dwarka Sector 21, Metro Station">Dwarka Sector 21, Metro Station</option>
+              <option value="Pacific D21 Mall">Pacific D21 Mall</option>
+              <option value="Indira Gandhi International Airport">Indira Gandhi International Airport</option>
+              <option value="Hamoni Golf Camp">Hamoni Golf Camp</option>
+              <option value="Fun N Food Waterpark">Fun N Food Waterpark</option>
+              <option value="Accenture DDC5">Accenture DDC5</option>
+              <option value="DPSG Palam Vihar Gurugram">DPSG Palam Vihar Gurugram</option>
+              <option value="Park Hospital, Palam Vihar">Park Hospital, Palam Vihar</option>
+              <option value="Palam Vihar Halt Railway Station">Palam Vihar Halt Railway Station</option>
+              <option value="Dwarka Expressway">Dwarka Expressway</option>
+              <option value="Tau DeviLal Sports Complex">Tau DeviLal Sports Complex</option>
+              <option value="Hyatt Place">Hyatt Place</option>
+              <option value="Altrade Business Centre">Altrade Business Centre</option>
+              <option value="AIPL Business Club Sector 62">AIPL Business Club Sector 62</option>
+              <option value="Heritage Xperiential Learning School">Heritage Xperiential Learning School</option>
+              <option value="CK Birla Hospital">CK Birla Hospital</option>
+              <option value="Paras Trinity Mall Sector 63">Paras Trinity Mall Sector 63</option>
+              <option value="Rapid Metro Station Sector 56">Rapid Metro Station Sector 56</option>
+              <option value="De Adventure Park">De Adventure Park</option>
+              <option value="Golf Course Ext Rd">Golf Course Ext Rd</option>
+              <option value="DoubleTree by Hilton Hotel Gurgaon">DoubleTree by Hilton Hotel Gurgaon</option>
+              <option value="KIIT College of Engineering Sohna Road">KIIT College of Engineering Sohna Road</option>
+              <option value="Mehrauli-Gurgaon Road">Mehrauli-Gurgaon Road</option>
+              <option value="Nirvana Rd">Nirvana Rd</option>
+              <option value="TERI Golf Course">TERI Golf Course</option>
+              <option value="The Shikshiyan School">The Shikshiyan School</option>
+              <option value="WTC Plaza">WTC Plaza</option>
+              <option value="Luxus Haritma Resort">Luxus Haritma Resort</option>
+              <option value="BSF Golf Course">BSF Golf Course</option>
+              <option value="Rions Hospital">Rions Hospital</option>
+              <option value="Gurgaon">Gurgaon</option>
+              <option value="Dwarka Sector 21">Dwarka Sector 21</option>
+              <option value="Nehru Stadium">Nehru Stadium</option>
+              <option value="IGI Airport">IGI Airport</option>
+              <option value="Vasant Kunj">Vasant Kunj</option>
+              <option value="Pranavananda Int. School">Pranavananda Int. School</option>
+              <option value="DLF Site central office">DLF Site central office</option>
+              <option value="Holiday Inn Gurugram Sector 90">Holiday Inn Gurugram Sector 90</option>
+              <option value="Krishna Hospital">Krishna Hospital</option>
+              <option value="Royal Institute Of Science">Royal Institute Of Science</option>
+              <option value="Sapphire 83 Mall">Sapphire 83 Mall</option>
+              <option value="NH48">NH48</option>
+              <option value="Garhi Harsaru Junction">Garhi Harsaru Junction</option>
+              <option value="Manesar Golf Course">Manesar Golf Course</option>
+              <option value="AapnoGhar">AapnoGhar</option>
+              <option value="Vega Schools NH-8">Vega Schools NH-8</option>
+              <option value="DLF Corporate Greens">DLF Corporate Greens</option>
+              <option value="Miracles Apollo Cradle Hospital">Miracles Apollo Cradle Hospital</option>
+              <option value="Hyatt Regency Gurugram">Hyatt Regency Gurugram</option>
+              <option value="NH 48">NH 48</option>
+              <option value="Golden Greens Golf & Resorts Limited">Golden Greens Golf & Resorts Limited</option>
+              <option value="Mount Olympus Junior School">Mount Olympus Junior School</option>
+              <option value="NH -8">NH -8</option>
+              <option value="Savoy Suites, Manesar">Savoy Suites, Manesar</option>
+              <option value="IMT Manesar">IMT Manesar</option>
+              <option value="Amity University Gurugram">Amity University Gurugram</option>
+              <option value="Golf Course Extension Road">Golf Course Extension Road</option>
+              <option value="Dwarka Expy, Sector 109">Dwarka Expy, Sector 109</option>
+              <option value="Euro International School, Sector- 109">Euro International School, Sector- 109</option>
+              <option value="Jai Sai Ram Hospital">Jai Sai Ram Hospital</option>
+              <option value="Aryan Hospital">Aryan Hospital</option>
+              <option value="Idea Cosmic Plaza">Idea Cosmic Plaza</option>
+              <option value="Indira Gandhi Intl Airport">Indira Gandhi Intl Airport</option>
+              <option value="Royal Institute Of Science & Management">Royal Institute Of Science & Management</option>
+              <option value="Pataudi Road">Pataudi Road</option>
+              <option value="RPS International School">RPS International School</option>
+              <option value="Aarvy Healthcare Hospital">Aarvy Healthcare Hospital</option>
+              <option value="Iris Broadway Mall">Iris Broadway Mall</option>
+              <option value="Imperia Mindspace">Imperia Mindspace</option>
+              <option value="AIPL Business Tower">AIPL Business Tower</option>
+              <option value="Heritage School">Heritage School</option>
+              <option value="Lotus Valley Intl School, Gurgaon">Lotus Valley Intl School, Gurgaon</option>
+              <option value="Sector 55-56 Metro Station">Sector 55-56 Metro Station</option>
+              <option value="Omaxe Gurgaon Mall">Omaxe Gurgaon Mall</option>
+              <option value="Sushant University">Sushant University</option>
+              <option value="Badshahpur Sohna Rd Hwy,Sector 48">Badshahpur Sohna Rd Hwy,Sector 48</option>
+              <option value="Naurangpur Cricket Stadium">Naurangpur Cricket Stadium</option>
+              <option value="Naurangpur Road">Naurangpur Road</option>
+              <option value="National Highway  48">National Highway  48</option>
+              <option value="Vatika Town Square-INXT">Vatika Town Square-INXT</option>
+              <option value="Ompee International School">Ompee International School</option>
+              <option value="Manesar Bus Stand">Manesar Bus Stand</option>
+              <option value="Yashlok Medical Centre">Yashlok Medical Centre</option>
+              <option value="Euro International School">Euro International School</option>
+              <option value="WorldMark Gurgaon">WorldMark Gurgaon</option>
+              <option value="Capital Cyberscape">Capital Cyberscape</option>
+              <option value="The Shriram Millennium School">The Shriram Millennium School</option>
+              <option value="Badshahpur Sohna Hwy">Badshahpur Sohna Hwy</option>
+              <option value="Nakhrola Stadium">Nakhrola Stadium</option>
+              <option value="Delhi - Jaipur Expressway">Delhi - Jaipur Expressway</option>
+              <option value="Savoy Suites">Savoy Suites</option>
+              <option value="Bal Bharati Public School">Bal Bharati Public School</option>
+              <option value="Vatika Business Centre">Vatika Business Centre</option>
+              <option value="St. Xavier's High School">St. Xavier's High School</option>
+              <option value="Ambience Mall New">Ambience Mall New</option>
+              <option value="NH8">NH8</option>
+              <option value="Hyatt Regency Gurgaon">Hyatt Regency Gurgaon</option>
+              <option value="Delhi Public School">Delhi Public School</option>
+              <option value="Elan Miracle Mall">Elan Miracle Mall</option>
+              <option value="Agri Business Management Collage">Agri Business Management Collage</option>
+              <option value="Grand Hyatt Gurgaon">Grand Hyatt Gurgaon</option>
+              <option value="Duke Horse Riding Club">Duke Horse Riding Club</option>
+              <option value="PVR Drive In Cinema">PVR Drive In Cinema</option>
+              <option value="W Pratiksha Hospital">W Pratiksha Hospital</option>
+              <option value="Metro World Mall">Metro World Mall</option>
+              <option value="Unicosmos School">Unicosmos School</option>
+              <option value="Faridabad Gurgaon Road">Faridabad Gurgaon Road</option>
+              <option value="Sohna Road">Sohna Road</option>
+              <option value="Bestech Business Tower">Bestech Business Tower</option>
+              <option value="Appu Ghar">Appu Ghar</option>
+              <option value="SkyJumper Trampoline Park">SkyJumper Trampoline Park</option>
+              <option value="Axis Bank">Axis Bank</option>
+              <option value="KMP Expressway">KMP Expressway</option>
+              <option value="Karma Lakelands">Karma Lakelands</option>
+              <option value="Jungle Safari & Trails">Jungle Safari & Trails</option>
+              <option value="DPS Manesar">DPS Manesar</option>
+              <option value="Medanta Hospital">Medanta Hospital</option>
+              <option value="Lingaya's Lalita Devi Institute">Lingaya's Lalita Devi Institute</option>
+              <option value="ASF Insignia SEZ">ASF Insignia SEZ</option>
+              <option value="Banjara Market Gurugram">Banjara Market Gurugram</option>
+              <option value="Central Plaza Mall">Central Plaza Mall</option>
+              <option value="Paras Hospitals, Gurgaon">Paras Hospitals, Gurgaon</option>
+              <option value="Vega School">Vega School</option>
+              <option value="Indian School of Hospitality">Indian School of Hospitality</option>
+              <option value="Vatika City Centre">Vatika City Centre</option>
+              <option value="Aatish Hospital">Aatish Hospital</option>
+              <option value="Info Technology Park Phase 2">Info Technology Park Phase 2</option>
+              <option value="Huda Metro Station">Huda Metro Station</option>
+              <option value="Southern Peripheral Rd">Southern Peripheral Rd</option>
+              <option value="Global Ways School">Global Ways School</option>
+              <option value="Radisson Hotel">Radisson Hotel</option>
+              <option value="NH 248A">NH 248A</option>
+              <option value="Mavens Inn">Mavens Inn</option>
+              <option value="Sanar International Hospital">Sanar International Hospital</option>
+              <option value="Sector 53-54 Metro Station">Sector 53-54 Metro Station</option>
+              <option value="IILM University, Gurugram">IILM University, Gurugram</option>
+              <option value="The Banyan Tree World School">The Banyan Tree World School</option>
+              <option value="The Big Tree Cafe">The Big Tree Cafe</option>
+              <option value="DLF Golf and Country Club">DLF Golf and Country Club</option>
+              <option value="Delhi Public School, Sector 84">Delhi Public School, Sector 84</option>
+              <option value="Aarvy Hospital">Aarvy Hospital</option>
+              <option value="DPG Degree College">DPG Degree College</option>
+              <option value="Shivani public school">Shivani public school</option>
+              <option value="Baghera University">Baghera University</option>
+              <option value="Kutumbh Hospital">Kutumbh Hospital</option>
+              <option value="Bijwasan Railway Station">Bijwasan Railway Station</option>
+              <option value="Global Foyer Mall">Global Foyer Mall</option>
+              <option value="Phase 2 Metro Station">Phase 2 Metro Station</option>
+              <option value="Gurgaon Dreamz Mall">Gurgaon Dreamz Mall</option>
+              <option value="Metro Hospital, Palam Vihar">Metro Hospital, Palam Vihar</option>
+              <option value="Delhi Ajmer Expressway">Delhi Ajmer Expressway</option>
+              <option value="Infinity Business Park">Infinity Business Park</option>
+              <option value="Heritage Xperiential Learning, CRPF Rd">Heritage Xperiential Learning, CRPF Rd</option>
+              <option value="Sector 54 Chowk Metro Station">Sector 54 Chowk Metro Station</option>
+              <option value="Gurgaon - Delhi Expy">Gurgaon - Delhi Expy</option>
+              <option value="Genesis Hospital Sector 84">Genesis Hospital Sector 84</option>
+              <option value="DPGITM Engineering College Sector 34">DPGITM Engineering College Sector 34</option>
+              <option value="Sapphire 83 Mall Sector 83">Sapphire 83 Mall Sector 83</option>
+              <option value="Holiday Inn Hotel Sector 90">Holiday Inn Hotel Sector 90</option>
+              <option value="National Tennis Academy Sector 98">National Tennis Academy Sector 98</option>
+              <option value="NH-8 Delhi Jaipur Highway">NH-8 Delhi Jaipur Highway</option>
+              <option value="Nouveau Medics Multispeciality OPD">Nouveau Medics Multispeciality OPD</option>
+              <option value="Heritage Village Resort & Spa">Heritage Village Resort & Spa</option>
+              <option value="Sector 86 Road">Sector 86 Road</option>
+              <option value="Genesis Hospital">Genesis Hospital</option>
+              <option value="Delh-Ajmer Expy">Delh-Ajmer Expy</option>
+              <option value="DPG Institute of Technology">DPG Institute of Technology</option>
+              <option value="Medanta -The Medicity">Medanta -The Medicity</option>
+              <option value="Airia Mall">Airia Mall</option>
+              <option value="Amma Hospital">Amma Hospital</option>
+              <option value="DPS International Edge">DPS International Edge</option>
+              <option value="Eros City Square">Eros City Square</option>
+              <option value="Splendor Trade Tower">Splendor Trade Tower</option>
+              <option value="Narayana Junior College">Narayana Junior College</option>
+              <option value="Dharampur Main Road">Dharampur Main Road</option>
+              <option value="Oyster's Water Park">Oyster's Water Park</option>
+              <option value="Vivanta Dwarka New Delhi">Vivanta Dwarka New Delhi</option>
+              <option value="DLF Corporate Park">DLF Corporate Park</option>
+              <option value="GD Goenka World School">GD Goenka World School</option>
+              <option value="KR Mangalam University">KR Mangalam University</option>
+              <option value="Smart View Hotel and Resort">Smart View Hotel and Resort</option>
+              <option value="Central Park Flower Valley">Central Park Flower Valley</option>
+              <option value="Shopping complex">Shopping complex</option>
+              <option value="Central Peripheral Road">Central Peripheral Road</option>
+              <option value="Nakhrola Stadium Sector 81A">Nakhrola Stadium Sector 81A</option>
+              <option value="NH 08">NH 08</option>
+              <option value="G D Goenka University">G D Goenka University</option>
+              <option value="Fly India Adventure Resort">Fly India Adventure Resort</option>
+              <option value="Vardaan Hospital">Vardaan Hospital</option>
+              <option value="IMT Office Sohna">IMT Office Sohna</option>
+              <option value="JMS Marine Square Mall">JMS Marine Square Mall</option>
+              <option value="Vibrant Hospital">Vibrant Hospital</option>
+              <option value="Prime Scholars Int. School">Prime Scholars Int. School</option>
+              <option value="Ramgarh Farms & Resort">Ramgarh Farms & Resort</option>
+              <option value="Basai Road">Basai Road</option>
+              <option value="The Esplanade Mall">The Esplanade Mall</option>
+              <option value="GEMS International School">GEMS International School</option>
+              <option value="Pranavananda International School">Pranavananda International School</option>
+              <option value="Greenway Hospital">Greenway Hospital</option>
+              <option value="Paras Trinity Mall">Paras Trinity Mall</option>
+              <option value="Rajesh Pilot Road">Rajesh Pilot Road</option>
+              <option value="Scottish High International School">Scottish High International School</option>
+              <option value="The Vivekananda School">The Vivekananda School</option>
+              <option value="Holiday Inn Express Gurugram Sector 50">Holiday Inn Express Gurugram Sector 50</option>
+              <option value="Early Basket Grocery shop">Early Basket Grocery shop</option>
+              <option value="Aradhya Cricket Club Gurgaon">Aradhya Cricket Club Gurgaon</option>
+              <option value="Imperial Heritage School">Imperial Heritage School</option>
+              <option value="Daultabad Village Park">Daultabad Village Park</option>
+              <option value="Skylark Cricket Academy">Skylark Cricket Academy</option>
+              <option value="Yashroop Hospital">Yashroop Hospital</option>
+              <option value="Domino's Pizza">Domino's Pizza</option>
+              <option value="Conscient One Mall">Conscient One Mall</option>
+              <option value="Emerald Plaza Shopping Mall">Emerald Plaza Shopping Mall</option>
+              <option value="Pawlywoof - Dog Park">Pawlywoof - Dog Park</option>
+              <option value="SCC Drive-In Cinema">SCC Drive-In Cinema</option>
+              <option value="Lemon Tree Hotel, Sohna Road">Lemon Tree Hotel, Sohna Road</option>
+              <option value="Shiksha Bharti Public School">Shiksha Bharti Public School</option>
+              <option value="Sahara Mall">Sahara Mall</option>
+              <option value="Dhanwapur Road">Dhanwapur Road</option>
+              <option value="Govt. PG College">Govt. PG College</option>
+              <option value="Basai Dhankot">Basai Dhankot</option>
+              <option value="Park Inn">Park Inn</option>
+              <option value="IFFCO Chowk Metro Station">IFFCO Chowk Metro Station</option>
+              <option value="The Executive Centre">The Executive Centre</option>
+              <option value="Dwarka Expy, Sector 88">Dwarka Expy, Sector 88</option>
+              <option value="Euro Int School, Sector 37D, Gurugram">Euro Int School, Sector 37D, Gurugram</option>
+              <option value="Reliance Trends Newtown Square Mall">Reliance Trends Newtown Square Mall</option>
+              <option value="SGT University">SGT University</option>
+              <option value="SGT Hospital 1">SGT Hospital 1</option>
+              <option value="Suncity School">Suncity School</option>
+              <option value="Green Field School">Green Field School</option>
+              <option value="Narayana E Techno">Narayana E Techno</option>
+              <option value="Alpine Convent School">Alpine Convent School</option>
+              <option value="Little E Step –Pre School">Little E Step –Pre School</option>
+              <option value="Sheetla Mata Mandir">Sheetla Mata Mandir</option>
+              <option value="Captain Chandan Lal Marg">Captain Chandan Lal Marg</option>
+              <option value="CD International School">CD International School</option>
+              <option value="Raheja Mall">Raheja Mall</option>
+              <option value="Basai Dhankot Railway Station">Basai Dhankot Railway Station</option>
+              <option value="First Step Play School">First Step Play School</option>
+              <option value="Sri Ma Montessori International">Sri Ma Montessori International</option>
+              <option value="Ansal Plaza">Ansal Plaza</option>
+              <option value="Proposed Metro Station">Proposed Metro Station</option>
+              <option value="Delhi International Airport">Delhi International Airport</option>
+              <option value="KMP Corridor">KMP Corridor</option>
+              <option value="Vega Schools Sector 48">Vega Schools Sector 48</option>
+              <option value="Cloudnine Hospital Sector 47">Cloudnine Hospital Sector 47</option>
+              <option value="PVR Drive In Theatre">PVR Drive In Theatre</option>
+              <option value="City Hospital">City Hospital</option>
+              <option value="NH 352W, Pataudi">NH 352W, Pataudi</option>
+              <option value="Pathfinder Global School, Pataudi">Pathfinder Global School, Pataudi</option>
+              <option value="Vistar Complex">Vistar Complex</option>
+              <option value="BML Munjal University (BMU)">BML Munjal University (BMU)</option>
+              <option value="Bestech Central Square Mall">Bestech Central Square Mall</option>
+              <option value="ORCHIDS The International School">ORCHIDS The International School</option>
+              <option value="Marengo Asia Hospitals">Marengo Asia Hospitals</option>
+              <option value="Sector 42-43 Rapid Metro">Sector 42-43 Rapid Metro</option>
+              <option value="Sector 53-54 Rapid Metro">Sector 53-54 Rapid Metro</option>
+              <option value="Bank Of Baroda">Bank Of Baroda</option>
+              <option value="HDFC Bank ATM">HDFC Bank ATM</option>
+              <option value="Muincipal Corporation of Gurugram">Muincipal Corporation of Gurugram</option>
+              <option value="One Horizon Center Bus Stop">One Horizon Center Bus Stop</option>
+              <option value="Shalom Hills International School">Shalom Hills International School</option>
+              <option value="Satyam Medicare Hospital">Satyam Medicare Hospital</option>
+              <option value="Anand Preschool">Anand Preschool</option>
+              <option value="Choice pharmacy">Choice pharmacy</option>
+              <option value="Qutub Plaza">Qutub Plaza</option>
+              <option value="Sunset point">Sunset point</option>
+              <option value="EPF Regional Office">EPF Regional Office</option>
+              <option value="IFFCO Chowk">IFFCO Chowk</option>
+              <option value="Kingdom of Dreams">Kingdom of Dreams</option>
+              <option value="Gaytri Public School">Gaytri Public School</option>
+              <option value="KIIT College">KIIT College</option>
+              <option value="SPM Hospital">SPM Hospital</option>
+              <option value="Sealdah Railway Station">Sealdah Railway Station</option>
+              <option value="Lemon Tree Hotel">Lemon Tree Hotel</option>
+              <option value="CK Birla Hospital, Gurgaon">CK Birla Hospital, Gurgaon</option>
+              <option value="Golf Pavilion">Golf Pavilion</option>
+              <option value="Golf Course Road">Golf Course Road</option>
+              <option value="Ardee Mall">Ardee Mall</option>
+              <option value="Shiv Nadar School">Shiv Nadar School</option>
+              <option value="NH 148A">NH 148A</option>
+              <option value="Ambience Public School">Ambience Public School</option>
+              <option value="Heritage Intl Xperiential School">Heritage Intl Xperiential School</option>
+              <option value="Summer Fields School">Summer Fields School</option>
+              <option value="Primamed Super Speciality Hospital">Primamed Super Speciality Hospital</option>
+              <option value="Uma Sanjeevani Health Centre">Uma Sanjeevani Health Centre</option>
+              <option value="Anya Gurgaon">Anya Gurgaon</option>
+              <option value="Hotel Golf View Suites">Hotel Golf View Suites</option>
+              <option value="Apollo Pharmacy">Apollo Pharmacy</option>
+              <option value="Rx Pharmacy">Rx Pharmacy</option>
+              <option value="Sector 42/43 Bus Stand">Sector 42/43 Bus Stand</option>
+              <option value="Genpact Chowk Bus Stop">Genpact Chowk Bus Stop</option>
+              <option value="Huda City Centre Metro Station">Huda City Centre Metro Station</option>
+              <option value="ICICI Bank ATM">ICICI Bank ATM</option>
+              <option value="Bharat Petroleum Retail Outlet">Bharat Petroleum Retail Outlet</option>
+              <option value="DLF Linear Park">DLF Linear Park</option>
+              <option value="Le Meridien Gurgaon">Le Meridien Gurgaon</option>
+              <option value="Sector 42-43 Metro Station">Sector 42-43 Metro Station</option>
+              <option value="Faridabad - Gurgaon Rd">Faridabad - Gurgaon Rd</option>
+              <option value="Fun N Food Village">Fun N Food Village</option>
+              <option value="F9 Go Karting Gurgaon">F9 Go Karting Gurgaon</option>
+              <option value="Proposed Metro corridor">Proposed Metro corridor</option>
+              <option value="N.H-8">N.H-8</option>
+              <option value="Shiskshantar">Shiskshantar</option>
+              <option value="DPS">DPS</option>
+              <option value="Amity">Amity</option>
+              <option value="Pathways">Pathways</option>
+              <option value="GD Goenka">GD Goenka</option>
+              <option value="Medicity">Medicity</option>
+              <option value="Artemis">Artemis</option>
+              <option value="Max, Fortis">Max, Fortis</option>
+              <option value="Apollo">Apollo</option>
+              <option value="Paras Trinity Shopping Mall">Paras Trinity Shopping Mall</option>
+              <option value="Swastik Multispeciality Hospital">Swastik Multispeciality Hospital</option>
+              <option value="AIPL Business Co Working Space">AIPL Business Co Working Space</option>
+              <option value="Lemon Tree Hotel Sector 60">Lemon Tree Hotel Sector 60</option>
+              <option value="MKD Hospital">MKD Hospital</option>
+              <option value="Sant Soordas Sihi Metro Station">Sant Soordas Sihi Metro Station</option>
+              <option value="De Adventure Amusement Park">De Adventure Amusement Park</option>
+              <option value="Vatika Business Park Sector 49">Vatika Business Park Sector 49</option>
+              <option value="Suncity School, Sector 37D">Suncity School, Sector 37D</option>
+              <option value="The Signature Advanced Super Speciality">The Signature Advanced Super Speciality</option>
+              <option value="Gurugram University Kankrola">Gurugram University Kankrola</option>
+              <option value="Candor TechSpace, Sector 48">Candor TechSpace, Sector 48</option>
+              <option value="IndusInd Bank ATM">IndusInd Bank ATM</option>
+              <option value="Cherub's Cradle">Cherub's Cradle</option>
+              <option value="Mavens Orange - Hotel">Mavens Orange - Hotel</option>
+              <option value="Learning Stars School">Learning Stars School</option>
+              <option value="State Bank of India">State Bank of India</option>
+              <option value="Deerika HyperMart">Deerika HyperMart</option>
+              <option value="Triangular Park">Triangular Park</option>
+              <option value="Artimis hospital">Artimis hospital</option>
+              <option value="Sector 45 SO Post Office">Sector 45 SO Post Office</option>
+              <option value="FUEL NATION">FUEL NATION</option>
+              <option value="HSBC">HSBC</option>
+              <option value="Women Police Station">Women Police Station</option>
+              <option value="Best IVF Centre">Best IVF Centre</option>
+              <option value="Huda City Centre">Huda City Centre</option>
+              <option value="Gurugram Public School">Gurugram Public School</option>
+              <option value="Shikshantar - Primary School">Shikshantar - Primary School</option>
+              <option value="Mamta Hospital">Mamta Hospital</option>
+              <option value="IG International Airport">IG International Airport</option>
+              <option value="Omaxe City Centre">Omaxe City Centre</option>
+              <option value="DLF Grand Mall">DLF Grand Mall</option>
+              <option value="Matrikiran School">Matrikiran School</option>
+              <option value="DLF Cyber City">DLF Cyber City</option>
+              <option value="Global city centre">Global city centre</option>
+              <option value="Sohna road dhunela">Sohna road dhunela</option>
+              <option value="Vardaan hospital and trauma centre">Vardaan hospital and trauma centre</option>
+              <option value="Maharana pratap school">Maharana pratap school</option>
+              <option value="Garhi harsaru railway station Gurgaon">Garhi harsaru railway station Gurgaon</option>
+              <option value="HUB 66">HUB 66</option>
+              <option value="Sealdah">Sealdah</option>
+              <option value="Hasanpur">Hasanpur</option>
+              <option value="The Oberoi">The Oberoi</option>
+              <option value="Euro Intl School, Sector- 109">Euro Intl School, Sector- 109</option>
+              <option value="Najafgarh Kapashera Road">Najafgarh Kapashera Road</option>
+              <option value="Hong Kong Bazaar">Hong Kong Bazaar</option>
+              <option value="Bharti International Convent School">Bharti International Convent School</option>
+              <option value="Ashoka International School">Ashoka International School</option>
+              <option value="The Oberoi Gurgaon">The Oberoi Gurgaon</option>
+              <option value="GD Goenka Public School">GD Goenka Public School</option>
+              <option value="Chauma Road">Chauma Road</option>
+              <option value="Chirag Hospital">Chirag Hospital</option>
+              <option value="AIPL Joy Street Mall">AIPL Joy Street Mall</option>
+              <option value="Radisson Hotel Sohna Road">Radisson Hotel Sohna Road</option>
+              <option value="iON Digital Zone (Gurugram)">iON Digital Zone (Gurugram)</option>
+              <option value="HUDA Mini Golf Course">HUDA Mini Golf Course</option>
+              <option value="IMT Road">IMT Road</option>
+              <option value="Sohna Gurgaon Road">Sohna Gurgaon Road</option>
+              <option value="Spaze Itech Park">Spaze Itech Park</option>
+              <option value="Pallavan PreSchool, Sohna Road">Pallavan PreSchool, Sohna Road</option>
+              <option value="Polaris Hospital">Polaris Hospital</option>
+              <option value="RBSM Public school">RBSM Public school</option>
+              <option value="Health Care Pharmacy">Health Care Pharmacy</option>
+              <option value="Sector 54 Chowk">Sector 54 Chowk</option>
+              <option value="EuroKids Preschool Suncity">EuroKids Preschool Suncity</option>
+              <option value="YES Bank ATM">YES Bank ATM</option>
+              <option value="Suncity School Gurgaon">Suncity School Gurgaon</option>
+              <option value="Suncity Shopping Complex">Suncity Shopping Complex</option>
+              <option value="Vallores Pre School">Vallores Pre School</option>
+              <option value="Umkal Hospital">Umkal Hospital</option>
+              <option value="Haryana City Gas">Haryana City Gas</option>
+              <option value="Marigold Secondary School">Marigold Secondary School</option>
+              <option value="Alpine Hospital">Alpine Hospital</option>
+              <option value="Pushpanjali Hospital">Pushpanjali Hospital</option>
+              <option value="Country Inn">Country Inn</option>
+              <option value="Westin">Westin</option>
+              <option value="The Millenium School">The Millenium School</option>
+              <option value="Rajiv Chowk - Sohna Highway">Rajiv Chowk - Sohna Highway</option>
+              <option value="Central Park Resorts">Central Park Resorts</option>
+              <option value="Swastik Hospital Sec 66">Swastik Hospital Sec 66</option>
+              <option value="Adarsh Senior Secondary School">Adarsh Senior Secondary School</option>
+              <option value="International Tech Park Gurgaon,">International Tech Park Gurgaon,</option>
+              <option value="Surajgarh Gurgaon, Golf Course Ext Rd">Surajgarh Gurgaon, Golf Course Ext Rd</option>
+              <option value="Ananta Hospital">Ananta Hospital</option>
+              <option value="Indus World School">Indus World School</option>
+              <option value="Golf Corse Ext. Rd.">Golf Corse Ext. Rd.</option>
+              <option value="Prime Scholars International School">Prime Scholars International School</option>
+              <option value="Dwarka Expy, Dhanwapur Village">Dwarka Expy, Dhanwapur Village</option>
+              <option value="Shri Balaji’s Multispeciality Hospital">Shri Balaji’s Multispeciality Hospital</option>
+              <option value="Delhi Public School, Sector 103">Delhi Public School, Sector 103</option>
+              <option value="Park Inn, Gurgaon">Park Inn, Gurgaon</option>
+              <option value="DLF World Tech Park">DLF World Tech Park</option>
+              <option value="Star Mall">Star Mall</option>
+              <option value="The Hive Shopping Mall">The Hive Shopping Mall</option>
+              <option value="NH-8, IMT Manesar">NH-8, IMT Manesar</option>
+              <option value="Yaduvanshi Shiksha Niketan">Yaduvanshi Shiksha Niketan</option>
+              <option value="Newtown Square Mall">Newtown Square Mall</option>
+              <option value="NH 352W">NH 352W</option>
+              <option value="Eros Corporate Park">Eros Corporate Park</option>
+              <option value="Manesar Road">Manesar Road</option>
+              <option value="Huda Metro Station (Gurugram)">Huda Metro Station (Gurugram)</option>
+              <option value="InfinityS Badminton Academy">InfinityS Badminton Academy</option>
+              <option value="Sanskar Bharti Public School">Sanskar Bharti Public School</option>
+              <option value="Manipal Hospital, Gurugram">Manipal Hospital, Gurugram</option>
+              <option value="HUDA Market, Sector 14">HUDA Market, Sector 14</option>
+              <option value="Delhi Gurgaon Expressway">Delhi Gurgaon Expressway</option>
+              <option value="SCC Rooftop Drive-In">SCC Rooftop Drive-In</option>
+              <option value="Gurugram Railway Station">Gurugram Railway Station</option>
+              <option value="Kings International School">Kings International School</option>
+              <option value="chool">chool</option>
+              <option value="HUDA Market">HUDA Market</option>
+              <option value="Basai Metro Station">Basai Metro Station</option>
+              <option value="CBR Cricket Ground">CBR Cricket Ground</option>
+              <option value="Rapid Metro Sector 55-56">Rapid Metro Sector 55-56</option>
+              <option value="Kunskapsskolan School">Kunskapsskolan School</option>
+              <option value="Omaxe Celebration Mall">Omaxe Celebration Mall</option>
+              <option value="Gurgaon - Delhi Expy, Sector 75A">Gurgaon - Delhi Expy, Sector 75A</option>
+              <option value="Shalom Presidency School">Shalom Presidency School</option>
+              <option value="Jinga Lala Theme Park Gurgaon Delhi">Jinga Lala Theme Park Gurgaon Delhi</option>
+              <option value="Pataudi Rd, Sector 95B">Pataudi Rd, Sector 95B</option>
+              <option value="Aarvy Healthcare Super Speciality">Aarvy Healthcare Super Speciality</option>
+              <option value="Approved Sector 37 Mero Station">Approved Sector 37 Mero Station</option>
+              <option value="Signature Hospital">Signature Hospital</option>
+              <option value="Xavier’s International">Xavier’s International</option>
+              <option value="Alpine School">Alpine School</option>
+              <option value="Sector 10 Market">Sector 10 Market</option>
+              <option value="Blue Bells Public School">Blue Bells Public School</option>
+              <option value="Galleria 108 Mall">Galleria 108 Mall</option>
+              <option value="Manipal Hospital">Manipal Hospital</option>
+              <option value="Bharat Ram Global School">Bharat Ram Global School</option>
+              <option value="Canara Bank ATM">Canara Bank ATM</option>
+              <option value="Yes Bank">Yes Bank</option>
+              <option value="Arc Hospital">Arc Hospital</option>
+              <option value="Shishu Kalyan School">Shishu Kalyan School</option>
+              <option value="Rathore IMT Hospital">Rathore IMT Hospital</option>
+              <option value="DSD College">DSD College</option>
+              <option value="Patil Station">Patil Station</option>
+              <option value="Amity University">Amity University</option>
+              <option value="ICFAI University">ICFAI University</option>
+              <option value="Cambridge Montessori">Cambridge Montessori</option>
+              <option value="Hyatt Regency">Hyatt Regency</option>
+              <option value="Rao Bharat Singh International School">Rao Bharat Singh International School</option>
+              <option value="Aarvy Healthcare">Aarvy Healthcare</option>
+              <option value="Cambridge College Of Education">Cambridge College Of Education</option>
+              <option value="Dharampeth Main Road">Dharampeth Main Road</option>
+              <option value="Old Delhi Gurgaon Road">Old Delhi Gurgaon Road</option>
+              <option value="Rotary Public School">Rotary Public School</option>
+              <option value="Candor Techspace">Candor Techspace</option>
+              <option value="Manipal Hospital, Palam Vihar">Manipal Hospital, Palam Vihar</option>
+              <option value="Moulsari Avenue">Moulsari Avenue</option>
+              <option value="Adarsh public school,Garhi Harsaru">Adarsh public school,Garhi Harsaru</option>
+              <option value="PHC Garhi Harsaru">PHC Garhi Harsaru</option>
+              <option value="Excellere World School">Excellere World School</option>
+              <option value="Aman Hospital & Surgical Centre">Aman Hospital & Surgical Centre</option>
+              <option value="Neemrana Palace">Neemrana Palace</option>
+              <option value="K. R. Mangalam University">K. R. Mangalam University</option>
+              <option value="Vishwas Hospital">Vishwas Hospital</option>
+              <option value="Ibis Hotel">Ibis Hotel</option>
+              <option value="Horizon 1 Mall">Horizon 1 Mall</option>
+              <option value="Ernst & Young">Ernst & Young</option>
+              <option value="Paras Hospital">Paras Hospital</option>
+              <option value="Gurgaon Faridabad Highway">Gurgaon Faridabad Highway</option>
+              <option value="Mount Olympus School, Sec 79">Mount Olympus School, Sec 79</option>
+              <option value="Singhania University, Manesar">Singhania University, Manesar</option>
+              <option value="Capital Business Park">Capital Business Park</option>
+              <option value="Old Sohna Dhani Road">Old Sohna Dhani Road</option>
+              <option value="GD Goenka Signature School">GD Goenka Signature School</option>
+              <option value="Public Bazar">Public Bazar</option>
+              <option value="Vatika Business Park">Vatika Business Park</option>
+              <option value="Bharat Petrol Pump">Bharat Petrol Pump</option>
+              <option value="Artemis Hospital">Artemis Hospital</option>
+              <option value="Children Park">Children Park</option>
+              <option value="Medanta Dialysis Center">Medanta Dialysis Center</option>
+              <option value="Central Park, Sohna Rd">Central Park, Sohna Rd</option>
+              <option value="HDFC Bank ATM, Dhunela Ghamroj">HDFC Bank ATM, Dhunela Ghamroj</option>
+              <option value="Ashiana Anmol  Kid Centric Homes">Ashiana Anmol  Kid Centric Homes</option>
+              <option value="Indianoil, Sohna - Gurgaon Rd">Indianoil, Sohna - Gurgaon Rd</option>
+              <option value="Taj Hotel & Family Restaurant">Taj Hotel & Family Restaurant</option>
+              <option value="V-Square Sohna New Residential">V-Square Sohna New Residential</option>
+              <option value="The Phoenix Project, Sohna - Gurgaon Rd">The Phoenix Project, Sohna - Gurgaon Rd</option>
+              <option value="Signature Global Park">Signature Global Park</option>
+              <option value="Signum 36">Signum 36</option>
+              <option value="Kotak Mahindra Bank, MBS Tower">Kotak Mahindra Bank, MBS Tower</option>
+              <option value="Pasco Automobiles, Alipur, Sohna">Pasco Automobiles, Alipur, Sohna</option>
+              <option value="Sohna Bus Stand">Sohna Bus Stand</option>
+              <option value="Imperio School">Imperio School</option>
+              <option value="Ektaa Hospitals">Ektaa Hospitals</option>
+              <option value="Vipul Trade Business Centre">Vipul Trade Business Centre</option>
+              <option value="Radisson Hotel Gurugram">Radisson Hotel Gurugram</option>
+              <option value="Airia Mall Sector 68">Airia Mall Sector 68</option>
+              <option value="Damdama More">Damdama More</option>
+              <option value="Civil Hospital">Civil Hospital</option>
+              <option value="Western Peripheral Expressway">Western Peripheral Expressway</option>
+              <option value="Bhondsi Nature Park">Bhondsi Nature Park</option>
+              <option value="Enkays Hospital">Enkays Hospital</option>
+              <option value="Ram Krishna Public School">Ram Krishna Public School</option>
+              <option value="Aravalli Hill View Point">Aravalli Hill View Point</option>
+              <option value="Gurugram Global Heights School">Gurugram Global Heights School</option>
+              <option value="Satya The Hive Mall">Satya The Hive Mall</option>
+              <option value="Gurugram Road">Gurugram Road</option>
+              <option value="The Signature Super Speciality Hospital">The Signature Super Speciality Hospital</option>
+              <option value="Sunrise University">Sunrise University</option>
+              <option value="Country Inn & Suites by Radisson">Country Inn & Suites by Radisson</option>
+              <option value="Yonex Badminton Stadium">Yonex Badminton Stadium</option>
+              <option value="Grand Hyatt">Grand Hyatt</option>
+              <option value="Au Grand Air">Au Grand Air</option>
+              <option value="Indira Gandhi Eye Hospital">Indira Gandhi Eye Hospital</option>
+              <option value="Double Tree by Hilton">Double Tree by Hilton</option>
+              <option value="Jinaglala Theme Park">Jinaglala Theme Park</option>
+              <option value="Ap Sports cricket ground">Ap Sports cricket ground</option>
+              <option value="Nischay Cricket Academy">Nischay Cricket Academy</option>
+              <option value="DLC Cricket Ground">DLC Cricket Ground</option>
+              <option value="Drona Sports Village">Drona Sports Village</option>
+              <option value="Ramada by Wyndham Gurgaon">Ramada by Wyndham Gurgaon</option>
+              <option value="Surajgarh Gurgaon">Surajgarh Gurgaon</option>
+              <option value="Apex Plus Hospital">Apex Plus Hospital</option>
+              <option value="ZEN Golf Range & Academy">ZEN Golf Range & Academy</option>
+              <option value="The Banyan Tree Hiking Area">The Banyan Tree Hiking Area</option>
+              <option value="MG Road">MG Road</option>
+              <option value="Plaza Mall">Plaza Mall</option>
+              <option value="MGF Metropolitan Mall">MGF Metropolitan Mall</option>
+              <option value="Lancers International School">Lancers International School</option>
+              <option value="Gurjar Samrat Jaipal Khatana Marg">Gurjar Samrat Jaipal Khatana Marg</option>
+              <option value="Signature Global Infinity Mall Sohna">Signature Global Infinity Mall Sohna</option>
+              <option value="Vidya Niketan Sr Sec School">Vidya Niketan Sr Sec School</option>
+              <option value="Sanjivani Hospital">Sanjivani Hospital</option>
+              <option value="Spectra Hospital">Spectra Hospital</option>
+              <option value="Tulip Violet Society, Sector 69">Tulip Violet Society, Sector 69</option>
+              <option value="Spaze Palazo, Golf Course Ext Rd">Spaze Palazo, Golf Course Ext Rd</option>
+              <option value="Federal Bank Sector 71">Federal Bank Sector 71</option>
+              <option value="Kunskapsskolan International">Kunskapsskolan International</option>
+              <option value="Ektaa Hospitals  Main Sohna Rd">Ektaa Hospitals  Main Sohna Rd</option>
+              <option value="Central Bank Of India Sohna Rd">Central Bank Of India Sohna Rd</option>
+              <option value="Sanjeevani Hospital - Child Specialist">Sanjeevani Hospital - Child Specialist</option>
+              <option value="IndianOil, Hasanpur">IndianOil, Hasanpur</option>
+              <option value="The Medicity, Spaze iTech Park">The Medicity, Spaze iTech Park</option>
+              <option value="Axis Bank, Sohna Rd">Axis Bank, Sohna Rd</option>
+              <option value="Shambhu Dayal High School">Shambhu Dayal High School</option>
+              <option value="Ascendas OneHub Gurgaon">Ascendas OneHub Gurgaon</option>
+              <option value="Flying Wings Badminton Academy">Flying Wings Badminton Academy</option>
+              <option value="Saraswati Model School">Saraswati Model School</option>
+              <option value="Orchid Business Park">Orchid Business Park</option>
+              <option value="Farrukh Nagar Railway Station">Farrukh Nagar Railway Station</option>
+              <option value="M3m 65th Avenue Mall">M3m 65th Avenue Mall</option>
+              <option value="Sneh Hospital">Sneh Hospital</option>
+              <option value="Appu Ghar Water Park">Appu Ghar Water Park</option>
+              <option value="Tennis Vidyalaya (Tennis Academy)">Tennis Vidyalaya (Tennis Academy)</option>
+              <option value="Zooper India Trampoline Park">Zooper India Trampoline Park</option>
+              <option value="Park Dr, DLF Phase 5">Park Dr, DLF Phase 5</option>
+              <option value="Heritage badminton academy">Heritage badminton academy</option>
+              <option value="Kadipur Industrial Area">Kadipur Industrial Area</option>
+              <option value="Spazedge IT Park">Spazedge IT Park</option>
+              <option value="JMD Megapolis">JMD Megapolis</option>
+              <option value="More Hypermart , Vipul business park">More Hypermart , Vipul business park</option>
+              <option value="Basant Valley Global School">Basant Valley Global School</option>
+              <option value="The Paras World School">The Paras World School</option>
+              <option value="Vipul Trade Centre">Vipul Trade Centre</option>
+              <option value="WorldMark Gurgaon, Maidawas Rd">WorldMark Gurgaon, Maidawas Rd</option>
+              <option value="Artemis Hospital Gurgaon">Artemis Hospital Gurgaon</option>
+              <option value="Western Peripheral Expy, Gurugram">Western Peripheral Expy, Gurugram</option>
+              <option value="Raghunath Bal Vidya Mandir School">Raghunath Bal Vidya Mandir School</option>
+              <option value="ESIC Hospital">ESIC Hospital</option>
+              <option value="S N International School">S N International School</option>
+              <option value="Sector 29 Gurgaon Pubs and Bars">Sector 29 Gurgaon Pubs and Bars</option>
+              <option value="Emaar Business Park">Emaar Business Park</option>
+              <option value="Badshahpur Sohna Rd Hwy, Malibu Town">Badshahpur Sohna Rd Hwy, Malibu Town</option>
+              <option value="American Express">American Express</option>
+              <option value="IDFC FIRST Bank">IDFC FIRST Bank</option>
+              <option value="Sector 42-43">Sector 42-43</option>
+              <option value="Sector 53-54">Sector 53-54</option>
+              <option value="MGF Megacity Mall">MGF Megacity Mall</option>
+              <option value="Fortis hospital">Fortis hospital</option>
+              <option value="Double Infinity market">Double Infinity market</option>
+              <option value="Bamroli Cricket Ground">Bamroli Cricket Ground</option>
+              <option value="Aman Hospital">Aman Hospital</option>
+              <option value="Kidzee">Kidzee</option>
+              <option value="AIPL Business Club">AIPL Business Club</option>
+              <option value="Narayana e-Techno School - Manesar">Narayana e-Techno School - Manesar</option>
+              <option value="HDFC Bank, Pataudi Rd">HDFC Bank, Pataudi Rd</option>
+              <option value="SS Omnia, Sector 86">SS Omnia, Sector 86</option>
+              <option value="Canara Bank - Nawada Fatehpur">Canara Bank - Nawada Fatehpur</option>
+              <option value="ICICI Bank ATM, Sector 86">ICICI Bank ATM, Sector 86</option>
+              <option value="Silver Streak Multi Speciality">Silver Streak Multi Speciality</option>
+              <option value="RHM Public School">RHM Public School</option>
+              <option value="Minda Industries Nawada Fatehpur">Minda Industries Nawada Fatehpur</option>
+              <option value="Numberdar market, IMT Manesar">Numberdar market, IMT Manesar</option>
+              <option value="Sodhi's Supermarket, Sector 82">Sodhi's Supermarket, Sector 82</option>
+              <option value="M3M SCO Shop cum Office">M3M SCO Shop cum Office</option>
+              <option value="Quality Inn Gurgaon">Quality Inn Gurgaon</option>
+              <option value="Minda Industries Limited">Minda Industries Limited</option>
+              <option value="Central Park II Road">Central Park II Road</option>
+              <option value="Omex City Centre Mall">Omex City Centre Mall</option>
+              <option value="Damdama Lake Rd">Damdama Lake Rd</option>
+              <option value="Sohna Hill Viewpoint">Sohna Hill Viewpoint</option>
+              <option value="Hero Honda Chowk">Hero Honda Chowk</option>
+              <option value="Jagdish Super Market">Jagdish Super Market</option>
+              <option value="Gyaananda School">Gyaananda School</option>
+              <option value="Bharat Petroleum Shree Shyam Filling">Bharat Petroleum Shree Shyam Filling</option>
+              <option value="The Club, International City">The Club, International City</option>
+              <option value="ICICI BANK ATM, Annapurna MKT">ICICI BANK ATM, Annapurna MKT</option>
+              <option value="ESIC Dispensary">ESIC Dispensary</option>
+              <option value="Canara Bank New Palam Vihar">Canara Bank New Palam Vihar</option>
+              <option value="Dwarka">Dwarka</option>
+              <option value="Radha Krishan Mandir">Radha Krishan Mandir</option>
+              <option value="Daultabad Stadium">Daultabad Stadium</option>
+              <option value="Gurgaon Gramin Bank">Gurgaon Gramin Bank</option>
+              <option value="SCR Model School">SCR Model School</option>
+              <option value="Golden Tulip Suites Gurgaon">Golden Tulip Suites Gurgaon</option>
+              <option value="South point Mall">South point Mall</option>
+              <option value="Pathways School Gurgaon">Pathways School Gurgaon</option>
+              <option value="Kidzee Sec-93">Kidzee Sec-93</option>
+              <option value="Jhankar Group of Institutions">Jhankar Group of Institutions</option>
+              <option value="Dwarka Expy/Northern Peripheral Rd">Dwarka Expy/Northern Peripheral Rd</option>
+              <option value="Dwarka expressway Basai crossing">Dwarka expressway Basai crossing</option>
+              <option value="Sethi Hospital">Sethi Hospital</option>
+              <option value="The Sixth Element School">The Sixth Element School</option>
+              <option value="lam World School">K.R.Mangalam World School</option>
+              <option value="Sushil Park">Sushil Park</option>
+              <option value="Peer Baba Ki Mazar">Peer Baba Ki Mazar</option>
+              <option value="Punjab National Bank">Punjab National Bank</option>
+              <option value="CoNexus.Life B35">CoNexus.Life B35</option>
+              <option value="Medhaam Pre School & Daycare">Medhaam Pre School & Daycare</option>
+              <option value="Moksh Wellness Pvt Ltd.">Moksh Wellness Pvt Ltd.</option>
+              <option value="Marriott Courtyard">Marriott Courtyard</option>
+              <option value="Athena">Athena</option>
+              <option value="Bharat Petroleum Petrol Pump">Bharat Petroleum Petrol Pump</option>
+              <option value="Sanskar Jyoti School">Sanskar Jyoti School</option>
+              <option value="Arc Multi Speciality Hospital">Arc Multi Speciality Hospital</option>
+              <option value="Medeor Hospital, Manesar">Medeor Hospital, Manesar</option>
+              <option value="Guls' Kitchen">Guls' Kitchen</option>
+              <option value="The Nook">The Nook</option>
+              <option value="Open Tap">Open Tap</option>
+              <option value="Frescos">Frescos</option>
+              <option value="Subway">Subway</option>
+              <option value="BOB ATM">BOB ATM</option>
+              <option value="PNB ATM">PNB ATM</option>
+              <option value="Citibank ATM">Citibank ATM</option>
+              <option value="Gurugram Hospital">Gurugram Hospital</option>
+              <option value="Govind Hospital">Govind Hospital</option>
+              <option value="Manish Gallexie 91">Manish Gallexie 91</option>
+              <option value="Holiday Inn Gurugram">Holiday Inn Gurugram</option>
+              <option value="Airport">Airport</option>
+              <option value="Vatika Sector Road">Vatika Sector Road</option>
+              <option value="Gurugram University Sector 87">Gurugram University Sector 87</option>
+              <option value="CNG Petrol Pump">CNG Petrol Pump</option>
+              <option value="Vivek Model School">Vivek Model School</option>
+              <option value="Dwarka Expressway Link Road">Dwarka Expressway Link Road</option>
+              <option value="McDonald's India 24 Hours">McDonald's India 24 Hours</option>
+              <option value="Garhi Budhera Road">Garhi Budhera Road</option>
+              <option value="Iris Broadway Gurugram">Iris Broadway Gurugram</option>
+              <option value="iGrow Montessori Play School">iGrow Montessori Play School</option>
+              <option value="Badsa AMS Hospital">Badsa AMS Hospital</option>
+              <option value="GlobalHealthcare Multispeciality">GlobalHealthcare Multispeciality</option>
+              <option value="Cricket Academy">Cricket Academy</option>
+              <option value="V'Lante Mall">V'Lante Mall</option>
+              <option value="NH 48 Gurugram">NH 48 Gurugram</option>
+              <option value="Patli Railway Station">Patli Railway Station</option>
+              <option value="V Club">V Club</option>
+              <option value="Fitso Sector 48 Spuddy, Badminton">Fitso Sector 48 Spuddy, Badminton</option>
+              <option value="Lotus Valley International School">Lotus Valley International School</option>
+              <option value="Badshapur Sohna Highway">Badshapur Sohna Highway</option>
+              <option value="Bharat Singh fuel company">Bharat Singh fuel company</option>
+              <option value="Basai Enclave Park">Basai Enclave Park</option>
+              <option value="The Holy Kingdom Public School">The Holy Kingdom Public School</option>
+              <option value="Shiv Mandir">Shiv Mandir</option>
+              <option value="Open gym garden">Open gym garden</option>
+              <option value="KFG sports club Parking">KFG sports club Parking</option>
+              <option value="Sector 37 Police Station">Sector 37 Police Station</option>
+              <option value="Alfaa Health Care Hospital">Alfaa Health Care Hospital</option>
+              <option value="Euro Intl School Sec-51">Euro Intl School Sec-51</option>
+              <option value="Mall Fifty One">Mall Fifty One</option>
+              <option value="NH 8, Sector 15 Part 2">NH 8, Sector 15 Part 2</option>
+              <option value="K.D. Hospital">K.D. Hospital</option>
+              <option value="Gurgaon Road">Gurgaon Road</option>
+              <option value="Saint Paul's School">Saint Paul's School</option>
+              <option value="Indus valley Public School">Indus valley Public School</option>
+              <option value="MDS Public School">MDS Public School</option>
+              <option value="Harsaru Village Bus Stop">Harsaru Village Bus Stop</option>
+              <option value="Jadon Pharmacy">Jadon Pharmacy</option>
+              <option value="JMS Crosswalk">JMS Crosswalk</option>
+              <option value="Essar Petrol Pump">Essar Petrol Pump</option>
+              <option value="The Heritage Pride Modern School">The Heritage Pride Modern School</option>
+              <option value="SS Omnia Mall">SS Omnia Mall</option>
+              <option value="Miracles Apollo Cradle / Spectra">Miracles Apollo Cradle / Spectra</option>
+              <option value="Gurgaon Toll">Gurgaon Toll</option>
+              <option value="Rajiv Chowk">Rajiv Chowk</option>
+              <option value="Lions Public School">Lions Public School</option>
+              <option value="M3M Cosmopolitan">M3M Cosmopolitan</option>
+              <option value="M3M International Financial Center (IFC)">M3M International Financial Center (IFC)</option>
+              <option value="Badshahpur Sohna Rd Hwy, Haryana">Badshahpur Sohna Rd Hwy, Haryana</option>
+              <option value="NH 48, Sector 78">NH 48, Sector 78</option>
+              <option value="ICICI ATM">ICICI ATM</option>
+              <option value="Sai Sports Club cricket ground">Sai Sports Club cricket ground</option>
+              <option value="Silver Streak Hospital">Silver Streak Hospital</option>
+              <option value="Gurukul Preschool">Gurukul Preschool</option>
+              <option value="HP PETROL PUMP Unnamed Rd">HP PETROL PUMP Unnamed Rd</option>
+              <option value="INOX Cinema">INOX Cinema</option>
+              <option value="Nawada Cricket Accadmy">Nawada Cricket Accadmy</option>
+              <option value="Sanjeevani Hospital">Sanjeevani Hospital</option>
+              <option value="Baba Kanala Chowk">Baba Kanala Chowk</option>
+              <option value="Pataudi Rd">Pataudi Rd</option>
+              <option value="Dronacharya College of Engineering">Dronacharya College of Engineering</option>
+              <option value="Netaji Subhash Marg">Netaji Subhash Marg</option>
+              <option value="NH 248 A">NH 248 A</option>
+              <option value="Faridabad">Faridabad</option>
+              <option value="Delhi-Mumbai Expressway">Delhi-Mumbai Expressway</option>
+              <option value="IMT Sohna">IMT Sohna</option>
+              <option value="Kundli Manesar Palwal Expressway">Kundli Manesar Palwal Expressway</option>
+              <option value="KR Mangalam">KR Mangalam</option>
+              <option value="SCJ Academy">SCJ Academy</option>
+              <option value="Taj">Taj</option>
+              <option value="Ascendas OneHub Gurgaon Business Park">Ascendas OneHub Gurgaon Business Park</option>
+              <option value="GD Goenka High School">GD Goenka High School</option>
+              <option value="Badshahpur Sohna Rd Hwy, Rajoria Ngr">Badshahpur Sohna Rd Hwy, Rajoria Ngr</option>
+              <option value="GD Goenka University, Gurugram">GD Goenka University, Gurugram</option>
+              <option value="Jhankar Senior Secondary School">Jhankar Senior Secondary School</option>
+              <option value="Entertainland Mall">Entertainland Mall</option>
+              <option value="Aravalli Hills">Aravalli Hills</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Red Roses Public School">Red Roses Public School</option>
+              <option value="Galleria Market">Galleria Market</option>
+              <option value="Fortis Memorial Research Institute">Fortis Memorial Research Institute</option>
+              <option value="The Westin Hotel">The Westin Hotel</option>
+              <option value="BM College of Technology & Mgmt">BM College of Technology & Mgmt</option>
+              <option value="NeoSquare Shopping Mall">NeoSquare Shopping Mall</option>
+              <option value="Glorious World School">Glorious World School</option>
+              <option value="MG Road Metro Station">MG Road Metro Station</option>
+              <option value="Lovely Public School">Lovely Public School</option>
+              <option value="AIPL Business Centre">AIPL Business Centre</option>
+              <option value="Signature Advanced Hospital">Signature Advanced Hospital</option>
+              <option value="iON Digital Zone, Gurgaon">iON Digital Zone, Gurgaon</option>
+              <option value="Sapphire 93 Mall">Sapphire 93 Mall</option>
+              <option value="Signature tower">Signature tower</option>
+              <option value="Jharsha Chowk">Jharsha Chowk</option>
+              <option value="Umang Bhawaj Chawk">Umang Bhawaj Chawk</option>
+              <option value="Basai Dhancourt Railway Station">Basai Dhancourt Railway Station</option>
+              <option value="AIIMS Jhajjar">AIIMS Jhajjar</option>
+              <option value="Vedic Hospital">Vedic Hospital</option>
+              <option value="Balaji Hospital">Balaji Hospital</option>
+              <option value="SGT Medical College">SGT Medical College</option>
+              <option value="Garima Public School">Garima Public School</option>
+              <option value="Tigra Market">Tigra Market</option>
+              <option value="Imperfecto Patio">Imperfecto Patio</option>
+              <option value="ISKCON Temple">ISKCON Temple</option>
+              <option value="APJ Abdul Kalam Park">APJ Abdul Kalam Park</option>
+              <option value="Ramprastha Police Post">Ramprastha Police Post</option>
+              <option value="Taxila cricket ground">Taxila cricket ground</option>
+              <option value="St Pauls School">St Pauls School</option>
+              <option value="Edge towers tennis court">Edge towers tennis court</option>
+              <option value="SGT UHTC Basai">SGT UHTC Basai</option>
+              <option value="Hanuman & Shani Mandir">Hanuman & Shani Mandir</option>
+              <option value="KFG Sports Club">KFG Sports Club</option>
+              <option value="Metro Station Kankrola sec 87">Metro Station Kankrola sec 87</option>
+              <option value="Broadways International School">Broadways International School</option>
+              <option value="Sultanpur National Park">Sultanpur National Park</option>
+              <option value="Dwarka Expy, Block D, New Palam Vihar">Dwarka Expy, Block D, New Palam Vihar</option>
+              <option value="Global Foyer Mall,  Palam Vihar">Global Foyer Mall,  Palam Vihar</option>
+              <option value="Ocus Medley Mall">Ocus Medley Mall</option>
+              <option value="The Westin Gurgaon">The Westin Gurgaon</option>
+              <option value="Colonel's Central Academy">Colonel's Central Academy</option>
+              <option value="Trident Hotel Gurgaon">Trident Hotel Gurgaon</option>
+              <option value="Signum 107">Signum 107</option>
+              <option value="Nora Solomon Medicenter">Nora Solomon Medicenter</option>
+              <option value="Najafgarh Jheel Bird Sanctuary">Najafgarh Jheel Bird Sanctuary</option>
+              <option value="INXT High Street">INXT High Street</option>
+              <option value="iGrow Montessori">iGrow Montessori</option>
+              <option value="Urusvati Museum Of Folklore">Urusvati Museum Of Folklore</option>
+              <option value="Prakash Hospital">Prakash Hospital</option>
+              <option value="Aravali Adventure Hill">Aravali Adventure Hill</option>
+              <option value="KDM Public School, Sohna">KDM Public School, Sohna</option>
+              <option value="Badshahpur Sohna Rd Hwy, Raghav Vatika">Badshahpur Sohna Rd Hwy, Raghav Vatika</option>
+              <option value="Discount Department Store">Discount Department Store</option>
+              <option value="Kinder Care Playschool">Kinder Care Playschool</option>
+              <option value="Kangaroo Kids Preschool">Kangaroo Kids Preschool</option>
+              <option value="BigBazaar">BigBazaar</option>
+              <option value="Sohna Rd">Sohna Rd</option>
+              <option value="SRS Cinemas">SRS Cinemas</option>
+              <option value="VIBGYOR High School">VIBGYOR High School</option>
+              <option value="Gyan Bharti Public School">Gyan Bharti Public School</option>
+              <option value="Keshav Pharmacy">Keshav Pharmacy</option>
+              <option value="Diamond Public School">Diamond Public School</option>
+              <option value="Mother land public school">Mother land public school</option>
+              <option value="Kamal Hospital">Kamal Hospital</option>
+              <option value="Creative Tennis Academy">Creative Tennis Academy</option>
+              <option value="Shanti Tennis Academy">Shanti Tennis Academy</option>
+              <option value="Lotus Sports Academy">Lotus Sports Academy</option>
+              <option value="ISBM College">ISBM College</option>
+              <option value="Huda city center">Huda city center</option>
+              <option value="Centrum Plaza">Centrum Plaza</option>
+              <option value="Shoppers Stop">Shoppers Stop</option>
+              <option value="Suncity Market">Suncity Market</option>
+              <option value="Govt. Model Sanskriti Primary School">Govt. Model Sanskriti Primary School</option>
+              <option value="Cyber  Park">Cyber  Park</option>
+              <option value="IILM School of Management">IILM School of Management</option>
+              <option value="Shree Deep Petrol Pump">Shree Deep Petrol Pump</option>
+              <option value="Gurugram City Bus Depot">Gurugram City Bus Depot</option>
+              <option value="Starbucks">Starbucks</option>
+              <option value="Khatu Shyam Mandir">Khatu Shyam Mandir</option>
+              <option value="Mps World School">Mps World School</option>
+              <option value="Northern Peripheral Road">Northern Peripheral Road</option>
+              <option value="Tomar Hospital">Tomar Hospital</option>
+              <option value="Taj City Centre Hotel">Taj City Centre Hotel</option>
+              <option value="DPS Sector 103">DPS Sector 103</option>
+              <option value="Cambridge Montessori Preschool">Cambridge Montessori Preschool</option>
+              <option value="Shree Balaji College">Shree Balaji College</option>
+              <option value="New Water Pond">New Water Pond</option>
+              <option value="Sun's Spa">Sun's Spa</option>
+              <option value="Cool Deck Coffee">Cool Deck Coffee</option>
+              <option value="Shivai Hospital">Shivai Hospital</option>
+              <option value="Solitaire Banquet Hall">Solitaire Banquet Hall</option>
+              <option value="Huda Park">Huda Park</option>
+              <option value="Museum of Folk and Tribal Art">Museum of Folk and Tribal Art</option>
+              <option value="Ajit Stadium Dhanwapur">Ajit Stadium Dhanwapur</option>
+              <option value="Nazaf garh - Gurgaon Road">Nazafgarh - Gurgaon Road</option>
+              <option value="Cambridge Pre-School">Cambridge Pre-School</option>
+              <option value="Euro Int. School">Euro Int. School</option>
+              <option value="Society Park">Society Park</option>
+              <option value="Raheja Market">Raheja Market</option>
+              <option value="Dishoom Cinemas">Dishoom Cinemas</option>
+              <option value="Suraj PG Degree College, Sec -75">Suraj PG Degree College, Sec -75</option>
+              <option value="Dr Naveen Chawla General Physician">Dr Naveen Chawla General Physician</option>
+              <option value="NH248A">NH248A</option>
+              <option value="Reach 3 Roads Shopping Mall">Reach 3 Roads Shopping Mall</option>
+              <option value="SportsCube Center(Sports Complex)">SportsCube Center(Sports Complex)</option>
+              <option value="Southern Periphery Road">Southern Periphery Road</option>
+              <option value="Pragyanam School">Pragyanam School</option>
+              <option value="Old Bengali Market">Old Bengali Market</option>
+              <option value="St. Angel's Global">St. Angel's Global</option>
+              <option value="Ninex Mall">Ninex Mall</option>
+              <option value="Oriental Bank of Commerce">Oriental Bank of Commerce</option>
+              <option value="Shaheed Bhagat Singh Chowk">Shaheed Bhagat Singh Chowk</option>
+              <option value="ISKCON">ISKCON</option>
+              <option value="Meditree Market">Meditree Market</option>
+              <option value="Leopard hills">Leopard hills</option>
+              <option value="DLF5 Summit Plaza">DLF5 Summit Plaza</option>
+              <option value="Kriti Hospital">Kriti Hospital</option>
+              <option value="Anand Multispeciality Hospital">Anand Multispeciality Hospital</option>
+              <option value="JMD Regent Mall">JMD Regent Mall</option>
+              <option value="Eye Doctors at Krishna Netralaya">Eye Doctors at Krishna Netralaya</option>
+              <option value="Tagore Public School">Tagore Public School</option>
+              <option value="Syndicate Bank">Syndicate Bank</option>
+              <option value="Star Nursery">Star Nursery</option>
+              <option value="HP Petrol Pump">HP Petrol Pump</option>
+              <option value="Green garden narsari">Green garden narsari</option>
+              <option value="Lotus Valley School">Lotus Valley School</option>
+              <option value="Fresco Market">Fresco Market</option>
+              <option value="Insfire Sports">Insfire Sports</option>
+              <option value="Emerald Plaza">Emerald Plaza</option>
+              <option value="Shiva Temple Tigra">Shiva Temple Tigra</option>
+              <option value="McDonald's India">McDonald's India</option>
+              <option value="M3M IFC">M3M IFC</option>
+              <option value="The Sylvan Trails School">The Sylvan Trails School</option>
+              <option value="Leisure Valley Park">Leisure Valley Park</option>
+              <option value="Knowledge Tree World School">Knowledge Tree World School</option>
+              <option value="Presidium School Gurgoan">Presidium School Gurgoan</option>
+              <option value="Manav Rachna School">Manav Rachna School</option>
+              <option value="Windsor International School">Windsor International School</option>
+              <option value="Dreamz Cafe">Dreamz Cafe</option>
+              <option value="Biryani Shah">Biryani Shah</option>
+              <option value="KLAY Play School">KLAY Play School</option>
+              <option value="Spaze Business Park">Spaze Business Park</option>
+              <option value="Kheri Railway station">Kheri Railway station</option>
+              <option value="Unitech Business Zone">Unitech Business Zone</option>
+              <option value="Delhi Public School Gurugram Sector 67A">Delhi Public School Gurugram Sector 67A</option>
+              <option value="Samrat Mihir Bhoj Road">Samrat Mihir Bhoj Road</option>
+              <option value="AIIMS">AIIMS</option>
+              <option value="The Hive">The Hive</option>
+              <option value="Gurugram Rd">Gurugram Rd</option>
+              <option value="Stymerra Chowk">Stymerra Chowk</option>
+              <option value="Sector 102 Dhankot">Sector 102 Dhankot</option>
+              <option value="Shri Hanuman Ji Mandir">Shri Hanuman Ji Mandir</option>
+              <option value="MCC Cricket Ground Dhankot">MCC Cricket Ground Dhankot</option>
+              <option value="The Shri Ram School Aravali">The Shri Ram School Aravali</option>
+              <option value="Taj City Centre Gurugram">Taj City Centre Gurugram</option>
+              <option value="Minda Industries Corporate Office">Minda Industries Corporate Office</option>
+              <option value="Rampura Flyover, Naurangpur Rd">Rampura Flyover, Naurangpur Rd</option>
+              <option value="Manesar toll plaza - Kherki Daula">Manesar toll plaza - Kherki Daula</option>
+              <option value="Imt Manesar, Gurugram">Imt Manesar, Gurugram</option>
+              <option value="Holiday Inn">Holiday Inn</option>
+              <option value="Sector 84 Road">Sector 84 Road</option>
+              <option value="Skyview Corporate Park">Skyview Corporate Park</option>
+            </datalist>
+
+            <input type="number" id="range" placeholder="Enter range (km)">
+            <button id="get-sectors">Get Sector Recommendations</button>
+          </div>
+          
+          <!-- Section to display sector recommendations -->
+          <ul class="recommendation-list" id="sector-list"></ul>
+          
+          <!-- Section to display house/flat recommendations -->
+          <ul class="recommendation-list" id="house-list"></ul>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2024 <a href="#">Real-Estate-Analytics</a>. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    document.getElementById('get-sectors').addEventListener('click', async () => {
+      const location = document.getElementById('location').value;
+      const range = document.getElementById('range').value;
+      const sectorList = document.getElementById('sector-list');
+      const houseList = document.getElementById('house-list');
+
+      // Clear previous results
+      sectorList.innerHTML = '';
+      houseList.innerHTML = '';
+
+      try {
+        // Fetch sector recommendations
+        const sectorResponse = await fetch(`http://65.0.72.57:7878/property?location=${location}&radius=${range}`, {
+          method: 'POST'
+        });
+
+        if (!sectorResponse.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const sectors = await sectorResponse.json();
+        console.log('Sectors:', sectors);
+
+        if (!Array.isArray(sectors)) {
+          console.error('Expected an array of sectors, but got:', sectors);
+          throw new Error('Expected an array of sectors');
+        }
+
+        // Display sector recommendations
+        sectors.forEach(sector => {
+          const li = document.createElement('li');
+          li.textContent = sector.name;
+          li.addEventListener('click', async () => {
+            // Fetch house recommendations for the selected sector
+            const houseResponse = await fetch(`http://65.0.72.57:7878/recommend?location=${location}&radius=${range}&apartment_name=${encodeURIComponent(sector.name)}`, {
+              method: 'POST'
+            });
+
+            if (!houseResponse.ok) {
+              throw new Error('Network response was not ok');
+            }
+
+            const houses = await houseResponse.json();
+            console.log('Houses:', houses);
+
+            if (!Array.isArray(houses)) {
+              console.error('Expected an array of houses, but got:', houses);
+              throw new Error('Expected an array of houses');
+            }
+
+            // Display house recommendations
+            houseList.innerHTML = '';
+            houses.forEach(house => {
+              const houseLi = document.createElement('li');
+              houseLi.textContent = house.name;
+              houseList.appendChild(houseLi);
+            });
+          });
+          sectorList.appendChild(li);
+        });
+      } catch (error) {
+        console.error('Error fetching recommendations:', error);
+      }
+    });
+  </script>
+</body>
+</html>
