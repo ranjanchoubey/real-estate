@@ -977,11 +977,21 @@
             <button id="get-sectors">Get Sector Recommendations</button>
           </div>
           
-          <!-- Section to display sector recommendations -->
-          <ul class="recommendation-list" id="sector-list"></ul>
-          
-          <!-- Section to display house/flat recommendations -->
-          <ul class="recommendation-list" id="house-list"></ul>
+          <!-- <div id="api-response-box"></div> -->
+        
+        <div>
+          <h2></h2>
+          <ul id="sector-list"></ul>
+        </div>
+        
+        <div>
+          <h2></h2>
+          <ul id="house-list"></ul>
+        </div>
+        
+        <div>
+          <h2></h2>
+          <ul id="apartments-list"></ul>
         </div>
       </section>
     </article>
@@ -993,74 +1003,11 @@
       </div>
     </div>
   </footer>
+  
+    
   <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-    document.getElementById('get-sectors').addEventListener('click', async () => {
-      const location = document.getElementById('location').value;
-      const range = document.getElementById('range').value;
-      const sectorList = document.getElementById('sector-list');
-      const houseList = document.getElementById('house-list');
 
-      // Clear previous results
-      sectorList.innerHTML = '';
-      houseList.innerHTML = '';
-
-      try {
-        // Fetch sector recommendations
-        const sectorResponse = await fetch(`http://65.0.72.57:7878/property?location=${location}&radius=${range}`, {
-          method: 'POST'
-        });
-
-        if (!sectorResponse.ok) {
-          throw new Error('Network response was not ok');
-        }
-
-        const sectors = await sectorResponse.json();
-        console.log('Sectors:', sectors);
-
-        if (!Array.isArray(sectors)) {
-          console.error('Expected an array of sectors, but got:', sectors);
-          throw new Error('Expected an array of sectors');
-        }
-
-        // Display sector recommendations
-        sectors.forEach(sector => {
-          const li = document.createElement('li');
-          li.textContent = sector.name;
-          li.addEventListener('click', async () => {
-            // Fetch house recommendations for the selected sector
-            const houseResponse = await fetch(`http://65.0.72.57:7878/recommend?location=${location}&radius=${range}&apartment_name=${encodeURIComponent(sector.name)}`, {
-              method: 'POST'
-            });
-
-            if (!houseResponse.ok) {
-              throw new Error('Network response was not ok');
-            }
-
-            const houses = await houseResponse.json();
-            console.log('Houses:', houses);
-
-            if (!Array.isArray(houses)) {
-              console.error('Expected an array of houses, but got:', houses);
-              throw new Error('Expected an array of houses');
-            }
-
-            // Display house recommendations
-            houseList.innerHTML = '';
-            houses.forEach(house => {
-              const houseLi = document.createElement('li');
-              houseLi.textContent = house.name;
-              houseList.appendChild(houseLi);
-            });
-          });
-          sectorList.appendChild(li);
-        });
-      } catch (error) {
-        console.error('Error fetching recommendations:', error);
-      }
-    });
-  </script>
 </body>
 </html>
