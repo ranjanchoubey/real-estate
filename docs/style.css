@@ -1829,3 +1829,25 @@ datalist {
   max-height: 200px; /* Adjust height as needed */
   overflow-y: auto;
 }
+/* ... existing code ... */
+
+.apartments-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.apartments-list li {
+  margin: 10px 0;
+}
+
+.apartments-list a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.apartments-list a:hover {
+  text-decoration: underline;
+}
+
+/* ... existing code ... */
