@@ -13,8 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const predictionValue = document.getElementById('prediction-value');
   const resultBox = document.getElementById('result-box');
   const getSectorsBtn = document.getElementById('get-sectors');
-
-  const apiUrl = 'https://real-estate-api-v3m0.onrender.com';
+  const apiResponseBox = document.getElementById('api-response-box'); // New element to display API response
 
   if (navOpenBtn && navCloseBtn && navbar) {
     navOpenBtn.addEventListener('click', () => {
@@ -94,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         floor_category: floorCategory
       };
 
-      fetch(`${apiUrl}/predict`, {
+      fetch('https://real-estate-api-v3m0.onrender.com/property', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -116,95 +115,81 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-
   if (getSectorsBtn) {
+    console.log('Get Sectors button found');
     getSectorsBtn.addEventListener('click', function() {
+      console.log('Get Sectors button clicked');
       const location = document.getElementById('location').value;
-      const radius = parseInt(document.getElementById('range').value, 10); // Ensure radius is an integer
-
-      // Log the data being sent to the server
-      console.log('Sending data:', { location, radius });
-
-      fetch(`${apiUrl}/get_apartments_within_radius`, {
+      const radius = document.getElementById('range').value;
+  
+      console.log('Location:', location);
+      console.log('Radius:', radius);
+  
+      fetch('https://real-estate-api-v3m0.onrender.com/get_apartments_within_radius', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ location, radius })
+        body: JSON.stringify({
+          location: location,
+          radius: parseInt(radius)
+        })
       })
-      .then(response => {
-        if (!response.ok) {
-          return response.json().then(err => {
-            throw new Error(`Network response was not ok: ${err.message}`);
+      .then(response => response.json())
+      .then(data => {
+        console.log('API response:', data);  
+        const sectorList = document.getElementById('sector-list');
+        sectorList.innerHTML = ''; // Clear previous results
+  
+        if (data.sectors) {
+          data.sectors.forEach(sector => {
+            const li = document.createElement('li');
+            li.textContent = sector;
+            sectorList.appendChild(li);
           });
         }
-        return response.json();
-      })
-      .then(data => {
-        const sectorList = document.getElementById('sector-list');
+  
         const houseList = document.getElementById('house-list');
-        sectorList.innerHTML = '';
-        houseList.innerHTML = '';
-
-        if (data.apartments_within_radius && Array.isArray(data.apartments_within_radius)) {
-          data.apartments_within_radius.forEach(apartment => {
-            const listItem = document.createElement('li');
-            const link = document.createElement('a');
-            link.href = '#';
-            link.textContent = apartment.PropertyName;
-            link.addEventListener('click', function(event) {
-              event.preventDefault();
-              fetchRecommendations(apartment.PropertyName);
-            });
-            listItem.appendChild(link);
-            sectorList.appendChild(listItem);
+        houseList.innerHTML = ''; // Clear previous results
+  
+        if (data.houses) {
+          data.houses.forEach(house => {
+            const li = document.createElement('li');
+            li.textContent = house;
+            houseList.appendChild(li);
           });
-        } else {
-          console.error('Invalid data format');
+        }
+
+        // Display apartments within radius
+        const apartmentsList = document.getElementById('apartments-list');
+        apartmentsList.innerHTML = ''; // Clear previous results
+
+        if (data.apartments_within_radius) {
+          data.apartments_within_radius.forEach(apartment => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.textContent = apartment.PropertyName;
+            a.href = apartment.Link;
+            a.target = '_blank';
+            li.appendChild(a);
+            apartmentsList.appendChild(li);
+          });
+        }
+
+        // Display API response
+        if (apiResponseBox) {
+          apiResponseBox.textContent = JSON.stringify(data, null, 2);
         }
       })
       .catch(error => {
-        console.error('Error fetching sector data:', error);
+        console.error('Error:', error);
+        if (apiResponseBox) {
+          apiResponseBox.textContent = 'Error: ' + error;
+        }
       });
     });
+  } else {
+    console.log('Get Sectors button not found');
   }
-
-  function fetchRecommendations(propertyName) {
-    fetch(`${apiUrl}/recommend_properties`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ property_name: propertyName })
-    })
-    .then(response => {
-      if (!response.ok) {
-        return response.json().then(err => {
-          throw new Error(`Network response was not ok: ${err.message}`);
-        });
-      }
-      return response.json();
-    })
-    .then(data => {
-      const houseList = document.getElementById('house-list');
-      houseList.innerHTML = '';
-
-      if (Array.isArray(data)) {
-        data.forEach(house => {
-          const listItem = document.createElement('li');
-          const link = document.createElement('a');
-          link.href = house.Link;
-          link.textContent = house.PropertyName;
-          link.target = '_blank'; // Open link in a new tab
-          listItem.appendChild(link);
-          houseList.appendChild(listItem);
-        });
-      } else {
-        console.error('Invalid data format');
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching house recommendations:', error);
-    });
-  }
+  
 });
