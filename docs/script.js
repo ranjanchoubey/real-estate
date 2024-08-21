@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         floor_category: floorCategory
       };
 
-      fetch('http://real-estate-api-v3m0.onrender.com/predict', {
+      fetch('https://real-estate-api-v3m0.onrender.com/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
