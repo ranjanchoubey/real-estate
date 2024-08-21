@@ -1,0 +1,2917 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_075a9ddfa08c259174118a9893c94cc7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            bottom: 50px; left: 50px; width: 150px; height: 150px; 
+            background-color: white; z-index:9999; font-size:14px;
+            border:2px solid grey; padding: 10px;">
+    <b>Price per sqft</b><br>
+    <i class="fa fa-map-marker fa-2x" style="color:green"></i> < 7000<br>
+    <i class="fa fa-map-marker fa-2x" style="color:orange"></i> 7000 - 9999<br>
+    <i class="fa fa-map-marker fa-2x" style="color:red"></i> >= 10000<br>
+</div>
+    
+            <div class="folium-map" id="map_075a9ddfa08c259174118a9893c94cc7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_075a9ddfa08c259174118a9893c94cc7 = L.map(
+                "map_075a9ddfa08c259174118a9893c94cc7",
+                {
+                    center: [28.43992952380952, 77.02244285714286],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cf38486e872073ff5c975297d246bcf1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_cf38486e872073ff5c975297d246bcf1.addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var marker_afeafb185d98c9fa1afcae42e78afe73 = L.marker(
+                [28.4484, 77.021],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_c6f2ff1458e001e432722dc30b85ee0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_afeafb185d98c9fa1afcae42e78afe73.setIcon(icon_c6f2ff1458e001e432722dc30b85ee0a);
+        
+    
+        var popup_34009189e580985a3a4a93105e47dbae = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2f16806a8d7e5c15fa86b25e86877ca7 = $(`<div id="html_2f16806a8d7e5c15fa86b25e86877ca7" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> gwal pahari<br><b>Avg. Price per sqft:</b> 9585.777777777777<br><b>Avg Built up area:</b> 3056.1666666666665</div>`)[0];
+                popup_34009189e580985a3a4a93105e47dbae.setContent(html_2f16806a8d7e5c15fa86b25e86877ca7);
+            
+        
+
+        marker_afeafb185d98c9fa1afcae42e78afe73.bindPopup(popup_34009189e580985a3a4a93105e47dbae)
+        ;
+
+        
+    
+    
+            var marker_14cb8752c2dcc5ae1dcaf3669eb83d07 = L.marker(
+                [28.3515, 76.9428],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_c5899f6e6be354220a792c0d5581de3e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_14cb8752c2dcc5ae1dcaf3669eb83d07.setIcon(icon_c5899f6e6be354220a792c0d5581de3e);
+        
+    
+        var popup_bd07938d275876fb1b5e73e805b13bd3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fc676de53d463679e1cf7dd2d2947a63 = $(`<div id="html_fc676de53d463679e1cf7dd2d2947a63" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> manesar<br><b>Avg. Price per sqft:</b> 6702.25<br><b>Avg Built up area:</b> 1878.6</div>`)[0];
+                popup_bd07938d275876fb1b5e73e805b13bd3.setContent(html_fc676de53d463679e1cf7dd2d2947a63);
+            
+        
+
+        marker_14cb8752c2dcc5ae1dcaf3669eb83d07.bindPopup(popup_bd07938d275876fb1b5e73e805b13bd3)
+        ;
+
+        
+    
+    
+            var marker_287bac3be9b29204339ac4ee61e377fa = L.marker(
+                [28.3663, 76.9456],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_63a43c628f1b4b2ede60940f50a8e07a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_287bac3be9b29204339ac4ee61e377fa.setIcon(icon_63a43c628f1b4b2ede60940f50a8e07a);
+        
+    
+        var popup_a5935e98187b9d5f065b9d12909fbd8e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_88bc72ba4851818bda4079852afb9c77 = $(`<div id="html_88bc72ba4851818bda4079852afb9c77" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 1<br><b>Avg. Price per sqft:</b> 8249.833333333334<br><b>Avg Built up area:</b> 2327.8333333333335</div>`)[0];
+                popup_a5935e98187b9d5f065b9d12909fbd8e.setContent(html_88bc72ba4851818bda4079852afb9c77);
+            
+        
+
+        marker_287bac3be9b29204339ac4ee61e377fa.bindPopup(popup_a5935e98187b9d5f065b9d12909fbd8e)
+        ;
+
+        
+    
+    
+            var marker_423c2a4da1b483dff928411a364c6b31 = L.marker(
+                [28.475, 76.9715],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_1c9695069b291629a165ef4fc99b9da6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_423c2a4da1b483dff928411a364c6b31.setIcon(icon_1c9695069b291629a165ef4fc99b9da6);
+        
+    
+        var popup_f288b3599de46ee8368956950d863687 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_94bcbaf0a89f187ceda284dfa58dec97 = $(`<div id="html_94bcbaf0a89f187ceda284dfa58dec97" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 102<br><b>Avg. Price per sqft:</b> 10603.822429906542<br><b>Avg Built up area:</b> 1556.1308411214952</div>`)[0];
+                popup_f288b3599de46ee8368956950d863687.setContent(html_94bcbaf0a89f187ceda284dfa58dec97);
+            
+        
+
+        marker_423c2a4da1b483dff928411a364c6b31.bindPopup(popup_f288b3599de46ee8368956950d863687)
+        ;
+
+        
+    
+    
+            var marker_bdb9c2f171c75d5fc2885e908840b268 = L.marker(
+                [28.4949, 76.9845],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_764430d8eefe4eba932aff41252e64c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_bdb9c2f171c75d5fc2885e908840b268.setIcon(icon_764430d8eefe4eba932aff41252e64c6);
+        
+    
+        var popup_c9ba971e7b925643d1f6166205439422 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_46b8cad1383609395fbe2e8715c9f33b = $(`<div id="html_46b8cad1383609395fbe2e8715c9f33b" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 103<br><b>Avg. Price per sqft:</b> 7445.785714285715<br><b>Avg Built up area:</b> 1865.4285714285713</div>`)[0];
+                popup_c9ba971e7b925643d1f6166205439422.setContent(html_46b8cad1383609395fbe2e8715c9f33b);
+            
+        
+
+        marker_bdb9c2f171c75d5fc2885e908840b268.bindPopup(popup_c9ba971e7b925643d1f6166205439422)
+        ;
+
+        
+    
+    
+            var marker_acdbf33492552bea81bc22e476c741bd = L.marker(
+                [28.4788, 76.996],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_a83e3080145b6f3ebef6ac76bc429b0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_acdbf33492552bea81bc22e476c741bd.setIcon(icon_a83e3080145b6f3ebef6ac76bc429b0a);
+        
+    
+        var popup_09693c1b869ef52cc9f5759c568821c3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_962a2060c8a656a4243ea805a41ece17 = $(`<div id="html_962a2060c8a656a4243ea805a41ece17" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 104<br><b>Avg. Price per sqft:</b> 8890.134328358208<br><b>Avg Built up area:</b> 1835.5074626865671</div>`)[0];
+                popup_09693c1b869ef52cc9f5759c568821c3.setContent(html_962a2060c8a656a4243ea805a41ece17);
+            
+        
+
+        marker_acdbf33492552bea81bc22e476c741bd.bindPopup(popup_09693c1b869ef52cc9f5759c568821c3)
+        ;
+
+        
+    
+    
+            var marker_247475480362d8429b690b1a42499500 = L.marker(
+                [28.4952, 77.0114],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_b942fafba3cded01b1016a73e10e14ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_247475480362d8429b690b1a42499500.setIcon(icon_b942fafba3cded01b1016a73e10e14ba);
+        
+    
+        var popup_931c4c3f3aeaa570c2037c4916925684 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5601018af81b96d351adf74e94a260d6 = $(`<div id="html_5601018af81b96d351adf74e94a260d6" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 105<br><b>Avg. Price per sqft:</b> 10413.0<br><b>Avg Built up area:</b> 1118.1255</div>`)[0];
+                popup_931c4c3f3aeaa570c2037c4916925684.setContent(html_5601018af81b96d351adf74e94a260d6);
+            
+        
+
+        marker_247475480362d8429b690b1a42499500.bindPopup(popup_931c4c3f3aeaa570c2037c4916925684)
+        ;
+
+        
+    
+    
+            var marker_2406536cc221d972ea082b71a57b4373 = L.marker(
+                [28.500699999999995, 77.0003],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_29a5fb2fb4bf8247473686c7560e60e6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_2406536cc221d972ea082b71a57b4373.setIcon(icon_29a5fb2fb4bf8247473686c7560e60e6);
+        
+    
+        var popup_355693923ceef472e02a59ee278cc624 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_051a5d96c1a7ae9e05e0e0c89f5b1795 = $(`<div id="html_051a5d96c1a7ae9e05e0e0c89f5b1795" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 106<br><b>Avg. Price per sqft:</b> 8637.81081081081<br><b>Avg Built up area:</b> 1521.3513513513512</div>`)[0];
+                popup_355693923ceef472e02a59ee278cc624.setContent(html_051a5d96c1a7ae9e05e0e0c89f5b1795);
+            
+        
+
+        marker_2406536cc221d972ea082b71a57b4373.bindPopup(popup_355693923ceef472e02a59ee278cc624)
+        ;
+
+        
+    
+    
+            var marker_f65446fc2c72b75a15d1903c9c97b7d4 = L.marker(
+                [28.5052, 76.9729],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_003042dc261caf024e9e008442cf38b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f65446fc2c72b75a15d1903c9c97b7d4.setIcon(icon_003042dc261caf024e9e008442cf38b7);
+        
+    
+        var popup_bb7b2c75c3914102f26946e271e1e3c4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9fa870c7cb4ad422b8a78f8bae6c3dea = $(`<div id="html_9fa870c7cb4ad422b8a78f8bae6c3dea" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 107<br><b>Avg. Price per sqft:</b> 6643.9152542372885<br><b>Avg Built up area:</b> 1102.7966101694915</div>`)[0];
+                popup_bb7b2c75c3914102f26946e271e1e3c4.setContent(html_9fa870c7cb4ad422b8a78f8bae6c3dea);
+            
+        
+
+        marker_f65446fc2c72b75a15d1903c9c97b7d4.bindPopup(popup_bb7b2c75c3914102f26946e271e1e3c4)
+        ;
+
+        
+    
+    
+            var marker_2f51fc2e4ecfa4c5954af1b4e2efc09d = L.marker(
+                [28.5134, 76.983],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_8a35ce4aa30172c1b661c7ac3525518a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2f51fc2e4ecfa4c5954af1b4e2efc09d.setIcon(icon_8a35ce4aa30172c1b661c7ac3525518a);
+        
+    
+        var popup_790b0dced3e151a8f6a24b6fb45e8288 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c9e69c0fd773b76b3c4041a35225032a = $(`<div id="html_c9e69c0fd773b76b3c4041a35225032a" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 108<br><b>Avg. Price per sqft:</b> 10030.672413793103<br><b>Avg Built up area:</b> 1908.670400551724</div>`)[0];
+                popup_790b0dced3e151a8f6a24b6fb45e8288.setContent(html_c9e69c0fd773b76b3c4041a35225032a);
+            
+        
+
+        marker_2f51fc2e4ecfa4c5954af1b4e2efc09d.bindPopup(popup_790b0dced3e151a8f6a24b6fb45e8288)
+        ;
+
+        
+    
+    
+            var marker_4bfd7a5fcdebe6dc8e8e5dd9ea9897eb = L.marker(
+                [28.5073, 77.0089],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_dcc76dc4897aeb9b83f588e7508267e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4bfd7a5fcdebe6dc8e8e5dd9ea9897eb.setIcon(icon_dcc76dc4897aeb9b83f588e7508267e5);
+        
+    
+        var popup_ed8924009d07452b970e175763e8a0a5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1a13b7bb62b1d03103a5685c3468739a = $(`<div id="html_1a13b7bb62b1d03103a5685c3468739a" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 109<br><b>Avg. Price per sqft:</b> 12634.767441860466<br><b>Avg Built up area:</b> 2931.4418604651164</div>`)[0];
+                popup_ed8924009d07452b970e175763e8a0a5.setContent(html_1a13b7bb62b1d03103a5685c3468739a);
+            
+        
+
+        marker_4bfd7a5fcdebe6dc8e8e5dd9ea9897eb.bindPopup(popup_ed8924009d07452b970e175763e8a0a5)
+        ;
+
+        
+    
+    
+            var marker_654427ce1f0b1b30b8f98318816fe509 = L.marker(
+                [28.4469, 77.0106],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_a8b7d21d1626a9aefeb9ee70ee686eb1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_654427ce1f0b1b30b8f98318816fe509.setIcon(icon_a8b7d21d1626a9aefeb9ee70ee686eb1);
+        
+    
+        var popup_d2c200f9f52ba1654a1b84454004442a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ea213f2fc48c6af5bda60e5652d657c9 = $(`<div id="html_ea213f2fc48c6af5bda60e5652d657c9" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 10a<br><b>Avg. Price per sqft:</b> 11866.57142857143<br><b>Avg Built up area:</b> 1908.857142857143</div>`)[0];
+                popup_d2c200f9f52ba1654a1b84454004442a.setContent(html_ea213f2fc48c6af5bda60e5652d657c9);
+            
+        
+
+        marker_654427ce1f0b1b30b8f98318816fe509.bindPopup(popup_d2c200f9f52ba1654a1b84454004442a)
+        ;
+
+        
+    
+    
+            var marker_87bc4b7084db8df9797e4ae372c77c49 = L.marker(
+                [28.4531, 77.0202],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_2444602b6be06beca4f13595859c24e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_87bc4b7084db8df9797e4ae372c77c49.setIcon(icon_2444602b6be06beca4f13595859c24e0);
+        
+    
+        var popup_9a2e2c4e5c852232682c2ec86f15a160 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7d8f3eac2fb2b23fdd38941db8e6b186 = $(`<div id="html_7d8f3eac2fb2b23fdd38941db8e6b186" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 11<br><b>Avg. Price per sqft:</b> 8164.538461538462<br><b>Avg Built up area:</b> 1227.4615384615386</div>`)[0];
+                popup_9a2e2c4e5c852232682c2ec86f15a160.setContent(html_7d8f3eac2fb2b23fdd38941db8e6b186);
+            
+        
+
+        marker_87bc4b7084db8df9797e4ae372c77c49.bindPopup(popup_9a2e2c4e5c852232682c2ec86f15a160)
+        ;
+
+        
+    
+    
+            var marker_9c8bf3019a65102419bc04bec4f676d9 = L.marker(
+                [28.5145, 77.0197],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_3d71d0a79329b5ba4d3593b0b0e70eeb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_9c8bf3019a65102419bc04bec4f676d9.setIcon(icon_3d71d0a79329b5ba4d3593b0b0e70eeb);
+        
+    
+        var popup_8e03be41758e3b9359baaca4c8ffd650 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ed007fcf4e4370cbe7c8acc32e5024ee = $(`<div id="html_ed007fcf4e4370cbe7c8acc32e5024ee" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 110<br><b>Avg. Price per sqft:</b> 8905.608695652174<br><b>Avg Built up area:</b> 2549.782608695652</div>`)[0];
+                popup_8e03be41758e3b9359baaca4c8ffd650.setContent(html_ed007fcf4e4370cbe7c8acc32e5024ee);
+            
+        
+
+        marker_9c8bf3019a65102419bc04bec4f676d9.bindPopup(popup_8e03be41758e3b9359baaca4c8ffd650)
+        ;
+
+        
+    
+    
+            var marker_e1aa793d140fe3bbe880ebe3e4c1d216 = L.marker(
+                [28.523799999999998, 77.032],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_0f6f880c9ea6621a14c6250e2582aaed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e1aa793d140fe3bbe880ebe3e4c1d216.setIcon(icon_0f6f880c9ea6621a14c6250e2582aaed);
+        
+    
+        var popup_e4df628440efc6afbbf7be367f7c495f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8ca32a96c3ab5740aec92d364398f883 = $(`<div id="html_8ca32a96c3ab5740aec92d364398f883" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 111<br><b>Avg. Price per sqft:</b> 11692.545454545454<br><b>Avg Built up area:</b> 2346.6363636363635</div>`)[0];
+                popup_e4df628440efc6afbbf7be367f7c495f.setContent(html_8ca32a96c3ab5740aec92d364398f883);
+            
+        
+
+        marker_e1aa793d140fe3bbe880ebe3e4c1d216.bindPopup(popup_e4df628440efc6afbbf7be367f7c495f)
+        ;
+
+        
+    
+    
+            var marker_0c01a51d7cc1a94608c08691259a38b8 = L.marker(
+                [28.518900000000002, 77.0183],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_367f9fdce6b9aa139d6c827f275889ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0c01a51d7cc1a94608c08691259a38b8.setIcon(icon_367f9fdce6b9aa139d6c827f275889ad);
+        
+    
+        var popup_8cb5e278d6f0a066af82aa9a8e911406 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9132eeec45984aa5455870a8bd978697 = $(`<div id="html_9132eeec45984aa5455870a8bd978697" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 112<br><b>Avg. Price per sqft:</b> 12366.826086956522<br><b>Avg Built up area:</b> 3315.043043478261</div>`)[0];
+                popup_8cb5e278d6f0a066af82aa9a8e911406.setContent(html_9132eeec45984aa5455870a8bd978697);
+            
+        
+
+        marker_0c01a51d7cc1a94608c08691259a38b8.bindPopup(popup_8cb5e278d6f0a066af82aa9a8e911406)
+        ;
+
+        
+    
+    
+            var marker_ed3e7a7721bc8a4c1482e48abba8283d = L.marker(
+                [28.528700000000004, 77.0233],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_976f266046c4ae2768648b1cdbc9cc06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ed3e7a7721bc8a4c1482e48abba8283d.setIcon(icon_976f266046c4ae2768648b1cdbc9cc06);
+        
+    
+        var popup_ccd1b2dcae53428d37b5726599680ad3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_89e1867fd4724db4117d727384f55329 = $(`<div id="html_89e1867fd4724db4117d727384f55329" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 113<br><b>Avg. Price per sqft:</b> 12516.139534883721<br><b>Avg Built up area:</b> 2057.860465116279</div>`)[0];
+                popup_ccd1b2dcae53428d37b5726599680ad3.setContent(html_89e1867fd4724db4117d727384f55329);
+            
+        
+
+        marker_ed3e7a7721bc8a4c1482e48abba8283d.bindPopup(popup_ccd1b2dcae53428d37b5726599680ad3)
+        ;
+
+        
+    
+    
+            var marker_8a7fb605f47c60090a80f372bd42a8f5 = L.marker(
+                [28.4723, 77.032],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_3f91c8c1239bb7049b75dac2a7c17f18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8a7fb605f47c60090a80f372bd42a8f5.setIcon(icon_3f91c8c1239bb7049b75dac2a7c17f18);
+        
+    
+        var popup_14e8a5283d98299962e0257f9c409cbf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_17cde8afc8c70171797e07baa9571395 = $(`<div id="html_17cde8afc8c70171797e07baa9571395" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 12<br><b>Avg. Price per sqft:</b> 10868.07142857143<br><b>Avg Built up area:</b> 1801.7063275</div>`)[0];
+                popup_14e8a5283d98299962e0257f9c409cbf.setContent(html_17cde8afc8c70171797e07baa9571395);
+            
+        
+
+        marker_8a7fb605f47c60090a80f372bd42a8f5.bindPopup(popup_14e8a5283d98299962e0257f9c409cbf)
+        ;
+
+        
+    
+    
+            var marker_f9cb18e9d28b88dd8258dbb79b6e0520 = L.marker(
+                [28.4757, 77.0392],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_8ab93a0f78054fe3dcb9694193796645 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_f9cb18e9d28b88dd8258dbb79b6e0520.setIcon(icon_8ab93a0f78054fe3dcb9694193796645);
+        
+    
+        var popup_d447617701742eae05cd71ca3841e5d2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5a922ac3f0db8ca01c4d1ccb39cd1eb7 = $(`<div id="html_5a922ac3f0db8ca01c4d1ccb39cd1eb7" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 13<br><b>Avg. Price per sqft:</b> 8993.125<br><b>Avg Built up area:</b> 2095.2035875</div>`)[0];
+                popup_d447617701742eae05cd71ca3841e5d2.setContent(html_5a922ac3f0db8ca01c4d1ccb39cd1eb7);
+            
+        
+
+        marker_f9cb18e9d28b88dd8258dbb79b6e0520.bindPopup(popup_d447617701742eae05cd71ca3841e5d2)
+        ;
+
+        
+    
+    
+            var marker_9e50d8373f59f30a6ca287a3e00a7383 = L.marker(
+                [28.471099999999996, 77.0454],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_027403c291a6b36bb2e672b4b30c0864 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9e50d8373f59f30a6ca287a3e00a7383.setIcon(icon_027403c291a6b36bb2e672b4b30c0864);
+        
+    
+        var popup_3d50b06b7a1865ab7993b4e93ef64eb8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e9d565de7e568ef036aa75243bec8b70 = $(`<div id="html_e9d565de7e568ef036aa75243bec8b70" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 14<br><b>Avg. Price per sqft:</b> 17150.777777777777<br><b>Avg Built up area:</b> 2714.3333333333335</div>`)[0];
+                popup_3d50b06b7a1865ab7993b4e93ef64eb8.setContent(html_e9d565de7e568ef036aa75243bec8b70);
+            
+        
+
+        marker_9e50d8373f59f30a6ca287a3e00a7383.bindPopup(popup_3d50b06b7a1865ab7993b4e93ef64eb8)
+        ;
+
+        
+    
+    
+            var marker_95effa94f0e1ec50a544d89c899a6aee = L.marker(
+                [28.462100000000003, 77.0464],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_0ad37720396e6286d0b027268a674918 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_95effa94f0e1ec50a544d89c899a6aee.setIcon(icon_0ad37720396e6286d0b027268a674918);
+        
+    
+        var popup_eca03667f633053f0d32cd0fec7dba4d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5504e2f2f6b5ad611bc807c3713ef2ec = $(`<div id="html_5504e2f2f6b5ad611bc807c3713ef2ec" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 15<br><b>Avg. Price per sqft:</b> 11916.333333333334<br><b>Avg Built up area:</b> 1854.8333333333333</div>`)[0];
+                popup_eca03667f633053f0d32cd0fec7dba4d.setContent(html_5504e2f2f6b5ad611bc807c3713ef2ec);
+            
+        
+
+        marker_95effa94f0e1ec50a544d89c899a6aee.bindPopup(popup_eca03667f633053f0d32cd0fec7dba4d)
+        ;
+
+        
+    
+    
+            var marker_69c289ccf03233c8d7edd939fae00e2d = L.marker(
+                [28.4791, 77.0608],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_facbf4752aaccb758903f2c85f2fc149 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_69c289ccf03233c8d7edd939fae00e2d.setIcon(icon_facbf4752aaccb758903f2c85f2fc149);
+        
+    
+        var popup_860952cc3ea58085843572535b34ef3f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c34fd198bfbb0edfc34c454f49f9f94f = $(`<div id="html_c34fd198bfbb0edfc34c454f49f9f94f" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 17<br><b>Avg. Price per sqft:</b> 24349.5<br><b>Avg Built up area:</b> 2035.75572</div>`)[0];
+                popup_860952cc3ea58085843572535b34ef3f.setContent(html_c34fd198bfbb0edfc34c454f49f9f94f);
+            
+        
+
+        marker_69c289ccf03233c8d7edd939fae00e2d.bindPopup(popup_860952cc3ea58085843572535b34ef3f)
+        ;
+
+        
+    
+    
+            var marker_237ee685c9844209a408e381fe2b1670 = L.marker(
+                [28.4785, 77.06],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_1b01038c3840806df574e87aebb34cf8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_237ee685c9844209a408e381fe2b1670.setIcon(icon_1b01038c3840806df574e87aebb34cf8);
+        
+    
+        var popup_336d871434f792a3031ae3fb08bacf6c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_24beaa9e74cd1db7ad0ca799b65c5a83 = $(`<div id="html_24beaa9e74cd1db7ad0ca799b65c5a83" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 17a<br><b>Avg. Price per sqft:</b> 19869.0<br><b>Avg Built up area:</b> 105.0</div>`)[0];
+                popup_336d871434f792a3031ae3fb08bacf6c.setContent(html_24beaa9e74cd1db7ad0ca799b65c5a83);
+            
+        
+
+        marker_237ee685c9844209a408e381fe2b1670.bindPopup(popup_336d871434f792a3031ae3fb08bacf6c)
+        ;
+
+        
+    
+    
+            var marker_8a9e76575ea01c22ac249accc742ce43 = L.marker(
+                [28.4806, 77.0663],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_f770ddc27fda1250d01ed649f805b9d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8a9e76575ea01c22ac249accc742ce43.setIcon(icon_f770ddc27fda1250d01ed649f805b9d0);
+        
+    
+        var popup_73ed3393088432ca438acae60cab35da = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5006050c3896e489972241df741d6f85 = $(`<div id="html_5006050c3896e489972241df741d6f85" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 17b<br><b>Avg. Price per sqft:</b> 16728.0<br><b>Avg Built up area:</b> 4170.666666666667</div>`)[0];
+                popup_73ed3393088432ca438acae60cab35da.setContent(html_5006050c3896e489972241df741d6f85);
+            
+        
+
+        marker_8a9e76575ea01c22ac249accc742ce43.bindPopup(popup_73ed3393088432ca438acae60cab35da)
+        ;
+
+        
+    
+    
+            var marker_94d61e156b4221e6ffd1215c6ae578b1 = L.marker(
+                [28.5095, 77.03200000000001],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_58d759be6d7d1fd98d3d4931d9eb4699 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_94d61e156b4221e6ffd1215c6ae578b1.setIcon(icon_58d759be6d7d1fd98d3d4931d9eb4699);
+        
+    
+        var popup_e6ab0c594c9abfbee8775a0a903a0014 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_acc4255fbe452d6d94aa082a9fb18bf9 = $(`<div id="html_acc4255fbe452d6d94aa082a9fb18bf9" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 2<br><b>Avg. Price per sqft:</b> 11355.983606557376<br><b>Avg Built up area:</b> 1818.639344262295</div>`)[0];
+                popup_e6ab0c594c9abfbee8775a0a903a0014.setContent(html_acc4255fbe452d6d94aa082a9fb18bf9);
+            
+        
+
+        marker_94d61e156b4221e6ffd1215c6ae578b1.bindPopup(popup_e6ab0c594c9abfbee8775a0a903a0014)
+        ;
+
+        
+    
+    
+            var marker_c03ff7a54e1e95134fb3cf6ce4f59790 = L.marker(
+                [28.5134, 77.0723],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_084b8b2324d98f9f2c41bc2f751a7692 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_c03ff7a54e1e95134fb3cf6ce4f59790.setIcon(icon_084b8b2324d98f9f2c41bc2f751a7692);
+        
+    
+        var popup_86544408a596c12dda778c6ba33796be = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f3518374649d0a6058cadbb17fca88c1 = $(`<div id="html_f3518374649d0a6058cadbb17fca88c1" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 21<br><b>Avg. Price per sqft:</b> 7641.5<br><b>Avg Built up area:</b> 1252.3333333333333</div>`)[0];
+                popup_86544408a596c12dda778c6ba33796be.setContent(html_f3518374649d0a6058cadbb17fca88c1);
+            
+        
+
+        marker_c03ff7a54e1e95134fb3cf6ce4f59790.bindPopup(popup_86544408a596c12dda778c6ba33796be)
+        ;
+
+        
+    
+    
+            var marker_cd30e3edd8703a334bb55bdd7ee5a7f5 = L.marker(
+                [28.5072, 77.064],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_755c5e76c0a287454f918da8ee5b67e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cd30e3edd8703a334bb55bdd7ee5a7f5.setIcon(icon_755c5e76c0a287454f918da8ee5b67e2);
+        
+    
+        var popup_978eb4788926638730e88c28d4ffd88f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_331027c44ac95c9e07732a35eeb43c9c = $(`<div id="html_331027c44ac95c9e07732a35eeb43c9c" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 22<br><b>Avg. Price per sqft:</b> 16245.1<br><b>Avg Built up area:</b> 2072.8</div>`)[0];
+                popup_978eb4788926638730e88c28d4ffd88f.setContent(html_331027c44ac95c9e07732a35eeb43c9c);
+            
+        
+
+        marker_cd30e3edd8703a334bb55bdd7ee5a7f5.bindPopup(popup_978eb4788926638730e88c28d4ffd88f)
+        ;
+
+        
+    
+    
+            var marker_a4728add2787ec09b0ecbcd082ed26cf = L.marker(
+                [28.5121, 77.0478],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_702d7040781eb5c99002b397e2951941 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a4728add2787ec09b0ecbcd082ed26cf.setIcon(icon_702d7040781eb5c99002b397e2951941);
+        
+    
+        var popup_83fd7187bf712997e0d0ba6608c70aa3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a93236d91e4fa0a13fa5c8ee9675b230 = $(`<div id="html_a93236d91e4fa0a13fa5c8ee9675b230" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 23<br><b>Avg. Price per sqft:</b> 13727.384615384615<br><b>Avg Built up area:</b> 2366.065364538462</div>`)[0];
+                popup_83fd7187bf712997e0d0ba6608c70aa3.setContent(html_a93236d91e4fa0a13fa5c8ee9675b230);
+            
+        
+
+        marker_a4728add2787ec09b0ecbcd082ed26cf.bindPopup(popup_83fd7187bf712997e0d0ba6608c70aa3)
+        ;
+
+        
+    
+    
+            var marker_9c8a110a5ec544081d4cff47d9af9f68 = L.marker(
+                [28.4939, 77.1038],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_d76a08e303b29047e91aa7d2aa189a1c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9c8a110a5ec544081d4cff47d9af9f68.setIcon(icon_d76a08e303b29047e91aa7d2aa189a1c);
+        
+    
+        var popup_f2d8951b39789d0d794393d03c961db1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d68e208402e0149659920527ddb7307e = $(`<div id="html_d68e208402e0149659920527ddb7307e" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 24<br><b>Avg. Price per sqft:</b> 17656.473684210527<br><b>Avg Built up area:</b> 2333.054595</div>`)[0];
+                popup_f2d8951b39789d0d794393d03c961db1.setContent(html_d68e208402e0149659920527ddb7307e);
+            
+        
+
+        marker_9c8a110a5ec544081d4cff47d9af9f68.bindPopup(popup_f2d8951b39789d0d794393d03c961db1)
+        ;
+
+        
+    
+    
+            var marker_a5a6f19e73e2c15a684b2d7b48c89cab = L.marker(
+                [28.4844, 77.086],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_10dad533e51e46b39ea08c3cdf00582f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a5a6f19e73e2c15a684b2d7b48c89cab.setIcon(icon_10dad533e51e46b39ea08c3cdf00582f);
+        
+    
+        var popup_9b8d452b66ef0ccc20b2b8638c2d5689 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_35ef52868c1e95b53cccb6d7350498f8 = $(`<div id="html_35ef52868c1e95b53cccb6d7350498f8" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 25<br><b>Avg. Price per sqft:</b> 31309.777777777777<br><b>Avg Built up area:</b> 3312.6002079444443</div>`)[0];
+                popup_9b8d452b66ef0ccc20b2b8638c2d5689.setContent(html_35ef52868c1e95b53cccb6d7350498f8);
+            
+        
+
+        marker_a5a6f19e73e2c15a684b2d7b48c89cab.bindPopup(popup_9b8d452b66ef0ccc20b2b8638c2d5689)
+        ;
+
+        
+    
+    
+            var marker_fdd2dcf7cf1c66014f25350500579df0 = L.marker(
+                [28.4757, 77.1032],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_196e2bff9486fad1c150383c69e7e037 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fdd2dcf7cf1c66014f25350500579df0.setIcon(icon_196e2bff9486fad1c150383c69e7e037);
+        
+    
+        var popup_d5e0f64db2ca8302f6de2456516b4c86 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_df7af34671daef873487e5f04705d3e1 = $(`<div id="html_df7af34671daef873487e5f04705d3e1" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 26<br><b>Avg. Price per sqft:</b> 31922.075<br><b>Avg Built up area:</b> 3953.75826415</div>`)[0];
+                popup_d5e0f64db2ca8302f6de2456516b4c86.setContent(html_df7af34671daef873487e5f04705d3e1);
+            
+        
+
+        marker_fdd2dcf7cf1c66014f25350500579df0.bindPopup(popup_d5e0f64db2ca8302f6de2456516b4c86)
+        ;
+
+        
+    
+    
+            var marker_3773d26ea2383f361af5c50d178b010c = L.marker(
+                [28.4658, 77.0917],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_ffa8d70e73a6253dc55000c5e8fe20ef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3773d26ea2383f361af5c50d178b010c.setIcon(icon_ffa8d70e73a6253dc55000c5e8fe20ef);
+        
+    
+        var popup_6c4bc4a90f39a022c886ad066453c86c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_24d653df61b2421e71ad8c1966309aa6 = $(`<div id="html_24d653df61b2421e71ad8c1966309aa6" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 27<br><b>Avg. Price per sqft:</b> 28889.5<br><b>Avg Built up area:</b> 2196.0</div>`)[0];
+                popup_6c4bc4a90f39a022c886ad066453c86c.setContent(html_24d653df61b2421e71ad8c1966309aa6);
+            
+        
+
+        marker_3773d26ea2383f361af5c50d178b010c.bindPopup(popup_6c4bc4a90f39a022c886ad066453c86c)
+        ;
+
+        
+    
+    
+            var marker_9bada574dc47140b6314f5dbd7591111 = L.marker(
+                [28.4728, 77.0865],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_178556284fba82c45afc109709d65c42 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9bada574dc47140b6314f5dbd7591111.setIcon(icon_178556284fba82c45afc109709d65c42);
+        
+    
+        var popup_746c46ea7314d6b4670364771e00b771 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5c6fea01851dedfa1b33d8c38bdb0d0c = $(`<div id="html_5c6fea01851dedfa1b33d8c38bdb0d0c" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 28<br><b>Avg. Price per sqft:</b> 18831.78947368421<br><b>Avg Built up area:</b> 2071.9487231578946</div>`)[0];
+                popup_746c46ea7314d6b4670364771e00b771.setContent(html_5c6fea01851dedfa1b33d8c38bdb0d0c);
+            
+        
+
+        marker_9bada574dc47140b6314f5dbd7591111.bindPopup(popup_746c46ea7314d6b4670364771e00b771)
+        ;
+
+        
+    
+    
+            var marker_3fc61fd0940d67908f0288e1e95e5a84 = L.marker(
+                [28.4909, 77.0176],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_534ea00b8cb9f6f2b79daf561e8dfd07 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_3fc61fd0940d67908f0288e1e95e5a84.setIcon(icon_534ea00b8cb9f6f2b79daf561e8dfd07);
+        
+    
+        var popup_8ca39b29ebc062b89952f70a8d911b2e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c291b2cb6eae34ac1a80af9334b3ef45 = $(`<div id="html_c291b2cb6eae34ac1a80af9334b3ef45" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 3<br><b>Avg. Price per sqft:</b> 8206.541666666666<br><b>Avg Built up area:</b> 1182.3333333333333</div>`)[0];
+                popup_8ca39b29ebc062b89952f70a8d911b2e.setContent(html_c291b2cb6eae34ac1a80af9334b3ef45);
+            
+        
+
+        marker_3fc61fd0940d67908f0288e1e95e5a84.bindPopup(popup_8ca39b29ebc062b89952f70a8d911b2e)
+        ;
+
+        
+    
+    
+            var marker_005a26c0489b0bddc804ea1cb995d63f = L.marker(
+                [28.4604, 77.0579],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_3581664d0c74bb809fe87400d3962590 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_005a26c0489b0bddc804ea1cb995d63f.setIcon(icon_3581664d0c74bb809fe87400d3962590);
+        
+    
+        var popup_150742626a73c5a136cb456f84516e5f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3103bddf078f340acf4cb1a92cad6ee7 = $(`<div id="html_3103bddf078f340acf4cb1a92cad6ee7" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 30<br><b>Avg. Price per sqft:</b> 11255.2<br><b>Avg Built up area:</b> 1339.6</div>`)[0];
+                popup_150742626a73c5a136cb456f84516e5f.setContent(html_3103bddf078f340acf4cb1a92cad6ee7);
+            
+        
+
+        marker_005a26c0489b0bddc804ea1cb995d63f.bindPopup(popup_150742626a73c5a136cb456f84516e5f)
+        ;
+
+        
+    
+    
+            var marker_171864bb561cfeac94b419c2bc7a3332 = L.marker(
+                [28.452800000000003, 77.0498],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_87518870a3bcf6344b11ee12f363a40f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_171864bb561cfeac94b419c2bc7a3332.setIcon(icon_87518870a3bcf6344b11ee12f363a40f);
+        
+    
+        var popup_3bf43599dd659293526971884427d697 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6f2ccc9a43bd8178eca092ea1f357864 = $(`<div id="html_6f2ccc9a43bd8178eca092ea1f357864" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 31<br><b>Avg. Price per sqft:</b> 22197.3<br><b>Avg Built up area:</b> 1572.3</div>`)[0];
+                popup_3bf43599dd659293526971884427d697.setContent(html_6f2ccc9a43bd8178eca092ea1f357864);
+            
+        
+
+        marker_171864bb561cfeac94b419c2bc7a3332.bindPopup(popup_3bf43599dd659293526971884427d697)
+        ;
+
+        
+    
+    
+            var marker_11829f5f1f5b5dc58e216416b94e344e = L.marker(
+                [28.442, 77.0207],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_d58dca535d610528779847d06d6b4dde = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_11829f5f1f5b5dc58e216416b94e344e.setIcon(icon_d58dca535d610528779847d06d6b4dde);
+        
+    
+        var popup_cd37cf6a6c96a82dc74642fff87b229a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_39ba05cf457983284a896c91f674c1e8 = $(`<div id="html_39ba05cf457983284a896c91f674c1e8" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 33<br><b>Avg. Price per sqft:</b> 12281.164179104477<br><b>Avg Built up area:</b> 1863.4026377313432</div>`)[0];
+                popup_cd37cf6a6c96a82dc74642fff87b229a.setContent(html_39ba05cf457983284a896c91f674c1e8);
+            
+        
+
+        marker_11829f5f1f5b5dc58e216416b94e344e.bindPopup(popup_cd37cf6a6c96a82dc74642fff87b229a)
+        ;
+
+        
+    
+    
+            var marker_939c58a360aab40bd574d8afd6dfbf61 = L.marker(
+                [28.416, 76.9914],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_a940801402e3b8f0fdbac8762fdcaa1f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_939c58a360aab40bd574d8afd6dfbf61.setIcon(icon_a940801402e3b8f0fdbac8762fdcaa1f);
+        
+    
+        var popup_d8fa9af04b749a36a3c2ee2c6ceb3794 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_86b3e66cc24f0a9d11670ac11819abba = $(`<div id="html_86b3e66cc24f0a9d11670ac11819abba" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 36<br><b>Avg. Price per sqft:</b> 7600.272727272727<br><b>Avg Built up area:</b> 894.0</div>`)[0];
+                popup_d8fa9af04b749a36a3c2ee2c6ceb3794.setContent(html_86b3e66cc24f0a9d11670ac11819abba);
+            
+        
+
+        marker_939c58a360aab40bd574d8afd6dfbf61.bindPopup(popup_d8fa9af04b749a36a3c2ee2c6ceb3794)
+        ;
+
+        
+    
+    
+            var marker_b5f859b2c3cdda0b6ea4339da08d1648 = L.marker(
+                [28.4375, 76.9999],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_1725bc8e924712a9f8527d79ca49c15e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b5f859b2c3cdda0b6ea4339da08d1648.setIcon(icon_1725bc8e924712a9f8527d79ca49c15e);
+        
+    
+        var popup_3b9d10fe8831c0416ba664ad2ca164f7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1e6c41ba6833cdf5c42e3ac5c389bfc2 = $(`<div id="html_1e6c41ba6833cdf5c42e3ac5c389bfc2" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 37<br><b>Avg. Price per sqft:</b> 6579.0<br><b>Avg Built up area:</b> 1032.0</div>`)[0];
+                popup_3b9d10fe8831c0416ba664ad2ca164f7.setContent(html_1e6c41ba6833cdf5c42e3ac5c389bfc2);
+            
+        
+
+        marker_b5f859b2c3cdda0b6ea4339da08d1648.bindPopup(popup_3b9d10fe8831c0416ba664ad2ca164f7)
+        ;
+
+        
+    
+    
+            var marker_b25e84a2df79b995aa34c33eb2d2a8f4 = L.marker(
+                [28.4515, 76.9882],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_c3a4a0aaba2505a681dca9504f75da0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b25e84a2df79b995aa34c33eb2d2a8f4.setIcon(icon_c3a4a0aaba2505a681dca9504f75da0f);
+        
+    
+        var popup_eed16bd7ff591f47c4e8858b4cc15b37 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_61766b4b44477a008023c397744398d4 = $(`<div id="html_61766b4b44477a008023c397744398d4" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 37c<br><b>Avg. Price per sqft:</b> 6048.96<br><b>Avg Built up area:</b> 1492.182</div>`)[0];
+                popup_eed16bd7ff591f47c4e8858b4cc15b37.setContent(html_61766b4b44477a008023c397744398d4);
+            
+        
+
+        marker_b25e84a2df79b995aa34c33eb2d2a8f4.bindPopup(popup_eed16bd7ff591f47c4e8858b4cc15b37)
+        ;
+
+        
+    
+    
+            var marker_6c0d2a61ae642aac83e4a9a13fa6c787 = L.marker(
+                [28.4478, 76.9703],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_164c7c7d406ade0437fe708a45844c8f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_6c0d2a61ae642aac83e4a9a13fa6c787.setIcon(icon_164c7c7d406ade0437fe708a45844c8f);
+        
+    
+        var popup_fb1e5eac064c30cb6d6671a976fecb79 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_15f9ad8551a4ec7500e3725364c93dfd = $(`<div id="html_15f9ad8551a4ec7500e3725364c93dfd" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 37d<br><b>Avg. Price per sqft:</b> 8126.809523809524<br><b>Avg Built up area:</b> 1546.968253968254</div>`)[0];
+                popup_fb1e5eac064c30cb6d6671a976fecb79.setContent(html_15f9ad8551a4ec7500e3725364c93dfd);
+            
+        
+
+        marker_6c0d2a61ae642aac83e4a9a13fa6c787.bindPopup(popup_fb1e5eac064c30cb6d6671a976fecb79)
+        ;
+
+        
+    
+    
+            var marker_513295c693b55fcdcb1b1cb0add1fb1f = L.marker(
+                [28.4347, 77.043],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_91e9910b100c14b27cf6b04f27284574 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_513295c693b55fcdcb1b1cb0add1fb1f.setIcon(icon_91e9910b100c14b27cf6b04f27284574);
+        
+    
+        var popup_a21744a5f4910be491ae30b1dbdb7287 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_309080006c83fc1433cb0234b07a530a = $(`<div id="html_309080006c83fc1433cb0234b07a530a" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 38<br><b>Avg. Price per sqft:</b> 22857.7<br><b>Avg Built up area:</b> 2005.1224621000001</div>`)[0];
+                popup_a21744a5f4910be491ae30b1dbdb7287.setContent(html_309080006c83fc1433cb0234b07a530a);
+            
+        
+
+        marker_513295c693b55fcdcb1b1cb0add1fb1f.bindPopup(popup_a21744a5f4910be491ae30b1dbdb7287)
+        ;
+
+        
+    
+    
+            var marker_9ae52bc8ab5a340f2063df6c10460af7 = L.marker(
+                [28.443400000000004, 77.0515],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_0210e040737ac59e7b018aa14e64ab8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9ae52bc8ab5a340f2063df6c10460af7.setIcon(icon_0210e040737ac59e7b018aa14e64ab8a);
+        
+    
+        var popup_a5098f4a72f5c82b0529ffd7f6fd2da3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8c02000af6707f7778d523bc2d71c903 = $(`<div id="html_8c02000af6707f7778d523bc2d71c903" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 39<br><b>Avg. Price per sqft:</b> 14247.3<br><b>Avg Built up area:</b> 2199.1</div>`)[0];
+                popup_a5098f4a72f5c82b0529ffd7f6fd2da3.setContent(html_8c02000af6707f7778d523bc2d71c903);
+            
+        
+
+        marker_9ae52bc8ab5a340f2063df6c10460af7.bindPopup(popup_a5098f4a72f5c82b0529ffd7f6fd2da3)
+        ;
+
+        
+    
+    
+            var marker_d0b2d27f4dc05a6127155f3ba5e64b23 = L.marker(
+                [28.473800000000004, 77.0107],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_bddb5ccc78d0dedbf803302b8ef44c0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_d0b2d27f4dc05a6127155f3ba5e64b23.setIcon(icon_bddb5ccc78d0dedbf803302b8ef44c0d);
+        
+    
+        var popup_5e01719a1cd51774dfd69aed6b87c091 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc5d5e1330c2667195c8852f4b7089f2 = $(`<div id="html_bc5d5e1330c2667195c8852f4b7089f2" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 4<br><b>Avg. Price per sqft:</b> 9430.555555555555<br><b>Avg Built up area:</b> 1027.5333333333333</div>`)[0];
+                popup_5e01719a1cd51774dfd69aed6b87c091.setContent(html_bc5d5e1330c2667195c8852f4b7089f2);
+            
+        
+
+        marker_d0b2d27f4dc05a6127155f3ba5e64b23.bindPopup(popup_5e01719a1cd51774dfd69aed6b87c091)
+        ;
+
+        
+    
+    
+            var marker_093edf345cabc20dde8e43547eb44c43 = L.marker(
+                [28.4498, 77.0567],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_f8808cbbec768eb98a1ef54f1611437e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_093edf345cabc20dde8e43547eb44c43.setIcon(icon_f8808cbbec768eb98a1ef54f1611437e);
+        
+    
+        var popup_5dc547e855f398c3abd860a41ff909b4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_40e93ca6f4deaaedc54eecbf7c8cf657 = $(`<div id="html_40e93ca6f4deaaedc54eecbf7c8cf657" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 40<br><b>Avg. Price per sqft:</b> 19222.8<br><b>Avg Built up area:</b> 1366.8</div>`)[0];
+                popup_5dc547e855f398c3abd860a41ff909b4.setContent(html_40e93ca6f4deaaedc54eecbf7c8cf657);
+            
+        
+
+        marker_093edf345cabc20dde8e43547eb44c43.bindPopup(popup_5dc547e855f398c3abd860a41ff909b4)
+        ;
+
+        
+    
+    
+            var marker_e032e763cf9925632eafcf721abda043 = L.marker(
+                [28.4557, 77.0632],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_cf5f3f7ce2f54bb2da52bc64db3fff4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e032e763cf9925632eafcf721abda043.setIcon(icon_cf5f3f7ce2f54bb2da52bc64db3fff4c);
+        
+    
+        var popup_820dfe4c297b834384425d0357c60c99 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ab19ec417384fb7fcde6383f533fc691 = $(`<div id="html_ab19ec417384fb7fcde6383f533fc691" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 41<br><b>Avg. Price per sqft:</b> 24010.727272727272<br><b>Avg Built up area:</b> 2971.818181818182</div>`)[0];
+                popup_820dfe4c297b834384425d0357c60c99.setContent(html_ab19ec417384fb7fcde6383f533fc691);
+            
+        
+
+        marker_e032e763cf9925632eafcf721abda043.bindPopup(popup_820dfe4c297b834384425d0357c60c99)
+        ;
+
+        
+    
+    
+            var marker_a8f5b62c8f9f744b0593f165a735c6fc = L.marker(
+                [28.4629, 77.07720000000002],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_cd1fe3074102e1dde9a4e35912aaa409 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a8f5b62c8f9f744b0593f165a735c6fc.setIcon(icon_cd1fe3074102e1dde9a4e35912aaa409);
+        
+    
+        var popup_df08d20475f3a40bd194c77451abeb53 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_88b43975e0bb990da2e50d81b4abf131 = $(`<div id="html_88b43975e0bb990da2e50d81b4abf131" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 43<br><b>Avg. Price per sqft:</b> 21150.89285714286<br><b>Avg Built up area:</b> 2306.0178571428573</div>`)[0];
+                popup_df08d20475f3a40bd194c77451abeb53.setContent(html_88b43975e0bb990da2e50d81b4abf131);
+            
+        
+
+        marker_a8f5b62c8f9f744b0593f165a735c6fc.bindPopup(popup_df08d20475f3a40bd194c77451abeb53)
+        ;
+
+        
+    
+    
+            var marker_6a74c10195d8fcb9a5e2f35710fa9497 = L.marker(
+                [28.4466, 77.066],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_e155d86afb99a57df3ffa3370566147a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6a74c10195d8fcb9a5e2f35710fa9497.setIcon(icon_e155d86afb99a57df3ffa3370566147a);
+        
+    
+        var popup_046bab41f28b8e071f24dd10beb1c3c3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_92df3ad94de66b30d1d54bc18b67e376 = $(`<div id="html_92df3ad94de66b30d1d54bc18b67e376" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 45<br><b>Avg. Price per sqft:</b> 25525.5<br><b>Avg Built up area:</b> 2897.5</div>`)[0];
+                popup_046bab41f28b8e071f24dd10beb1c3c3.setContent(html_92df3ad94de66b30d1d54bc18b67e376);
+            
+        
+
+        marker_6a74c10195d8fcb9a5e2f35710fa9497.bindPopup(popup_046bab41f28b8e071f24dd10beb1c3c3)
+        ;
+
+        
+    
+    
+            var marker_f06c082a3c39976a0e37fb10bfe34fb8 = L.marker(
+                [28.4374, 77.0586],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_2314606bba7c7580b8b5fd1d9d375853 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f06c082a3c39976a0e37fb10bfe34fb8.setIcon(icon_2314606bba7c7580b8b5fd1d9d375853);
+        
+    
+        var popup_7a701e33d488801e19373be130b3342a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c9fccaeef8219b706810961ce7173e8f = $(`<div id="html_c9fccaeef8219b706810961ce7173e8f" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 46<br><b>Avg. Price per sqft:</b> 20010.454545454544<br><b>Avg Built up area:</b> 1516.909090909091</div>`)[0];
+                popup_7a701e33d488801e19373be130b3342a.setContent(html_c9fccaeef8219b706810961ce7173e8f);
+            
+        
+
+        marker_f06c082a3c39976a0e37fb10bfe34fb8.bindPopup(popup_7a701e33d488801e19373be130b3342a)
+        ;
+
+        
+    
+    
+            var marker_d22d922e21671530b0200b8e072e1bca = L.marker(
+                [28.4276, 77.0492],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_86509f0b49f87ba3b27e8c04bb97687a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d22d922e21671530b0200b8e072e1bca.setIcon(icon_86509f0b49f87ba3b27e8c04bb97687a);
+        
+    
+        var popup_c824676bc417bdedde1f3e39187146fa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_16656876469872768946b1aa8c39d952 = $(`<div id="html_16656876469872768946b1aa8c39d952" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 47<br><b>Avg. Price per sqft:</b> 14663.375<br><b>Avg Built up area:</b> 1956.625</div>`)[0];
+                popup_c824676bc417bdedde1f3e39187146fa.setContent(html_16656876469872768946b1aa8c39d952);
+            
+        
+
+        marker_d22d922e21671530b0200b8e072e1bca.bindPopup(popup_c824676bc417bdedde1f3e39187146fa)
+        ;
+
+        
+    
+    
+            var marker_9ffddd11e38edd9f8a0e30d0391744a5 = L.marker(
+                [28.4177, 77.0359],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_7e048cbabec551730259c8956de70370 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9ffddd11e38edd9f8a0e30d0391744a5.setIcon(icon_7e048cbabec551730259c8956de70370);
+        
+    
+        var popup_13d4ee838129b22fc86d9fef29312cc5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_be82167cd41b86581b754cfa84323279 = $(`<div id="html_be82167cd41b86581b754cfa84323279" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 48<br><b>Avg. Price per sqft:</b> 18326.727272727272<br><b>Avg Built up area:</b> 3152.5463905454544</div>`)[0];
+                popup_13d4ee838129b22fc86d9fef29312cc5.setContent(html_be82167cd41b86581b754cfa84323279);
+            
+        
+
+        marker_9ffddd11e38edd9f8a0e30d0391744a5.bindPopup(popup_13d4ee838129b22fc86d9fef29312cc5)
+        ;
+
+        
+    
+    
+            var marker_38d3156e4488186a2f83df4ae88aa234 = L.marker(
+                [28.4121, 77.048],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_559c1f15457fc7c0ae422a5350304835 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_38d3156e4488186a2f83df4ae88aa234.setIcon(icon_559c1f15457fc7c0ae422a5350304835);
+        
+    
+        var popup_3955e561c020d9f2f298f534c80536cc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8de582ca3b7b4648647903b9fa47ad38 = $(`<div id="html_8de582ca3b7b4648647903b9fa47ad38" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 49<br><b>Avg. Price per sqft:</b> 13911.244444444445<br><b>Avg Built up area:</b> 2137.1109338222223</div>`)[0];
+                popup_3955e561c020d9f2f298f534c80536cc.setContent(html_8de582ca3b7b4648647903b9fa47ad38);
+            
+        
+
+        marker_38d3156e4488186a2f83df4ae88aa234.bindPopup(popup_3955e561c020d9f2f298f534c80536cc)
+        ;
+
+        
+    
+    
+            var marker_fc6220bad13f62065fc2e41beb08f17a = L.marker(
+                [28.4794, 77.0176],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_35b03d54fc2840769d89561d8ec7d8ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fc6220bad13f62065fc2e41beb08f17a.setIcon(icon_35b03d54fc2840769d89561d8ec7d8ce);
+        
+    
+        var popup_3d350357720227906e4e1be224808ac3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_83ff45ac9104ed9192fd06d84544d0e2 = $(`<div id="html_83ff45ac9104ed9192fd06d84544d0e2" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 5<br><b>Avg. Price per sqft:</b> 10771.833333333334<br><b>Avg Built up area:</b> 1751.6666666666667</div>`)[0];
+                popup_3d350357720227906e4e1be224808ac3.setContent(html_83ff45ac9104ed9192fd06d84544d0e2);
+            
+        
+
+        marker_fc6220bad13f62065fc2e41beb08f17a.bindPopup(popup_3d350357720227906e4e1be224808ac3)
+        ;
+
+        
+    
+    
+            var marker_bc665c0b48a246544ffaaf17e058440f = L.marker(
+                [28.4178, 77.0628],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_d6817b33deba5f909debb903c0cb26f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bc665c0b48a246544ffaaf17e058440f.setIcon(icon_d6817b33deba5f909debb903c0cb26f4);
+        
+    
+        var popup_ba64b2f92484ef794f99fc4f9d4c7c7a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2cf8e770f8e7b87e7c7fb6207ca3ac55 = $(`<div id="html_2cf8e770f8e7b87e7c7fb6207ca3ac55" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 50<br><b>Avg. Price per sqft:</b> 22999.4<br><b>Avg Built up area:</b> 3098.1889538333335</div>`)[0];
+                popup_ba64b2f92484ef794f99fc4f9d4c7c7a.setContent(html_2cf8e770f8e7b87e7c7fb6207ca3ac55);
+            
+        
+
+        marker_bc665c0b48a246544ffaaf17e058440f.bindPopup(popup_ba64b2f92484ef794f99fc4f9d4c7c7a)
+        ;
+
+        
+    
+    
+            var marker_fbf38e436222086ca0e2590d52ad417c = L.marker(
+                [28.432, 77.06859999999999],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_5f053a7acbce82efe1ed695bd1d654a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_fbf38e436222086ca0e2590d52ad417c.setIcon(icon_5f053a7acbce82efe1ed695bd1d654a5);
+        
+    
+        var popup_b7263a87fee130fc39698d6adb35ff2e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0786348dd8c68047bc0b8208c9e0f5dd = $(`<div id="html_0786348dd8c68047bc0b8208c9e0f5dd" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 51<br><b>Avg. Price per sqft:</b> 7239.0<br><b>Avg Built up area:</b> 1674.142857142857</div>`)[0];
+                popup_b7263a87fee130fc39698d6adb35ff2e.setContent(html_0786348dd8c68047bc0b8208c9e0f5dd);
+            
+        
+
+        marker_fbf38e436222086ca0e2590d52ad417c.bindPopup(popup_b7263a87fee130fc39698d6adb35ff2e)
+        ;
+
+        
+    
+    
+            var marker_03dfb5ce9872351a3afbc9601a97e859 = L.marker(
+                [28.437899999999996, 77.0785],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_9ec2add4d1191b48dbf645da4eac0029 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_03dfb5ce9872351a3afbc9601a97e859.setIcon(icon_9ec2add4d1191b48dbf645da4eac0029);
+        
+    
+        var popup_0f697f830a3cf48073d7e24e506ea82d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cebb3451373761af9b64ce22525c6c6f = $(`<div id="html_cebb3451373761af9b64ce22525c6c6f" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 52<br><b>Avg. Price per sqft:</b> 11321.142857142857<br><b>Avg Built up area:</b> 2379.6816357142857</div>`)[0];
+                popup_0f697f830a3cf48073d7e24e506ea82d.setContent(html_cebb3451373761af9b64ce22525c6c6f);
+            
+        
+
+        marker_03dfb5ce9872351a3afbc9601a97e859.bindPopup(popup_0f697f830a3cf48073d7e24e506ea82d)
+        ;
+
+        
+    
+    
+            var marker_310e33df7c58e58b88707100f1dbe10d = L.marker(
+                [28.4433, 77.0948],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_6ccdaa18683531a329cf748e355b4056 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_310e33df7c58e58b88707100f1dbe10d.setIcon(icon_6ccdaa18683531a329cf748e355b4056);
+        
+    
+        var popup_66fdb6bcf08083b3f9f2fd4bffe0a33f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a3bd6cbc58084e9d0f908b6c80630ff5 = $(`<div id="html_a3bd6cbc58084e9d0f908b6c80630ff5" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 53<br><b>Avg. Price per sqft:</b> 20506.785714285714<br><b>Avg Built up area:</b> 2687.714285714286</div>`)[0];
+                popup_66fdb6bcf08083b3f9f2fd4bffe0a33f.setContent(html_a3bd6cbc58084e9d0f908b6c80630ff5);
+            
+        
+
+        marker_310e33df7c58e58b88707100f1dbe10d.bindPopup(popup_66fdb6bcf08083b3f9f2fd4bffe0a33f)
+        ;
+
+        
+    
+    
+            var marker_5acef2ee18859a95e523d3cbcc2853c0 = L.marker(
+                [28.4348, 77.1089],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_02cc704b837221f77c4773bbb33316ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5acef2ee18859a95e523d3cbcc2853c0.setIcon(icon_02cc704b837221f77c4773bbb33316ba);
+        
+    
+        var popup_3a3d7711910828173716c816325a267a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ae61fd315c7145cc1acad4baef6368a8 = $(`<div id="html_ae61fd315c7145cc1acad4baef6368a8" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 54<br><b>Avg. Price per sqft:</b> 19722.76923076923<br><b>Avg Built up area:</b> 2314.531211153846</div>`)[0];
+                popup_3a3d7711910828173716c816325a267a.setContent(html_ae61fd315c7145cc1acad4baef6368a8);
+            
+        
+
+        marker_5acef2ee18859a95e523d3cbcc2853c0.bindPopup(popup_3a3d7711910828173716c816325a267a)
+        ;
+
+        
+    
+    
+            var marker_76456ecd1a6458612d546d6fa3f8a98f = L.marker(
+                [28.4281, 77.11],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_84eb28c979da3e81392ccbde394cbc30 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_76456ecd1a6458612d546d6fa3f8a98f.setIcon(icon_84eb28c979da3e81392ccbde394cbc30);
+        
+    
+        var popup_c68f3c2aa22360ed1b087a070ca6f8b8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ffe3d65a8b5dcb765a8c464a79b7b31d = $(`<div id="html_ffe3d65a8b5dcb765a8c464a79b7b31d" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 55<br><b>Avg. Price per sqft:</b> 21206.8<br><b>Avg Built up area:</b> 1586.2</div>`)[0];
+                popup_c68f3c2aa22360ed1b087a070ca6f8b8.setContent(html_ffe3d65a8b5dcb765a8c464a79b7b31d);
+            
+        
+
+        marker_76456ecd1a6458612d546d6fa3f8a98f.bindPopup(popup_c68f3c2aa22360ed1b087a070ca6f8b8)
+        ;
+
+        
+    
+    
+            var marker_d2782c744ebd1084272ffd4827211db6 = L.marker(
+                [28.4245, 77.0991],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_d58bc1e68b4aa26c1606ccf297b99112 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d2782c744ebd1084272ffd4827211db6.setIcon(icon_d58bc1e68b4aa26c1606ccf297b99112);
+        
+    
+        var popup_ac6fd135c08c01898bae351262d0830d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_41b30e73d4798c745bb54327e209fd31 = $(`<div id="html_41b30e73d4798c745bb54327e209fd31" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 56<br><b>Avg. Price per sqft:</b> 10982.826923076924<br><b>Avg Built up area:</b> 1871.423076923077</div>`)[0];
+                popup_ac6fd135c08c01898bae351262d0830d.setContent(html_41b30e73d4798c745bb54327e209fd31);
+            
+        
+
+        marker_d2782c744ebd1084272ffd4827211db6.bindPopup(popup_ac6fd135c08c01898bae351262d0830d)
+        ;
+
+        
+    
+    
+            var marker_8ec59dcf4b79ac08843b78993673ac80 = L.marker(
+                [28.423200000000005, 77.0752],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_9ad156cfadbf4681c46c0da4873a1d82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8ec59dcf4b79ac08843b78993673ac80.setIcon(icon_9ad156cfadbf4681c46c0da4873a1d82);
+        
+    
+        var popup_ced588f6d2f4bd3c9acd9bbf4b98b28f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_db17db86047e59d59ce54b4b74092335 = $(`<div id="html_db17db86047e59d59ce54b4b74092335" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 57<br><b>Avg. Price per sqft:</b> 19775.954545454544<br><b>Avg Built up area:</b> 2304.5246772727273</div>`)[0];
+                popup_ced588f6d2f4bd3c9acd9bbf4b98b28f.setContent(html_db17db86047e59d59ce54b4b74092335);
+            
+        
+
+        marker_8ec59dcf4b79ac08843b78993673ac80.bindPopup(popup_ced588f6d2f4bd3c9acd9bbf4b98b28f)
+        ;
+
+        
+    
+    
+            var marker_8e5af8c2c8562afe7faaaee622399191 = L.marker(
+                [28.419999999999998, 77.1105],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_68083740637a39cb8144071a4d470863 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8e5af8c2c8562afe7faaaee622399191.setIcon(icon_68083740637a39cb8144071a4d470863);
+        
+    
+        var popup_5a9b2d262f7c212703d7c3dccabf9c85 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3f52ed9ecca21b26a63c46d0ef245117 = $(`<div id="html_3f52ed9ecca21b26a63c46d0ef245117" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 58<br><b>Avg. Price per sqft:</b> 17147.85714285714<br><b>Avg Built up area:</b> 1959.142857142857</div>`)[0];
+                popup_5a9b2d262f7c212703d7c3dccabf9c85.setContent(html_3f52ed9ecca21b26a63c46d0ef245117);
+            
+        
+
+        marker_8e5af8c2c8562afe7faaaee622399191.bindPopup(popup_5a9b2d262f7c212703d7c3dccabf9c85)
+        ;
+
+        
+    
+    
+            var marker_4487654e6a46e5e3b798db0298f0d04b = L.marker(
+                [28.4051, 77.1097],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_77e497e1772fd76f162cc9f0c19024ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4487654e6a46e5e3b798db0298f0d04b.setIcon(icon_77e497e1772fd76f162cc9f0c19024ad);
+        
+    
+        var popup_450acc1f15abe8240cb465dc00f6ac58 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7bb57950b063afc7ae19925b023e5d70 = $(`<div id="html_7bb57950b063afc7ae19925b023e5d70" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 59<br><b>Avg. Price per sqft:</b> 17476.0<br><b>Avg Built up area:</b> 2799.0</div>`)[0];
+                popup_450acc1f15abe8240cb465dc00f6ac58.setContent(html_7bb57950b063afc7ae19925b023e5d70);
+            
+        
+
+        marker_4487654e6a46e5e3b798db0298f0d04b.bindPopup(popup_450acc1f15abe8240cb465dc00f6ac58)
+        ;
+
+        
+    
+    
+            var marker_b3bfb5babac6daf4b65ef1bbbe2574be = L.marker(
+                [28.474499999999995, 77.0262],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_7156875b6477534c16cc9db78c68da09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_b3bfb5babac6daf4b65ef1bbbe2574be.setIcon(icon_7156875b6477534c16cc9db78c68da09);
+        
+    
+        var popup_2ead3ab44915ada78b6299202d574342 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e3c35466d3c12a0c4013749b8803c270 = $(`<div id="html_e3c35466d3c12a0c4013749b8803c270" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 6<br><b>Avg. Price per sqft:</b> 8186.333333333333<br><b>Avg Built up area:</b> 731.1111111111111</div>`)[0];
+                popup_2ead3ab44915ada78b6299202d574342.setContent(html_e3c35466d3c12a0c4013749b8803c270);
+            
+        
+
+        marker_b3bfb5babac6daf4b65ef1bbbe2574be.bindPopup(popup_2ead3ab44915ada78b6299202d574342)
+        ;
+
+        
+    
+    
+            var marker_b5a7c80d075e568ce8ed9d6b3129367e = L.marker(
+                [28.400299999999998, 77.0975],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_cb48dbb970ce98c1f52abda4c7d36639 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b5a7c80d075e568ce8ed9d6b3129367e.setIcon(icon_cb48dbb970ce98c1f52abda4c7d36639);
+        
+    
+        var popup_3060031913f3f938aff66be6ad2bd70b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_027f83855d91df8aeb709d917a233b88 = $(`<div id="html_027f83855d91df8aeb709d917a233b88" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 60<br><b>Avg. Price per sqft:</b> 14409.07142857143<br><b>Avg Built up area:</b> 2129.8571428571427</div>`)[0];
+                popup_3060031913f3f938aff66be6ad2bd70b.setContent(html_027f83855d91df8aeb709d917a233b88);
+            
+        
+
+        marker_b5a7c80d075e568ce8ed9d6b3129367e.bindPopup(popup_3060031913f3f938aff66be6ad2bd70b)
+        ;
+
+        
+    
+    
+            var marker_76d483c48333103b552a595d18913705 = L.marker(
+                [28.405, 77.0963],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_1579d783026e4bdbbdf7c9d4ab790664 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_76d483c48333103b552a595d18913705.setIcon(icon_1579d783026e4bdbbdf7c9d4ab790664);
+        
+    
+        var popup_d0144be8b74190c8e110f36aaa4f1c09 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9d39c123088bed35e4ea9990e70e7b9e = $(`<div id="html_9d39c123088bed35e4ea9990e70e7b9e" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 61<br><b>Avg. Price per sqft:</b> 14622.609756097561<br><b>Avg Built up area:</b> 1490.1463414634147</div>`)[0];
+                popup_d0144be8b74190c8e110f36aaa4f1c09.setContent(html_9d39c123088bed35e4ea9990e70e7b9e);
+            
+        
+
+        marker_76d483c48333103b552a595d18913705.bindPopup(popup_d0144be8b74190c8e110f36aaa4f1c09)
+        ;
+
+        
+    
+    
+            var marker_c848c519bf3722904ca9b8b1c0c20357 = L.marker(
+                [28.4139, 77.0886],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_dcc3d7c02af1a12e900a58f16e5ee33b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c848c519bf3722904ca9b8b1c0c20357.setIcon(icon_dcc3d7c02af1a12e900a58f16e5ee33b);
+        
+    
+        var popup_24a83e3b8b50831092c0eb3032894b11 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e6528c748a09063315f5a1a664ee57f7 = $(`<div id="html_e6528c748a09063315f5a1a664ee57f7" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 62<br><b>Avg. Price per sqft:</b> 17383.5625<br><b>Avg Built up area:</b> 2865.1875</div>`)[0];
+                popup_24a83e3b8b50831092c0eb3032894b11.setContent(html_e6528c748a09063315f5a1a664ee57f7);
+            
+        
+
+        marker_c848c519bf3722904ca9b8b1c0c20357.bindPopup(popup_24a83e3b8b50831092c0eb3032894b11)
+        ;
+
+        
+    
+    
+            var marker_df61bcb650b27406753607b15ba1573f = L.marker(
+                [28.3971, 77.0867],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_ac21ed3d1f770ee59550a0df02c623cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_df61bcb650b27406753607b15ba1573f.setIcon(icon_ac21ed3d1f770ee59550a0df02c623cf);
+        
+    
+        var popup_c9319701b63d7322640ae32ed468fc3f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c9e6ee0fdd4f4f82d861ae4d85080495 = $(`<div id="html_c9e6ee0fdd4f4f82d861ae4d85080495" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 63<br><b>Avg. Price per sqft:</b> 16931.214285714286<br><b>Avg Built up area:</b> 2793.0</div>`)[0];
+                popup_c9319701b63d7322640ae32ed468fc3f.setContent(html_c9e6ee0fdd4f4f82d861ae4d85080495);
+            
+        
+
+        marker_df61bcb650b27406753607b15ba1573f.bindPopup(popup_c9319701b63d7322640ae32ed468fc3f)
+        ;
+
+        
+    
+    
+            var marker_571073a235962b6891ed01263f284d0e = L.marker(
+                [28.3923, 77.0888],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_853f7a67b30eac3a9492ae8a090b5bae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_571073a235962b6891ed01263f284d0e.setIcon(icon_853f7a67b30eac3a9492ae8a090b5bae);
+        
+    
+        var popup_e04778a9b106bf1393ca50cf0dd425fc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_18008d4587cb580adb8b2ace2f42574b = $(`<div id="html_18008d4587cb580adb8b2ace2f42574b" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 63a<br><b>Avg. Price per sqft:</b> 16440.933333333334<br><b>Avg Built up area:</b> 1613.4666666666667</div>`)[0];
+                popup_e04778a9b106bf1393ca50cf0dd425fc.setContent(html_18008d4587cb580adb8b2ace2f42574b);
+            
+        
+
+        marker_571073a235962b6891ed01263f284d0e.bindPopup(popup_e04778a9b106bf1393ca50cf0dd425fc)
+        ;
+
+        
+    
+    
+            var marker_d4ebaa16c6587aa032acdb6529aa3b6d = L.marker(
+                [28.403, 77.069],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_1ac216bfab2c725e147e59a7c1d40b86 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d4ebaa16c6587aa032acdb6529aa3b6d.setIcon(icon_1ac216bfab2c725e147e59a7c1d40b86);
+        
+    
+        var popup_e90e7cb23226c2e34e5e95e3f250d1c9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c43f85036ee5e859fe8af6dfbb19a359 = $(`<div id="html_c43f85036ee5e859fe8af6dfbb19a359" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 65<br><b>Avg. Price per sqft:</b> 16018.255813953489<br><b>Avg Built up area:</b> 1945.4651162790697</div>`)[0];
+                popup_e90e7cb23226c2e34e5e95e3f250d1c9.setContent(html_c43f85036ee5e859fe8af6dfbb19a359);
+            
+        
+
+        marker_d4ebaa16c6587aa032acdb6529aa3b6d.bindPopup(popup_e90e7cb23226c2e34e5e95e3f250d1c9)
+        ;
+
+        
+    
+    
+            var marker_3404ca6b5b88657df64f4bb7204dc87e = L.marker(
+                [28.3925, 77.0541],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_b8acdc57aa5cd34f384343321710e162 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3404ca6b5b88657df64f4bb7204dc87e.setIcon(icon_b8acdc57aa5cd34f384343321710e162);
+        
+    
+        var popup_47de30bbc8ec19bec90757df1ca3c79d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f906d6a0e7b049c1928521a5a9ec819e = $(`<div id="html_f906d6a0e7b049c1928521a5a9ec819e" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 66<br><b>Avg. Price per sqft:</b> 19693.219512195123<br><b>Avg Built up area:</b> 2648.1341463414633</div>`)[0];
+                popup_47de30bbc8ec19bec90757df1ca3c79d.setContent(html_f906d6a0e7b049c1928521a5a9ec819e);
+            
+        
+
+        marker_3404ca6b5b88657df64f4bb7204dc87e.bindPopup(popup_47de30bbc8ec19bec90757df1ca3c79d)
+        ;
+
+        
+    
+    
+            var marker_f0e9882a8c061b0b5b5a8fc3a1008295 = L.marker(
+                [28.385899999999996, 77.0608],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_86a59cce586ed53e09fd05a892d2ef62 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f0e9882a8c061b0b5b5a8fc3a1008295.setIcon(icon_86a59cce586ed53e09fd05a892d2ef62);
+        
+    
+        var popup_222c9772192bacde8010e567f961fbc0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cfae659abbd738ff88b9b12ed1657209 = $(`<div id="html_cfae659abbd738ff88b9b12ed1657209" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 67<br><b>Avg. Price per sqft:</b> 13474.869565217392<br><b>Avg Built up area:</b> 2082.391304347826</div>`)[0];
+                popup_222c9772192bacde8010e567f961fbc0.setContent(html_cfae659abbd738ff88b9b12ed1657209);
+            
+        
+
+        marker_f0e9882a8c061b0b5b5a8fc3a1008295.bindPopup(popup_222c9772192bacde8010e567f961fbc0)
+        ;
+
+        
+    
+    
+            var marker_14759b953338df8a4d3bc752310d40ef = L.marker(
+                [28.396, 77.0372],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_670f7951dd12b34544f38fb559669fbe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_14759b953338df8a4d3bc752310d40ef.setIcon(icon_670f7951dd12b34544f38fb559669fbe);
+        
+    
+        var popup_225dd23df3ea080216717952f8cf7e39 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_30aaf6c1d1d39a6dd501b4b795911b19 = $(`<div id="html_30aaf6c1d1d39a6dd501b4b795911b19" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 67a<br><b>Avg. Price per sqft:</b> 10049.857142857143<br><b>Avg Built up area:</b> 1364.4285714285713</div>`)[0];
+                popup_225dd23df3ea080216717952f8cf7e39.setContent(html_30aaf6c1d1d39a6dd501b4b795911b19);
+            
+        
+
+        marker_14759b953338df8a4d3bc752310d40ef.bindPopup(popup_225dd23df3ea080216717952f8cf7e39)
+        ;
+
+        
+    
+    
+            var marker_7d380b5a2dd5c6e091b36d15a4c34437 = L.marker(
+                [28.385299999999997, 77.0484],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_3f00970fda5087403766f60aebfddc54 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_7d380b5a2dd5c6e091b36d15a4c34437.setIcon(icon_3f00970fda5087403766f60aebfddc54);
+        
+    
+        var popup_5becd2eff365adbdf5c49eed89ead3cc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2134f27c4a1cbc0c812bcb27b9caddba = $(`<div id="html_2134f27c4a1cbc0c812bcb27b9caddba" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 68<br><b>Avg. Price per sqft:</b> 8914.7<br><b>Avg Built up area:</b> 1340.0666666666666</div>`)[0];
+                popup_5becd2eff365adbdf5c49eed89ead3cc.setContent(html_2134f27c4a1cbc0c812bcb27b9caddba);
+            
+        
+
+        marker_7d380b5a2dd5c6e091b36d15a4c34437.bindPopup(popup_5becd2eff365adbdf5c49eed89ead3cc)
+        ;
+
+        
+    
+    
+            var marker_064c2f2d5259888a6143ceb08c9ab3db = L.marker(
+                [28.3966, 77.0341],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_3bf4bb8f0c5ed210bbd90a50eb90a05e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_064c2f2d5259888a6143ceb08c9ab3db.setIcon(icon_3bf4bb8f0c5ed210bbd90a50eb90a05e);
+        
+    
+        var popup_5581dfeaf44797f49eb5927eef3b339a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc38b89f54cc69bf66f37103f2e3263c = $(`<div id="html_bc38b89f54cc69bf66f37103f2e3263c" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 69<br><b>Avg. Price per sqft:</b> 9225.301075268817<br><b>Avg Built up area:</b> 1579.731182795699</div>`)[0];
+                popup_5581dfeaf44797f49eb5927eef3b339a.setContent(html_bc38b89f54cc69bf66f37103f2e3263c);
+            
+        
+
+        marker_064c2f2d5259888a6143ceb08c9ab3db.bindPopup(popup_5581dfeaf44797f49eb5927eef3b339a)
+        ;
+
+        
+    
+    
+            var marker_a742ceebf474ec25120d0fc53fd7bbb5 = L.marker(
+                [28.4644, 77.0143],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_e2ea10a10bc6d27cbadec9aecebf8fbd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a742ceebf474ec25120d0fc53fd7bbb5.setIcon(icon_e2ea10a10bc6d27cbadec9aecebf8fbd);
+        
+    
+        var popup_8f21cf50566336fe867c06e9fb49d9c1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_da48d434c388143cb9aaecf4ba7b99aa = $(`<div id="html_da48d434c388143cb9aaecf4ba7b99aa" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 7<br><b>Avg. Price per sqft:</b> 11782.375<br><b>Avg Built up area:</b> 1394.625</div>`)[0];
+                popup_8f21cf50566336fe867c06e9fb49d9c1.setContent(html_da48d434c388143cb9aaecf4ba7b99aa);
+            
+        
+
+        marker_a742ceebf474ec25120d0fc53fd7bbb5.bindPopup(popup_8f21cf50566336fe867c06e9fb49d9c1)
+        ;
+
+        
+    
+    
+            var marker_b8392c0bdcb8b7be83c2225635f89960 = L.marker(
+                [28.3968, 77.0233],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_c662914f2640a300d35c3a1c9df8c467 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_b8392c0bdcb8b7be83c2225635f89960.setIcon(icon_c662914f2640a300d35c3a1c9df8c467);
+        
+    
+        var popup_13a6553810b5f8764f009f7f1d8bb08c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_74c01f60b43aa551f622390b24a8a083 = $(`<div id="html_74c01f60b43aa551f622390b24a8a083" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 70<br><b>Avg. Price per sqft:</b> 8740.604166666666<br><b>Avg Built up area:</b> 1724.0416666666667</div>`)[0];
+                popup_13a6553810b5f8764f009f7f1d8bb08c.setContent(html_74c01f60b43aa551f622390b24a8a083);
+            
+        
+
+        marker_b8392c0bdcb8b7be83c2225635f89960.bindPopup(popup_13a6553810b5f8764f009f7f1d8bb08c)
+        ;
+
+        
+    
+    
+            var marker_9798cd204798a7b4e4536143901114d7 = L.marker(
+                [28.4104, 77.0281],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_3d91f48c5b5aa7670b18e69401e42e98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_9798cd204798a7b4e4536143901114d7.setIcon(icon_3d91f48c5b5aa7670b18e69401e42e98);
+        
+    
+        var popup_541bef2ea2e433faf43dc7892552f8d2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a8eb1b1808681db298e2d02f9249545c = $(`<div id="html_a8eb1b1808681db298e2d02f9249545c" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 71<br><b>Avg. Price per sqft:</b> 7717.111111111111<br><b>Avg Built up area:</b> 1223.4814814814815</div>`)[0];
+                popup_541bef2ea2e433faf43dc7892552f8d2.setContent(html_a8eb1b1808681db298e2d02f9249545c);
+            
+        
+
+        marker_9798cd204798a7b4e4536143901114d7.bindPopup(popup_541bef2ea2e433faf43dc7892552f8d2)
+        ;
+
+        
+    
+    
+            var marker_60a4d0df797619b40bb72c8f93b080a7 = L.marker(
+                [28.4225, 77.02110000000002],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_ad1c00eb67587b6b0060a61d22dfd8db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_60a4d0df797619b40bb72c8f93b080a7.setIcon(icon_ad1c00eb67587b6b0060a61d22dfd8db);
+        
+    
+        var popup_8f8bd712bbf2a6f6030a80454be3dc9f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_01b68f4a55837a5597e200296f96761a = $(`<div id="html_01b68f4a55837a5597e200296f96761a" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 72<br><b>Avg. Price per sqft:</b> 12788.655172413793<br><b>Avg Built up area:</b> 3101.9310344827586</div>`)[0];
+                popup_8f8bd712bbf2a6f6030a80454be3dc9f.setContent(html_01b68f4a55837a5597e200296f96761a);
+            
+        
+
+        marker_60a4d0df797619b40bb72c8f93b080a7.bindPopup(popup_8f8bd712bbf2a6f6030a80454be3dc9f)
+        ;
+
+        
+    
+    
+            var marker_81b035ed237b9061d85af046da4612cd = L.marker(
+                [28.4072, 77.0118],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_9a67df97eb6ba902129808f3dd70d2b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_81b035ed237b9061d85af046da4612cd.setIcon(icon_9a67df97eb6ba902129808f3dd70d2b8);
+        
+    
+        var popup_d46ce9f013f361a63a275d31f1d9fc95 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2c78b8bceb9f834d1747c2dc06aa485d = $(`<div id="html_2c78b8bceb9f834d1747c2dc06aa485d" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 73<br><b>Avg. Price per sqft:</b> 16116.666666666666<br><b>Avg Built up area:</b> 4022.0</div>`)[0];
+                popup_d46ce9f013f361a63a275d31f1d9fc95.setContent(html_2c78b8bceb9f834d1747c2dc06aa485d);
+            
+        
+
+        marker_81b035ed237b9061d85af046da4612cd.bindPopup(popup_d46ce9f013f361a63a275d31f1d9fc95)
+        ;
+
+        
+    
+    
+            var marker_99b43c0a35ecbd93523f823e186530b5 = L.marker(
+                [28.4158, 77.0118],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_4a256306260fa87f8486d85cd6504a26 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_99b43c0a35ecbd93523f823e186530b5.setIcon(icon_4a256306260fa87f8486d85cd6504a26);
+        
+    
+        var popup_293d1701a751f950055a1ebf37dcfbc5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_23551ef067abdd2dd596114f7a4824c7 = $(`<div id="html_23551ef067abdd2dd596114f7a4824c7" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 74<br><b>Avg. Price per sqft:</b> 11790.833333333334<br><b>Avg Built up area:</b> 1490.0</div>`)[0];
+                popup_293d1701a751f950055a1ebf37dcfbc5.setContent(html_23551ef067abdd2dd596114f7a4824c7);
+            
+        
+
+        marker_99b43c0a35ecbd93523f823e186530b5.bindPopup(popup_293d1701a751f950055a1ebf37dcfbc5)
+        ;
+
+        
+    
+    
+            var marker_629fe7d210066c3904dbbd410b4b7fb0 = L.marker(
+                [28.3935, 76.9888],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_86d483fa26944bb7f1a7b70144d2a4dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_629fe7d210066c3904dbbd410b4b7fb0.setIcon(icon_86d483fa26944bb7f1a7b70144d2a4dd);
+        
+    
+        var popup_f6624d05c70d7c2ba2935ee091020ece = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0a6fef32dfe004660220b4bad9d6fd5b = $(`<div id="html_0a6fef32dfe004660220b4bad9d6fd5b" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 76<br><b>Avg. Price per sqft:</b> 9009.733333333334<br><b>Avg Built up area:</b> 1598.4</div>`)[0];
+                popup_f6624d05c70d7c2ba2935ee091020ece.setContent(html_0a6fef32dfe004660220b4bad9d6fd5b);
+            
+        
+
+        marker_629fe7d210066c3904dbbd410b4b7fb0.bindPopup(popup_f6624d05c70d7c2ba2935ee091020ece)
+        ;
+
+        
+    
+    
+            var marker_2c2fb0341434a4505eb55c2889be5e3b = L.marker(
+                [28.3801, 76.9845],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_7bbbe299d51a02e0ec4f81fc2dc14823 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_2c2fb0341434a4505eb55c2889be5e3b.setIcon(icon_7bbbe299d51a02e0ec4f81fc2dc14823);
+        
+    
+        var popup_2aff5eb672b6673687a90331ffda1960 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_04c708598a29ef320ca82b5b0fef82a4 = $(`<div id="html_04c708598a29ef320ca82b5b0fef82a4" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 77<br><b>Avg. Price per sqft:</b> 7731.2962962962965<br><b>Avg Built up area:</b> 1553.2222222222222</div>`)[0];
+                popup_2aff5eb672b6673687a90331ffda1960.setContent(html_04c708598a29ef320ca82b5b0fef82a4);
+            
+        
+
+        marker_2c2fb0341434a4505eb55c2889be5e3b.bindPopup(popup_2aff5eb672b6673687a90331ffda1960)
+        ;
+
+        
+    
+    
+            var marker_3fb14c290438341967f2d77046031ac1 = L.marker(
+                [28.3733, 76.9729],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_c68e92aa819c7bd552727ec9648f1b23 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3fb14c290438341967f2d77046031ac1.setIcon(icon_c68e92aa819c7bd552727ec9648f1b23);
+        
+    
+        var popup_f43822a35011a0441623b4fb1d8dd3af = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f7ab22eaa51a5f99e519c94eb3963316 = $(`<div id="html_f7ab22eaa51a5f99e519c94eb3963316" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 78<br><b>Avg. Price per sqft:</b> 6397.4375<br><b>Avg Built up area:</b> 1701.0</div>`)[0];
+                popup_f43822a35011a0441623b4fb1d8dd3af.setContent(html_f7ab22eaa51a5f99e519c94eb3963316);
+            
+        
+
+        marker_3fb14c290438341967f2d77046031ac1.bindPopup(popup_f43822a35011a0441623b4fb1d8dd3af)
+        ;
+
+        
+    
+    
+            var marker_92ac07afc469e98a42926781e42b87d5 = L.marker(
+                [28.362400000000004, 76.9787],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_a9724687cb42ea48704c01924ba6a8ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_92ac07afc469e98a42926781e42b87d5.setIcon(icon_a9724687cb42ea48704c01924ba6a8ab);
+        
+    
+        var popup_04b9d4c46d848e7ec1c52b37a9a69ab1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b8a4e1723fbc89c8e07594249aee610d = $(`<div id="html_b8a4e1723fbc89c8e07594249aee610d" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 79<br><b>Avg. Price per sqft:</b> 8507.421052631578<br><b>Avg Built up area:</b> 1516.2894736842106</div>`)[0];
+                popup_04b9d4c46d848e7ec1c52b37a9a69ab1.setContent(html_b8a4e1723fbc89c8e07594249aee610d);
+            
+        
+
+        marker_92ac07afc469e98a42926781e42b87d5.bindPopup(popup_04b9d4c46d848e7ec1c52b37a9a69ab1)
+        ;
+
+        
+    
+    
+            var marker_188116495a6712e9982753badcff162a = L.marker(
+                [28.3738, 76.897],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_124c7f28569114e2ac620ad25413efa2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_188116495a6712e9982753badcff162a.setIcon(icon_124c7f28569114e2ac620ad25413efa2);
+        
+    
+        var popup_ddd10ac30f2a7b795945e358a53576f5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_686462ba45a151ada892358f513905d2 = $(`<div id="html_686462ba45a151ada892358f513905d2" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 8<br><b>Avg. Price per sqft:</b> 8659.142857142857<br><b>Avg Built up area:</b> 641.4285714285714</div>`)[0];
+                popup_ddd10ac30f2a7b795945e358a53576f5.setContent(html_686462ba45a151ada892358f513905d2);
+            
+        
+
+        marker_188116495a6712e9982753badcff162a.bindPopup(popup_ddd10ac30f2a7b795945e358a53576f5)
+        ;
+
+        
+    
+    
+            var marker_d0aee1df6bf9661bb5788d2dfe06f672 = L.marker(
+                [28.3659, 76.9557],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_b8f8a2444c6aba24da4ad100c5373388 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_d0aee1df6bf9661bb5788d2dfe06f672.setIcon(icon_b8f8a2444c6aba24da4ad100c5373388);
+        
+    
+        var popup_8c6a2746046a0f6414fca0d93f7547b0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bfa65c77143031ed497d667f30c128a4 = $(`<div id="html_bfa65c77143031ed497d667f30c128a4" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 80<br><b>Avg. Price per sqft:</b> 7498.2<br><b>Avg Built up area:</b> 1632.8</div>`)[0];
+                popup_8c6a2746046a0f6414fca0d93f7547b0.setContent(html_bfa65c77143031ed497d667f30c128a4);
+            
+        
+
+        marker_d0aee1df6bf9661bb5788d2dfe06f672.bindPopup(popup_8c6a2746046a0f6414fca0d93f7547b0)
+        ;
+
+        
+    
+    
+            var marker_0731b376895662e9fe05a26d8013857c = L.marker(
+                [28.386700000000005, 76.9485],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_e8bf67e8846489ae18afb9bea1183571 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_0731b376895662e9fe05a26d8013857c.setIcon(icon_e8bf67e8846489ae18afb9bea1183571);
+        
+    
+        var popup_ebf3e338c2562b796d9d428ea07a5607 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f0814d93e1b53e32b04d7ab34fde7fc6 = $(`<div id="html_f0814d93e1b53e32b04d7ab34fde7fc6" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 81<br><b>Avg. Price per sqft:</b> 9317.632183908046<br><b>Avg Built up area:</b> 1846.7241379310344</div>`)[0];
+                popup_ebf3e338c2562b796d9d428ea07a5607.setContent(html_f0814d93e1b53e32b04d7ab34fde7fc6);
+            
+        
+
+        marker_0731b376895662e9fe05a26d8013857c.bindPopup(popup_ebf3e338c2562b796d9d428ea07a5607)
+        ;
+
+        
+    
+    
+            var marker_bc792b1076ba871d47d7ab9eb11236ad = L.marker(
+                [28.3935, 76.96],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_d72b8bc937d1f6e6d13afe54c69c934e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_bc792b1076ba871d47d7ab9eb11236ad.setIcon(icon_d72b8bc937d1f6e6d13afe54c69c934e);
+        
+    
+        var popup_01bd9aebba62e9786fd45a56ef5bf971 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_953e5b3bc4ffd7d5fc3e31ac8e001ad6 = $(`<div id="html_953e5b3bc4ffd7d5fc3e31ac8e001ad6" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 82<br><b>Avg. Price per sqft:</b> 9345.219512195123<br><b>Avg Built up area:</b> 1955.9756097560976</div>`)[0];
+                popup_01bd9aebba62e9786fd45a56ef5bf971.setContent(html_953e5b3bc4ffd7d5fc3e31ac8e001ad6);
+            
+        
+
+        marker_bc792b1076ba871d47d7ab9eb11236ad.bindPopup(popup_01bd9aebba62e9786fd45a56ef5bf971)
+        ;
+
+        
+    
+    
+            var marker_4beca7ff79a7cc9008550d4ed9b54d89 = L.marker(
+                [28.3858, 76.9686],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_9e91e506e3b32d2decb032b47fb87a14 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4beca7ff79a7cc9008550d4ed9b54d89.setIcon(icon_9e91e506e3b32d2decb032b47fb87a14);
+        
+    
+        var popup_b7d621ca4cd9525ca817fccccf48b3e1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cae4eb2eaf4014f1aa356eb13f77c2f3 = $(`<div id="html_cae4eb2eaf4014f1aa356eb13f77c2f3" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 82a<br><b>Avg. Price per sqft:</b> 10120.894736842105<br><b>Avg Built up area:</b> 2359.4210526315787</div>`)[0];
+                popup_b7d621ca4cd9525ca817fccccf48b3e1.setContent(html_cae4eb2eaf4014f1aa356eb13f77c2f3);
+            
+        
+
+        marker_4beca7ff79a7cc9008550d4ed9b54d89.bindPopup(popup_b7d621ca4cd9525ca817fccccf48b3e1)
+        ;
+
+        
+    
+    
+            var marker_11d78f928402b16980d7116dfe557959 = L.marker(
+                [28.3986, 76.9647],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_f5ccd51bd899a121e3ff23eb7b6657e1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_11d78f928402b16980d7116dfe557959.setIcon(icon_f5ccd51bd899a121e3ff23eb7b6657e1);
+        
+    
+        var popup_e0a348b2a2f978510cc41b2114e2ad82 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6848427458129c2a7e9a211ff66e9500 = $(`<div id="html_6848427458129c2a7e9a211ff66e9500" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 83<br><b>Avg. Price per sqft:</b> 7659.492537313433<br><b>Avg Built up area:</b> 1535.2835820895523</div>`)[0];
+                popup_e0a348b2a2f978510cc41b2114e2ad82.setContent(html_6848427458129c2a7e9a211ff66e9500);
+            
+        
+
+        marker_11d78f928402b16980d7116dfe557959.bindPopup(popup_e0a348b2a2f978510cc41b2114e2ad82)
+        ;
+
+        
+    
+    
+            var marker_fbf16e99c192677ff7da322691c60d97 = L.marker(
+                [28.3979, 76.9736],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_65964e63f87a2f1b30e8f70f1c7a9d89 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fbf16e99c192677ff7da322691c60d97.setIcon(icon_65964e63f87a2f1b30e8f70f1c7a9d89);
+        
+    
+        var popup_9efe7a690cce7f176dad522281399e39 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8518b4440c5e4bfaf1a8b11fb12dd702 = $(`<div id="html_8518b4440c5e4bfaf1a8b11fb12dd702" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 84<br><b>Avg. Price per sqft:</b> 6375.102040816327<br><b>Avg Built up area:</b> 1425.857142857143</div>`)[0];
+                popup_9efe7a690cce7f176dad522281399e39.setContent(html_8518b4440c5e4bfaf1a8b11fb12dd702);
+            
+        
+
+        marker_fbf16e99c192677ff7da322691c60d97.bindPopup(popup_9efe7a690cce7f176dad522281399e39)
+        ;
+
+        
+    
+    
+            var marker_25a4061640c303a3e5dad5b4131e386e = L.marker(
+                [28.404200000000003, 76.9513],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_8b6fce03bcd753f24543f61d4c308520 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_25a4061640c303a3e5dad5b4131e386e.setIcon(icon_8b6fce03bcd753f24543f61d4c308520);
+        
+    
+        var popup_1050d07d874569267819f1a5e93941a5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_66a8922a21b8e2ed0f775edaefce50ce = $(`<div id="html_66a8922a21b8e2ed0f775edaefce50ce" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 85<br><b>Avg. Price per sqft:</b> 7879.579439252337<br><b>Avg Built up area:</b> 1819.0093457943926</div>`)[0];
+                popup_1050d07d874569267819f1a5e93941a5.setContent(html_66a8922a21b8e2ed0f775edaefce50ce);
+            
+        
+
+        marker_25a4061640c303a3e5dad5b4131e386e.bindPopup(popup_1050d07d874569267819f1a5e93941a5)
+        ;
+
+        
+    
+    
+            var marker_463d56029853d12fee63a8569e7cef13 = L.marker(
+                [28.3986, 76.9384],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_a01d4aaa204c0828fe8a6fdbee6bfddc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_463d56029853d12fee63a8569e7cef13.setIcon(icon_a01d4aaa204c0828fe8a6fdbee6bfddc);
+        
+    
+        var popup_791a57f5d09fb70957580f157da9ab61 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e32228a3da9d7e29235870b285428bdc = $(`<div id="html_e32228a3da9d7e29235870b285428bdc" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 86<br><b>Avg. Price per sqft:</b> 7600.870967741936<br><b>Avg Built up area:</b> 1513.967741935484</div>`)[0];
+                popup_791a57f5d09fb70957580f157da9ab61.setContent(html_e32228a3da9d7e29235870b285428bdc);
+            
+        
+
+        marker_463d56029853d12fee63a8569e7cef13.bindPopup(popup_791a57f5d09fb70957580f157da9ab61)
+        ;
+
+        
+    
+    
+            var marker_c5f11e51c83174df2fab4fdc7261cee0 = L.marker(
+                [28.4347, 76.9557],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_c60e30093c1a7590f5c7b2887bea5392 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_c5f11e51c83174df2fab4fdc7261cee0.setIcon(icon_c60e30093c1a7590f5c7b2887bea5392);
+        
+    
+        var popup_d00c49bf572f38c40494642136081a20 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9377fc4def6d7ae17a1891972a0d830d = $(`<div id="html_9377fc4def6d7ae17a1891972a0d830d" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 88a<br><b>Avg. Price per sqft:</b> 8672.285714285714<br><b>Avg Built up area:</b> 1398.3333333333333</div>`)[0];
+                popup_d00c49bf572f38c40494642136081a20.setContent(html_9377fc4def6d7ae17a1891972a0d830d);
+            
+        
+
+        marker_c5f11e51c83174df2fab4fdc7261cee0.bindPopup(popup_d00c49bf572f38c40494642136081a20)
+        ;
+
+        
+    
+    
+            var marker_107c87a897254081155f2f6a8691f175 = L.marker(
+                [28.444599999999998, 76.9542],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_2b65cdcf24f700271eb3d9724200616d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_107c87a897254081155f2f6a8691f175.setIcon(icon_2b65cdcf24f700271eb3d9724200616d);
+        
+    
+        var popup_f53c4f5ec890bfd899d61455ed6e821e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fd48f739d765d0cc859fd8d7e0fa5106 = $(`<div id="html_fd48f739d765d0cc859fd8d7e0fa5106" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 88b<br><b>Avg. Price per sqft:</b> 7441.0<br><b>Avg Built up area:</b> 1333.3333333333333</div>`)[0];
+                popup_f53c4f5ec890bfd899d61455ed6e821e.setContent(html_fd48f739d765d0cc859fd8d7e0fa5106);
+            
+        
+
+        marker_107c87a897254081155f2f6a8691f175.bindPopup(popup_f53c4f5ec890bfd899d61455ed6e821e)
+        ;
+
+        
+    
+    
+            var marker_f1295060981927806df2ba634fc198d5 = L.marker(
+                [28.4253, 76.9439],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_c4b670400c4c0bc6b464305e8df616bf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_f1295060981927806df2ba634fc198d5.setIcon(icon_c4b670400c4c0bc6b464305e8df616bf);
+        
+    
+        var popup_a8163ee981861659d51946d59bbf323e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b72f73888a2b4527f13d1b1d4cb67e27 = $(`<div id="html_b72f73888a2b4527f13d1b1d4cb67e27" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 89<br><b>Avg. Price per sqft:</b> 8598.964285714286<br><b>Avg Built up area:</b> 1339.6785714285713</div>`)[0];
+                popup_a8163ee981861659d51946d59bbf323e.setContent(html_b72f73888a2b4527f13d1b1d4cb67e27);
+            
+        
+
+        marker_f1295060981927806df2ba634fc198d5.bindPopup(popup_a8163ee981861659d51946d59bbf323e)
+        ;
+
+        
+    
+    
+            var marker_aea52f3b9246b871b8d9b2045e6c58f7 = L.marker(
+                [28.4603, 77.0],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_ff20d0ddb9105398e8e6cf219e82e4c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_aea52f3b9246b871b8d9b2045e6c58f7.setIcon(icon_ff20d0ddb9105398e8e6cf219e82e4c0);
+        
+    
+        var popup_778e217c2b57d662b29f344a27daae22 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4983eb0fae3d41bb8e268a56546834b0 = $(`<div id="html_4983eb0fae3d41bb8e268a56546834b0" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 9<br><b>Avg. Price per sqft:</b> 10469.083333333334<br><b>Avg Built up area:</b> 1205.9166666666667</div>`)[0];
+                popup_778e217c2b57d662b29f344a27daae22.setContent(html_4983eb0fae3d41bb8e268a56546834b0);
+            
+        
+
+        marker_aea52f3b9246b871b8d9b2045e6c58f7.bindPopup(popup_778e217c2b57d662b29f344a27daae22)
+        ;
+
+        
+    
+    
+            var marker_46e42d1f5ed1a705946d65f81c63d7e2 = L.marker(
+                [28.4085, 76.9369],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_69ebfb6b055ff095a3af62eb9ce263f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_46e42d1f5ed1a705946d65f81c63d7e2.setIcon(icon_69ebfb6b055ff095a3af62eb9ce263f4);
+        
+    
+        var popup_b313fe2df9831944c60cfc185d482411 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ca04b9b7b8a29240a8099358dd1e61fd = $(`<div id="html_ca04b9b7b8a29240a8099358dd1e61fd" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 90<br><b>Avg. Price per sqft:</b> 6418.831460674157<br><b>Avg Built up area:</b> 1731.6966292134832</div>`)[0];
+                popup_b313fe2df9831944c60cfc185d482411.setContent(html_ca04b9b7b8a29240a8099358dd1e61fd);
+            
+        
+
+        marker_46e42d1f5ed1a705946d65f81c63d7e2.bindPopup(popup_b313fe2df9831944c60cfc185d482411)
+        ;
+
+        
+    
+    
+            var marker_774780eb3f1098c47339acee07703ccb = L.marker(
+                [28.4014, 76.9225],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_2dd29c4016e07bfbe242e8ead5130161 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_774780eb3f1098c47339acee07703ccb.setIcon(icon_2dd29c4016e07bfbe242e8ead5130161);
+        
+    
+        var popup_47770cea5d29e7b1707aff891c8dcaf0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ddb477d24e425defcf6ada3a574da2ef = $(`<div id="html_ddb477d24e425defcf6ada3a574da2ef" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 91<br><b>Avg. Price per sqft:</b> 7586.117647058823<br><b>Avg Built up area:</b> 2028.6470588235295</div>`)[0];
+                popup_47770cea5d29e7b1707aff891c8dcaf0.setContent(html_ddb477d24e425defcf6ada3a574da2ef);
+            
+        
+
+        marker_774780eb3f1098c47339acee07703ccb.bindPopup(popup_47770cea5d29e7b1707aff891c8dcaf0)
+        ;
+
+        
+    
+    
+            var marker_f7123819616ad50e0e9113f5d8c442d2 = L.marker(
+                [28.4079, 76.9153],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_2611bf1028a370745477a72e3305105f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f7123819616ad50e0e9113f5d8c442d2.setIcon(icon_2611bf1028a370745477a72e3305105f);
+        
+    
+        var popup_d506cfc5e0f06ebafeb778f7fe285a2a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8d6dc157f52e2b25bc7f468b3580a56a = $(`<div id="html_8d6dc157f52e2b25bc7f468b3580a56a" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 92<br><b>Avg. Price per sqft:</b> 5952.734693877551<br><b>Avg Built up area:</b> 1568.1651020408162</div>`)[0];
+                popup_d506cfc5e0f06ebafeb778f7fe285a2a.setContent(html_8d6dc157f52e2b25bc7f468b3580a56a);
+            
+        
+
+        marker_f7123819616ad50e0e9113f5d8c442d2.bindPopup(popup_d506cfc5e0f06ebafeb778f7fe285a2a)
+        ;
+
+        
+    
+    
+            var marker_5780eece1b1502c4f731336fa854723e = L.marker(
+                [28.4153, 76.9326],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_85337695293257461bd0db9a5a56ca0c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_5780eece1b1502c4f731336fa854723e.setIcon(icon_85337695293257461bd0db9a5a56ca0c);
+        
+    
+        var popup_a73914d4968aacd921fcde0e2c96a1fa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e3099f5f5f7aceb5d2b60f6dbcdbfe6d = $(`<div id="html_e3099f5f5f7aceb5d2b60f6dbcdbfe6d" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 93<br><b>Avg. Price per sqft:</b> 8009.888888888889<br><b>Avg Built up area:</b> 1017.0</div>`)[0];
+                popup_a73914d4968aacd921fcde0e2c96a1fa.setContent(html_e3099f5f5f7aceb5d2b60f6dbcdbfe6d);
+            
+        
+
+        marker_5780eece1b1502c4f731336fa854723e.bindPopup(popup_a73914d4968aacd921fcde0e2c96a1fa)
+        ;
+
+        
+    
+    
+            var marker_6b90d9115cf68ce19a64fe5afeffb11e = L.marker(
+                [28.4172, 76.90809999999999],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_3a37a029ab8bd193bca58b9fa8c4d38a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6b90d9115cf68ce19a64fe5afeffb11e.setIcon(icon_3a37a029ab8bd193bca58b9fa8c4d38a);
+        
+    
+        var popup_ed69de0bd243493811f942a2bedb7409 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8421c87cbea72cab8ab2f2a10b27d4a5 = $(`<div id="html_8421c87cbea72cab8ab2f2a10b27d4a5" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 95<br><b>Avg. Price per sqft:</b> 5602.509090909091<br><b>Avg Built up area:</b> 995.9818181818182</div>`)[0];
+                popup_ed69de0bd243493811f942a2bedb7409.setContent(html_8421c87cbea72cab8ab2f2a10b27d4a5);
+            
+        
+
+        marker_6b90d9115cf68ce19a64fe5afeffb11e.bindPopup(popup_ed69de0bd243493811f942a2bedb7409)
+        ;
+
+        
+    
+    
+            var marker_8460304ed45148b2bcf29547afb391a0 = L.marker(
+                [28.464, 76.9614],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_d20a45cb16eda1bfdcd28e5a057dca06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8460304ed45148b2bcf29547afb391a0.setIcon(icon_d20a45cb16eda1bfdcd28e5a057dca06);
+        
+    
+        var popup_f3203be1e3314b8ca86fb8acf760a17a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5c6fcf2dd69f12c6602ed4843b487752 = $(`<div id="html_5c6fcf2dd69f12c6602ed4843b487752" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 99<br><b>Avg. Price per sqft:</b> 6798.25<br><b>Avg Built up area:</b> 1802.6666666666667</div>`)[0];
+                popup_f3203be1e3314b8ca86fb8acf760a17a.setContent(html_5c6fcf2dd69f12c6602ed4843b487752);
+            
+        
+
+        marker_8460304ed45148b2bcf29547afb391a0.bindPopup(popup_f3203be1e3314b8ca86fb8acf760a17a)
+        ;
+
+        
+    
+    
+            var marker_08f72c240676c48ec47e02e57053623f = L.marker(
+                [28.4561, 76.9542],
+                {}
+            ).addTo(map_075a9ddfa08c259174118a9893c94cc7);
+        
+    
+            var icon_6cf76797c9edb4e6830a88b183202da5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_08f72c240676c48ec47e02e57053623f.setIcon(icon_6cf76797c9edb4e6830a88b183202da5);
+        
+    
+        var popup_287b13c2b7605f6cea4a67edadc6ffaa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4db75cde5be37c1cc25a9bdf339a68d7 = $(`<div id="html_4db75cde5be37c1cc25a9bdf339a68d7" style="width: 100.0%; height: 100.0%;"><b>Sector:</b> sector 99a<br><b>Avg. Price per sqft:</b> 6257.733333333334<br><b>Avg Built up area:</b> 1188.8333333333333</div>`)[0];
+                popup_287b13c2b7605f6cea4a67edadc6ffaa.setContent(html_4db75cde5be37c1cc25a9bdf339a68d7);
+            
+        
+
+        marker_08f72c240676c48ec47e02e57053623f.bindPopup(popup_287b13c2b7605f6cea4a67edadc6ffaa)
+        ;
+
+        
+    
+</script>
+</html>

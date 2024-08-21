@@ -51,9 +51,9 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7878"]
 - Navigate to the webapps/backend directory and build the Docker image:
 
 ``` 
-cd webapps/backend
-docker build -t real-estate-api .
-docker run -p 7878:7878 real-estate-api
+cd backend
+sudo docker build -t real-estate-api .
+sudo docker run -p 7878:7878 real-estate-api
 ```
 
 - This will build the Docker image and run it locally on port 7878.
@@ -63,21 +63,21 @@ docker run -p 7878:7878 real-estate-api
 1. Log in to Docker Hub:
 
 ```
-docker login
+sudo docker login
 ```
 
 2. Tag your Docker image & Push the Docker image to Docker Hub:
 
 ```
-docker tag real-estate-api <your-docker-username>/real-estate-api:latest
+sudo docker tag real-estate-api ranjan999/real-estate-api:latest
 
-docker push <your-docker-username>/real-estate-api:latest
+sudo docker push ranjan999/real-estate-api:latest
 ```
 
 3. Verify the Docker image is pushed to Docker Hub:
 
 ```
-docker images
+sudo docker images
 
 ```
 ## **Step 4: Set Up an AWS EC2 Instance**
@@ -112,17 +112,28 @@ sudo systemctl enable docker
 1. Log in to Docker Hub on the EC2 instance:
 
 ```
-docker login
+sudo docker login
 ```
 2. Pull the Docker image:
 
 ```
-    docker pull your-dockerhub-username/real-estate-api
+sudo docker pull ranjan999/real-estate-api
 ```
 3. Run the Docker container:
 
+Find the container ID of the running container
 ```
-sudo docker run -p 7878:7878 your-dockerhub-username/real-estate-api
+sudo docker ps
+```
+
+Stop and remove the running container
+```
+sudo docker stop <container_id>
+sudo docker rm <container_id>
+```
+
+```
+sudo docker run -p 7878:7878 ranjan999/real-estate-api
 ```
 
 ## **Step 7: Access Your FastAPI Application**
