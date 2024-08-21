@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const location = document.getElementById('location').value;
       const range = document.getElementById('range').value;
 
-      fetch(`https://api.example.com/sectors?location=${location}&range=${range}`)
+      fetch('https://real-estate-api-v3m0.onrender.com/property?location=${location}&range=${range}')
         .then(response => response.json())
         .then(data => {
           const sectorList = document.getElementById('sector-list');
