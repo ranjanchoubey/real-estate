@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Real Estate Price Prediction Project
 
 A comprehensive data science project for real estate price prediction and property recommendation in Gurgaon.
@@ -115,3 +116,16 @@ Feel free to contribute to this project by:
 4. Pushing to the branch
 5. Creating a pull request
 
+=======
+# real-estate project
+
+## To start the API: Go to webapps/backend and run start_api.sh
+```
+>> cd webapps/backend
+>> ./start_api.sh
+```
+Or
+```
+>> ./webapps/backend/start_api.sh
+```
+>>>>>>> 8ad208dff4dd5d0062d668828fc8eaa987d54eba
