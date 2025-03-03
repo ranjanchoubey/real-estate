@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Prediction</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="overlay" data-overlay></div>
+        <div class="header-top">
+          <div class="container">
+            <ul class="header-top-list">
+              <div class="header-top-slider">
+                <div class="header-top-slide" style="display: flex; gap: 20px;">
+                  <a href="mailto:info@Real Estate Analytics.com" class="header-top-link">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <span>info@Real Estate Analytics.com</span>
+                  </a>
+                  <a href="#" class="header-top-link">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <address>Kolkata</address>
+                  </a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="container">
+            <a href="index.html" class="logo">
+              <img src="./assets/images/logo.png" alt="Real Estate Analytics logo">
+            </a>
+            <nav class="navbar" data-navbar>
+              <div class="navbar-top">
+                <a href="index.html" class="logo">
+                  <img src="./assets/images/logo.png" alt="Real Estate Analytics logo">
+                </a>
+                <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+                  <ion-icon name="close-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="navbar-bottom">
+                <ul class="navbar-list">
+                  <li><a href="index.html" class="navbar-link" data-nav-link>Home</a></li>
+                  <li><a href="price-prediction.html" class="navbar-link" data-nav-link>Price Prediction</a></li>
+                  <li><a href="analytics.html" class="navbar-link" data-nav-link>Analytics</a></li>
+                  <li><a href="recommendation.html" class="navbar-link" data-nav-link>Recommendation</a></li>
+             
+                </ul>
+              </div>
+            </nav>
+           
+          </div>
+        </div>
+      </header>
+  <main class="main-content">
+    <article class="article">
+      <section class="section">
+        <div class="container">
+          <!-- 
+            - #price-prediction
+          -->
+          <section class="price-prediction" id="price-prediction">
+              <h6 class="h2 section-title">Price Prediction </h6>
+      
+              <div class="form-container">
+            
+                <form id="price-prediction-form" class="price-prediction-form">
+                  <div class="form-group">
+                    <label for="property-type">Property Type:</label>
+                    <select id="property-type" name="property_type" required>
+                      <option value="">Select Property Type</option>
+                      <option value="apartment">Flat</option>
+                      <option value="house">House</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="sector">Sector:</label>
+                    <select id="sector" name="sector" required>
+                      <option value="">Select Sector</option>
+                      <option value="sohna road">Sohna Road</option>
+                      <option value="sector 102">Sector 102</option>
+                      <option value="sector 85">Sector 85</option>
+                      <option value="sector 92">Sector 92</option>
+                      <option value="sector 69">Sector 69</option>
+                      <option value="sector 90">Sector 90</option>
+                      <option value="sector 81">Sector 81</option>
+                      <option value="sector 109">Sector 109</option>
+                      <option value="sector 65">Sector 65</option>
+                      <option value="sector 79">Sector 79</option>
+                      <option value="sector 33">Sector 33</option>
+                      <option value="sector 104">Sector 104</option>
+                      <option value="sector 83">Sector 83</option>
+                      <option value="sector 37d">Sector 37D</option>
+                      <option value="sector 86">Sector 86</option>
+                      <option value="sector 2">Sector 2</option>
+                      <option value="sector 50">Sector 50</option>
+                      <option value="sector 107">Sector 107</option>
+                      <option value="sector 108">Sector 108</option>
+                      <option value="sector 43">Sector 43</option>
+                      <option value="sector 89">Sector 89</option>
+                      <option value="sector 95">Sector 95</option>
+                      <option value="sector 48">Sector 48</option>
+                      <option value="sector 70a">Sector 70A</option>
+                      <option value="sector 56">Sector 56</option>
+                      <option value="sector 37c">Sector 37C</option>
+                      <option value="sector 84">Sector 84</option>
+                      <option value="sector 70">Sector 70</option>
+                      <option value="sector 67">Sector 67</option>
+                      <option value="sector 4">Sector 4</option>
+                      <option value="sector 49">Sector 49</option>
+                      <option value="sector 113">Sector 113</option>
+                      <option value="sector 103">Sector 103</option>
+                      <option value="sector 82">Sector 82</option>
+                      <option value="sector 61">Sector 61</option>
+                      <option value="sector 66">Sector 66</option>
+                      <option value="sector 26">Sector 26</option>
+                      <option value="sector 28">Sector 28</option>
+                      <option value="sector 106">Sector 106</option>
+                      <option value="sector 25">Sector 25</option>
+                      <option value="sector 68">Sector 68</option>
+                      <option value="sector 99a">Sector 99A</option>
+                      <option value="sector 72">Sector 72</option>
+                      <option value="sector 12">Sector 12</option>
+                      <option value="sector 71">Sector 71</option>
+                      <option value="sector 77">Sector 77</option>
+                      <option value="sector 54">Sector 54</option>
+                      <option value="sector 3">Sector 3</option>
+                      <option value="sector 7">Sector 7</option>
+                      <option value="sector 112">Sector 112</option>
+                      <option value="sector 110">Sector 110</option>
+                      <option value="sector 57">Sector 57</option>
+                      <option value="sector 111">Sector 111</option>
+                      <option value="sector 88a">Sector 88A</option>
+                      <option value="sector 67a">Sector 67A</option>
+                      <option value="sector 22">Sector 22</option>
+                      <option value="sector 105">Sector 105</option>
+                      <option value="sector 82a">Sector 82A</option>
+                      <option value="sector 24">Sector 24</option>
+                      <option value="sector 74">Sector 74</option>
+                      <option value="sector 14">Sector 14</option>
+                      <option value="gwal pahari">Gwal Pahari</option>
+                      <option value="sector 91">Sector 91</option>
+                      <option value="sector 47">Sector 47</option>
+                      <option value="sector 78">Sector 78</option>
+                      <option value="sector 62">Sector 62</option>
+                      <option value="sector 76">Sector 76</option>
+                      <option value="sector 63a">Sector 63A</option>
+                      <option value="sector 60">Sector 60</option>
+                      <option value="sector 1 imt manesar">Sector 1 IMT Manesar</option>
+                      <option value="sector 63">Sector 63</option>
+                      <option value="sector 53">Sector 53</option>
+                      <option value="sector 52">Sector 52</option>
+                      <option value="sector 23">Sector 23</option>
+                      <option value="sector 11">Sector 11</option>
+                      <option value="sector 9">Sector 9</option>
+                      <option value="sector 99">Sector 99</option>
+                      <option value="sector 36">Sector 36</option>
+                      <option value="sector 36a">Sector 36A</option>
+                      <option value="sector 41">Sector 41</option>
+                      <option value="sector 46">Sector 46</option>
+                      <option value="sector 9a">Sector 9A</option>
+                      <option value="sector 39">Sector 39</option>
+                      <option value="sector 31">Sector 31</option>
+                      <option value="sector 55">Sector 55</option>
+                      <option value="sector 38">Sector 38</option>
+                      <option value="sohna road road">Sohna Road Road</option>
+                      <option value="sector 1a imt manesar">Sector 1A IMT Manesar</option>
+                      <option value="sector 6">Sector 6</option>
+                      <option value="sector 3 phase 3 extension">Sector 3 Phase 3 Extension</option>
+                      <option value="sector 93">Sector 93</option>
+                      <option value="dwarka expressway">Dwarka Expressway</option>
+                      <option value="sector 59">Sector 59</option>
+                      <option value="sector 45">Sector 45</option>
+                      <option value="sector 13">Sector 13</option>
+                      <option value="sector 51">Sector 51</option>
+                      <option value="sector 8">Sector 8</option>
+                      <option value="sector 10a">Sector 10A</option>
+                      <option value="sector 58">Sector 58</option>
+                      <option value="sector 15">Sector 15</option>
+                      <option value="sector 1">Sector 1</option>
+                      <option value="sector 21">Sector 21</option>
+                      <option value="sector 3 phase 2">Sector 3 Phase 2</option>
+                      <option value="sector 5">Sector 5</option>
+                      <option value="new sector 2">New Sector 2</option>
+                      <option value="sector 40">Sector 40</option>
+                      <option value="sector 30">Sector 30</option>
+                      <option value="sector 80">Sector 80</option>
+                      <option value="new">New</option>
+                      <option value="baldev nagar">Baldev Nagar</option>
+                      <option value="manesar">Manesar</option>
+                      <option value="sector 17">Sector 17</option>
+                      <option value="madanpuri">Madanpuri</option>
+                      <option value="adarsh nagar">Adarsh Nagar</option>
+                      <option value="shivaji nagar">Shivaji Nagar</option>
+                      <option value="shivpuri">Shivpuri</option>
+                      <option value="sector 17b">Sector 17B</option>
+                      <option value="sector 73">Sector 73</option>
+                      <option value="imt manesar">IMT Manesar</option>
+                      <option value="sector 88b">Sector 88B</option>
+                      <option value="garhi harsaru">Garhi Harsaru</option>
+                      <option value="bhim nagar">Bhim Nagar</option>
+                      <option value="sector 27">Sector 27</option>
+                      <option value="sector 37">Sector 37</option>
+                      <option value="sector 17a">Sector 17A</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="bedRoom">Number of Bedrooms:</label>
+                    <input type="number" id="bedRoom" name="bedRoom" required placeholder="Enter Number of Bedrooms">
+                  </div>
+                  <div class="form-group">
+                    <label for="bathroom">Number of Bathrooms:</label>
+                    <input type="number" id="bathroom" name="bathroom" required placeholder="Enter Number of Bathrooms">
+                  </div>
+                  <div class="form-group">
+                    <label for="balcony">Balcony:</label>
+                    <input type="text" id="balcony" name="balcony" required placeholder="Enter Balcony">
+                  </div>
+                  <div class="form-group">
+                    <label for="agePossession">Age Possession:</label>
+                    <select id="agePossession" name="agePossession" required>
+                      <option value="">Select Age Possession</option>
+                      <option value="Relatively New">Relatively New</option>
+                      <option value="Moderately Old">Moderately Old</option>
+                      <option value="New Property">New Property</option>
+                      <option value="Old Property">Old Property</option>
+                      <option value="Under Construction">Under Construction</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="built_up_area">Built-up Area (Sq. Ft.):</label>
+                    <input type="number" id="built_up_area" name="built_up_area" required placeholder="Enter Built-up Area">
+                  </div>
+                  <div class="form-group">
+                    <label for="servant_room">Servant Room:</label>
+                    <input type="number" id="servant_room" name="servant_room" required placeholder="Enter Servant Room">
+                  </div>
+                  <div class="form-group">
+                    <label for="store_room">Store Room:</label>
+                    <input type="number" id="store_room" name="store_room" required placeholder="Enter Store Room">
+                  </div>
+                  <div class="form-group">
+                    <label for="furnishing_type">Furnishing Type:</label>
+                    <select id="furnishing_type" name="furnishing_type" required>
+                      <option value="">Select Furnishing Type</option>
+                      <option value="unfurnished">Unfurnished</option>
+                      <option value="furnished">Furnished</option>
+                      <option value="semifurnished">Semi-Furnished</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="luxury_category">Luxury Category:</label>
+                    <select id="luxury_category" name="luxury_category" required>
+                      <option value="">Select Luxury Category</option>
+                      <option value="Low">Low</option>
+                      <option value="Medium">Medium</option>
+                      <option value="High">High</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="floor_category">Floor Category:</label>
+                    <select id="floor_category" name="floor_category" required>
+                      <option value="">Select Floor Category</option>
+                      <option value="Mid Floor">Mid Floor</option>
+                      <option value="Low Floor">Low Floor</option>
+                      <option value="High Floor">High Floor</option>
+                    </select>
+                  </div>
+                  <div class="form-group full-width" style="order: last;">
+                    <button type="submit" class="btn" id="price-prediction-btn">Get Price Prediction</button>
+                  </div>
+                </form>
+              </div>
+      
+              <!-- Add this div to show the prediction result -->
+              <div id="result-box" class="result-box slide-in" style="display: none;">
+                <p id="result-message"><strong>Predicted Price:</strong> <span id="prediction-value"></span></p>
+              </div>
+          
+          </section>
+          </section>
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+   
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2024 <a href="#">Real-Estate-Analytics</a>. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
